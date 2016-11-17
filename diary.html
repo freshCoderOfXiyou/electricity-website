@@ -1,0 +1,18 @@
+express提供的页面响应函数是app.get，它有两个参数，第一个参数是请求的路由，第二个参数是一个回调函数，回调函数有两个参数，第一个是请求对象，第二个是响应对象，这两个对象只和顺序相关，和对象的名称无关。
+当express需要引入文件时，作为服务器不同于单机，需要定义文件路径，在定义文件路径之前还需要加上路径模块和serve-static模块
+#code:var path = require("path")
+           var serveStatic=require("serve-static")\
+          app.use(serveStatic('/public'))
+          app.use(expressf.static(path.join(__dirname+'/public'))
+When express need import documents, as the server is different from the single machine, you need to define the file path, also need to add file path ('path' module) and 'serve - static' module  before definition
+# code: var path = the require (" path ")
+Var serveStatic = the require \ (" serve - static ")
+App. Use (expressf. Static (path. Join (__dirname + '/ public')) 
+
+
+###使用webpack时应该注意在入口文件添加其他文件应该是：
+require('./main.js' )而不是require('main.js')。前面一种会导致错误。
+
+When using the webpack should pay attention to in the  file which is entryence for adding other documents should be:
+
+"Require ('. / main. Js')" rather than " require (' main. Js')". Frist one can leads to errors. 

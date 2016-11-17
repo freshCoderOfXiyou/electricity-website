@@ -1,0 +1,38 @@
+{
+  "name": "electricity-website",
+  "version": "1.0.0",
+  "description": "通过组件化的工具开发现代电子商务网站。It is a morden electicity through component tools.",
+  "main": "electricity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freshCoderOfXiyou/electricity-website.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "webpack",
+    "jade",
+    "sass"
+  ],
+  "author": "Yangyang Jiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freshCoderOfXiyou/electricity-website/issues"
+  },
+  "homepage": "https://github.com/freshCoderOfXiyou/electricity-website#readme",
+  "dependencies": {
+    "css-loader": "^0.25.0",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
+    "sass": "^0.5.0",
+    "sass-loader": "^4.0.2",
+    "serve-static": "^1.11.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}
