@@ -1,0 +1,146 @@
+.header{
+	border-bottom:1px solid #aaa;
+	width: 100%; 
+	float: left;
+	height: 32px;
+}
+	.header ul{
+		list-style-type: none;
+		font-size: 13px;
+		color: gray;
+	}
+	.header ul:first-child{
+		float: left;
+		margin-left: 100px;
+	}
+	.header ul:nth-child(2){
+		float: right;
+		margin-right: 100px;
+	}
+	.notice{
+		color: #c40000;
+		margin: 0px 5px;
+		font-size: 5px;
+	}
+		.header ul li {
+			float: left;
+			padding: 8px 10px;
+			position: relative;
+		}
+			.header ul li a{
+				color: gray;
+				text-decoration: none;
+			}
+			.header ul li a:hover{
+				color: red;
+				text-decoration: none;
+			}
+			.triangle{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: gray  transparent yellow transparent;
+			border-width: 3px 3px 0px 3px;
+			/* float: right; */
+			position: absolute;
+			right: 0;
+			top: 40%;
+			transition: transform 0.2s ease-in-out ;
+			}
+		.header ul li:hover .triangle{
+			transform: rotate(180deg);
+		}
+		.header ul li:hover .exchange{
+			display: block;
+		}
+		.exchange{
+			background: white;
+			position: absolute;
+			bottom: -50px;
+			display: none;	
+		}
+		.ws{
+			width: 86px;
+		}
+		.wss{
+			width: 73px;
+		}
+
+			.exchange li{
+				padding: 5px 2px !important;
+				display: inline-block;
+			}
+/*search div style*/
+	.search{
+
+		width: 554px;
+		margin: 0 auto;
+		margin-top: 60px;
+		font-size: 14px;
+	}
+	.search input[type='text']{
+		font-size: 18px;
+		color: gray;
+		width: 450px;
+		height: 36px;
+		border:2px solid #c40000;
+		float: left;
+		outline: none;
+		text-indent: 10px;
+		font-size: 14px;
+	}
+	.search input[type='submit']{
+		height: 36px;
+		width: 100px;
+		background: #c40000;
+		color: white;
+		border: none;
+		font-weight: bold;
+		font-size: 18px;
+		float: left;
+		letter-spacing: 5px;
+	}
+	.search  a{
+		display: inline-block;
+		color: gray;
+		margin: 6px 6px;
+		display: inline-block;
+		text-decoration: none;
+	}
+	.search  span:nth-child(3) a
+	{
+		color: #c40000;
+	}
+	.search  span:nth-child(7) a
+	{
+		color: #c40000;
+	}
+	.search  span:nth-child(13) a
+	{
+		color: #c40000;
+	}
+	
+.footer{
+	border-top: 1px solid #777;
+	width: 100%;
+}	
+	.footer ul{
+		float: left;
+		width: 20%;
+		transform: translateX(50%);
+	}
+		.footer  h3{
+			font-size: 18px;
+		}
+		.footer ul li a{
+			color: gray;
+		}
+		.footer ul li a:hover{
+			color: #c40000;
+		}
+
+.footerCR span{
+	margin: 30px auto;
+	display: inline-block;
+	transform: translateX(100%);//shit code here
+}
