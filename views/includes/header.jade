@@ -2,24 +2,7 @@ div.fixSearchBox#fixBox
 	form(ation='#{router}' method='post')
 			input(type='text' placeholder='#{searchWord}').inputText
 			input(type='submit' value='搜索' ).inputSummit
-div.fixSidebar
-	div.menubar
-		div.menubarUp
-			i.glyphicon.glyphicon-user
-				li 商城会员
-			i.glyphicon.glyphicon-shopping-cart
-				li 购物车
-			i.glyphicon.glyphicon-heart-empty
-				li 我的收藏
-			i.glyphicon.glyphicon-map-marker
-				li 我的足迹
-			i.glyphicon.glyphicon-bell
-				li 我的消息
-		div.menubarDown
-			i.glyphicon.glyphicon-chevron-up#toUpButton
-				li 返回顶部
-			i.glyphicon.glyphicon-edit
-				li 反馈
+
 div.header
 	ul
 		li
@@ -61,4 +44,4 @@ div
 			each recom in recommands
 				span
 					a(href='javascript:void();')=recom
-		span.glyphicon.glyphicon-heart asdfdasfasd
+		

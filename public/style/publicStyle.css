@@ -18,11 +18,11 @@
 	}
 .fixSidebar{
 	position: fixed;
-	right: -17.1%;
+	right: -17.2%;
 	/* right: 0; */
 	width: 17.5%;
 	height: 100%;
-	background: #aaa;
+	background: #fff;
 	border-left: 5px solid #7A6E6E;
 	z-index: 100;
 	transition: right 0.2s ease-in-out;
@@ -30,9 +30,49 @@
 .fixSidebarShow{
 	right: 0;
 }
+	.removeIcon{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		transition: transform  0.4s ease-in-out,color 0.2s ;
+		color: gray;
+		font-weight:900;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.removeIcon:hover{
+		transform: rotate(180deg);
+		color: #C81623;
+	}
+	.backDiv{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: white;
+	}
+	.detailDiv{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: skyblue;
+		right: -272px;
+		transform: scale(0.5);
+		transition: right 0.5s ease-in-out,transform 0.5s ease-in-out;
+	}
+	/* #userDiv#shoppingCart#hear#bell#edit */
+	#edit{
+		background: pink;
+		
+	}
+	.detailDivShow{
+		right: 0;
+		transform: scale(1);
+	}
 		.menubar{
 			position: absolute;			
-			left: -40px;
+			left: -35px;
 			width: 35px;
 			height: 100%;
 			font-size: 20px;
@@ -61,7 +101,7 @@
 			}
 			.menubar i:hover li{
 				left: -90px;
-				display: block;
+				/* display: block; */
 			}
 			#toUpButton{
 				display: none;
@@ -81,7 +121,7 @@
 					border-radius: 7px 0px 0px 7px;
 					transition: left  0.2s ease-in-out;
 					z-index: -1;
-					display: none;
+					/* display: none; */
 				}
 				.menuLiShow{
 					left: 2px;
@@ -166,6 +206,7 @@
 		margin: 0 auto;
 		margin-top: 60px;
 		font-size: 14px;
+		margin-bottom: 20px;
 	}
 	.search input[type='text']{
 		
@@ -252,3 +293,52 @@
 	display: inline-block;
 	transform: translateX(100%);//shit code here
 }
+
+.navWrap{
+	width: 100%;
+	height: 36px;
+	background: #DD2727;
+}
+	.navMain{
+		width: 80%;
+		margin: 0 auto;
+	}
+		.navSubLeft{
+			width: 45%;
+			/* background: blue; */
+			float: left;
+			font-size: 16px;
+			font-weight: bolder;
+			
+		}
+			.navSubLeft li:first-child{
+				background: #C60A0A;
+				padding: 0px 52px;
+				cursor: pointer;
+			}
+			.navSubLeft i{
+				float: left;
+				display: inline-block;
+				padding: 8px 8px;
+				color: white;
+			}
+		.navSubRight{
+			width: 55%;
+			/* background: skyblue; */
+			float: left;
+						
+		}	
+			.navMain li{
+				float: left;
+				font-size: 16px;
+				font-family: "Microsoft YaHei", "SimSun", "宋体", sans-serif;
+				line-height: 36px;
+				margin: 0 17px;
+			}
+			.navMain a{
+				color: white;
+			}
+			.navMain a:hover{
+				color: white;
+				text-decoration: none;
+			}
