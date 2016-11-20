@@ -23,8 +23,9 @@ module.exports={
 				},
 				{
 					test:/\.scss$/,
-					loader:"!sass!style!css"
-				}
+					loader:"style!css!sass"
+				},//$ npm install sass-loader node-sass css-loader style-sass -D
+				// $ npm install  extract-text-webpack-plugin -D 
 			]
 	}
 }

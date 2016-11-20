@@ -12,7 +12,9 @@ app.get('/' , function(req,res){
 	// res.type('text/html')
 	// res.send('welcome to electicity !')
 	res.render('index',{
-		title:'电子商务'
+		title:'电子商务',
+		searchWord:'箱包名品任你挑',
+		recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
 	})
 })
 app.listen(app.get('port'),function(){
