@@ -1,39 +1,39 @@
-div.fixSearchBox#fixBox
-	form(ation='#{router}' method='post')
-			input(type='text' placeholder='#{searchWord}').inputText
-			input(type='submit' value='搜索' ).inputSummit
+//- div.fixSearchBox#fixBox
+//- 	form(ation='#{router}' method='post')
+//- 			input(type='text' placeholder='#{searchWord}').inputText
+//- 			input(type='submit' value='搜索' ).inputSummit
 
 div.header
-	ul
-		li
-			a(href='javascript:void();') 嘿，欢迎来到电子商城
-		li 
-			a(href='javascript:void();') 请登录
-		li 
-			a(href='javascript:void();') 免费注册
-	ul.fl
-		li.fix
-			a(href='javascript:void();') 我的商城
-			div.triangle
-			ul.exchange.ws
-				li 
-					a(href='javascript:void();') 已买到的宝贝
-				li 
-					a(href='javascript:void();') 已卖出的宝贝
-		li 
-			span.glyphicon.glyphicon-heart.notice
-			a(href='javascript:void();') 我关注的品牌
-		li 
-			span.glyphicon.glyphicon-shopping-cart.notice
-			a(href='javascript:void();') 购物车
-		li.fix
-			a(href='javascript:void();') 收藏夹
-			div.triangle
-			ul.exchange.wss
-				li 
-					a(href='javascript:void();') 收藏的宝贝
-				li 
-					a(href='javascript:void();') 收藏的店铺
+	div.headerWrapDiv
+		ul
+			li 嘿，欢迎来到电子商城
+			li 
+				a(href='javascript:void();') 请登录
+			li 
+				a(href='javascript:void();') 免费注册
+		ul.fl
+			li.fix
+				a(href='javascript:void();') 我的商城
+				div.triangle
+				ul.exchange.ws
+					li 
+						a(href='javascript:void();') 已买到的宝贝
+					li 
+						a(href='javascript:void();') 已卖出的宝贝
+			li 
+				span.glyphicon.glyphicon-heart.notice
+				a(href='javascript:void();') 我关注的品牌
+			li 
+				span.glyphicon.glyphicon-shopping-cart.notice
+				a(href='javascript:void();') 购物车
+			li.fix
+				a(href='javascript:void();') 收藏夹
+				div.triangle
+				ul.exchange.wss
+					li 
+						a(href='javascript:void();') 收藏的宝贝
+					li 
+						a(href='javascript:void();') 收藏的店铺
 div
 	div.logo
 		img
