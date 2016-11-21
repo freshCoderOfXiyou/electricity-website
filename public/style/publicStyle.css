@@ -6,12 +6,12 @@
 	background: rgba(255, 255, 255, 0.9);
 	border-bottom: 1px solid red;
 	transition: top 0.25s ease-in-out;
+	z-index: 20;
 }
 .fixSearchBoxShow{
 	top: 0px;
 }
 	.fixSearchBox form{
-		background: yellow;
 		width: 550px;
 		height: 20px;
 		margin: 10px auto 0px;
@@ -26,7 +26,6 @@
 	border-left: 5px solid #7A6E6E;
 	z-index: 100;
 	transition: right 0.4s ease-in-out ;
-
 }
 .fixSidebarShow{
 	right: 0;
@@ -310,24 +309,23 @@
 		width: 80%;
 		margin: 0 auto;
 	}
-		.navSubLeft{
-			width: 45%;
+		.navSubLeft  li{
+			/* width: 45%; */
 			/* background: blue; */
 			float: left;
 			font-size: 16px;
-			font-weight: bolder;
-			
+			font-weight: bolder;	
 		}
-			.navSubLeft li:first-child{
+			#commodityClassTitle{
 				background: #C60A0A;
-				padding: 0px 52px;
+				padding: 0px 0px;
 				cursor: pointer;
 				width: 200px;
 			}
 			.navSubLeft i{
 				float: left;
 				display: inline-block;
-				padding: 8px 8px;
+				padding: 8px 8px 0px 8px;
 				color: white;
 			}
 		.navSubRight{
@@ -359,16 +357,25 @@
 		/* background: lightskyblue; */
 		font-weight: normal;
 		/* font-size: 14px; */
-		/* display: none; */
+		display: none;
+		z-index: 10;
 	}
-	
+	#commodityClassTitle:hover #navDetails{
+		display: block;
+	}
 		#navDetails .commodityClassfication{
 			width: 200px;
 			height: 500px;
-			line-height: 31px;
 			background: #ddd;
 		}
-
+			#navDetails .commodityClassfication li{
+				font-weight: normal;
+				width: 100%;
+				line-height: 31px;
+				margin: 0;
+				font-size: 14px;
+				padding-left: 10px;
+			}
 			.commodityClassfication li a{
 				color: black;
 				/* margin-left: 30px; */
@@ -379,8 +386,10 @@
 			}
 			.commodityClassfication li a:hover{
 				text-decoration: none;
-				color: black;
+				color: #b22222;
+				font-weight: bold;
 			}
+		    
 		#commodityDetail{
 			width: 100%;
 			height: 500px;
@@ -389,9 +398,12 @@
 			top: 0;
 			left: 200px;
 			background: white;
-			/* display: none; */
+			display: none;
 		}
 		#firstFloor:hover #commodityDetail{
+			display: block;
+		}
+		#secondFloor:hover #commodityDetail{
 			display: block;
 		}
 			.comDetailLinks{
@@ -408,17 +420,23 @@
 						width: 80px;
 						height: 50px;
 						font-weight: bold;
+						font-size: 14px;
 					}
 					.comDetailLinksTitle span:nth-child(2){
 						margin-left: 5px; 
 					}
 					.comDetailLinksContent{
 						height: 50px;
+						font-size: 14px;
+						color: gray;
 						/* float: left; */
 						/* background: red; */
 					}
-						.comDetailLinksContent a{
+						#commodityDetail .comDetailLinksContent a{
 							color: gray;
 							margin: 3px;
-
+						}
+						#commodityDetail .comDetailLinksContent a:hover{
+							color: orange;
+							font-weight: normal;
 						}
