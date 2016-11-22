@@ -1,23 +1,44 @@
-.banner{
-	background:  #FD3525;
-}
-.middle{
-	/* border: 3px solid black; */
-	width: 80%;
-	margin: 0 auto;
-	position: relative;
-	
-}
-	.imagesWrap{
-		border: 3px solid black;
-		width: 5202px;
+/*banner part css*/
+	.view{
+		/* border: 1px solid black; */
+		width: 867px;
 		height: 500px;
 		margin-left: 217px;
+		position: relative;
+		top: -10px;
+		overflow: hidden;
+	}
+	.imagesWrap{
+		/* border: 1px solid black; */
+		width: 6942px;
+		height: 502px;
+		left: -867px;
+		/* left: 217px; */
 		/* margin-top: -10px; */
+		position: absolute;
+
 	}
 		.imagesWrap img{
 			width: 867px;
 	/* 		top: 0;
 			left: 217px; */
 			float: left;
+		}
+	.buttons{
+		/* background: red; */
+		position: absolute;
+		width: 360px;
+		height: 20px;
+		bottom: 30px;
+		left: 253px;
+	}
+		.buttons span{
+			width: 20px;
+			height: 20px;
+			background: rgba(10, 10, 10, 0.58); 
+			display: inline-block;/*problems*/
+			margin-left: 40px;
+			border-radius: 50%;
+			border: 2px solid #444;
+
 		}

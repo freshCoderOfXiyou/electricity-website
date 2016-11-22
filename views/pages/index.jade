@@ -8,11 +8,17 @@ html
 		link(href='./style/publicStyle.css' rel='stylesheet' type='text/css')
 		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
 		link(href='./style/banner.css' rel='stylesheet' type='text/css')
+		link(href='./style/index.css' rel='stylesheet' type='text/css')
+		link(href='./style/infoMore.css' rel='stylesheet' type='text/css')
 	body
 		include ../includes/sidebar.jade
 		include ../includes/header.jade
 		include ../includes/nav.jade
-		include ../includes/banner.jade
+		div.indexBanner
+			div.middle
+				include ../includes/banner.jade
+				div.infoMoreWrap
+					include ../includes/infoMore.jade
 		div.alert(style='height:1900px;width:100%;background:pink;')  main content
 		
 		include ../includes/footer.jade
@@ -20,4 +26,5 @@ html
 	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 	script(src='./script/common.js' type='text/javascript')
 	script(src='./script/index.js' type='text/javascript')
+	script(src='./script/banner.js' type='text/javascript')
 	

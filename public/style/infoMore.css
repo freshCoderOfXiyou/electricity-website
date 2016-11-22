@@ -1,0 +1,31 @@
+.personInfo{
+	width: 95%;
+	margin: 10px auto 0px;
+	font-size: 12px;
+}
+	.personInfo img{
+		width: 47px;
+		height: 47px;
+		border: 3px solid gray;
+		border-radius: 50%;
+	}
+	.personInfo h5{
+		display: inline-block;
+		float: right;
+		font-size: 12px;
+		/* background: blue; */
+	}
+	.personInfoLinks{
+		background: blue;
+	}
+	.personInfoLinks a{
+		margin: 0px 10px;
+	}
+	.buttonLink{
+		border: 3px solid #E01222;
+		color: #E01222;
+	}
+	.buttonLink:hover{
+		background: #E01222;
+		color: white;
+	}
