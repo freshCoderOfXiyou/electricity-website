@@ -1,16 +1,19 @@
 div.personInfo
 	img(src='./images/touxiang.jpg' alt='header portrait')
-	h5 Hi，欢迎来到商城！
 	div.personInfoLinks
+		h5 Hi，欢迎来到商城！
 		a(href='javascript:;') 登录
 		a(href='javascript:;') 注册
-		a(href='javascript:;').buttonLink 新人福利
-		a(href='javascript:;').buttonLink PLUS会员
+p.user_profit
+	a(href='javascript:;').buttonLink 新人福利
+	a(href='javascript:;').buttonLink PLUS会员
 div.announcement
-	span
-		a(href='javascript:;') 促销
-		a(href='javascript:;') 公告
-		a(href='javascript:;') 更多
+	span.infoMore_title
+		a(href='javascript:;')#slimFirst 促销
+		a(href='javascript:;')#slimeSecond 公告
+		a(href='javascript:;').fr 更多
+	div.slimMain
+		div
 	ul.announSub#firstAnnounSub
 		li
 			a(href='javascript:;') 真情感恩季保暖套餐
@@ -18,48 +21,73 @@ div.announcement
 			a(href='javascript:;') 39元抢三星C9 PRO新品6+64G内存
 		li
 			a(href='javascript:;') 每日享折扣品质游
-	ul.announSub#firstAnnounSub
+	ul.announSub#secondAnnounSub
 		li
 			a(href='javascript:;') 售后无忧服务上线
 		li
 			a(href='javascript:;') 大家电订单超期自动取消公告
 		li
 			a(href='javascript:;') 消费扶贫只卖原生态
+//- img#bgimg(src='./images/sprite.png')
 div.entrys
 	ul
 		li
-			a(href='javascript:;') 话费
+			a(href='javascript:;' style='background:url(images/sprite.png);background-position: 0px 0px;')
+				i.telCharge_icon
+				span 话费
 		li
-			a(href='javascript:;') 机票
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.planeTicket_icon
+				span 机票
 		li
-			a(href='javascript:;') 电影票
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.filmTicket_icon
+				span 电影票
 		li
-			a(href='javascript:;') 游戏
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.game_icon
+				span 游戏
 		li
-			a(href='javascript:;') 企业购
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.corporationBuy_icon
+				span 企业购
 		li
-			a(href='javascript:;') 加油卡
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.gasFillingCard_icon
+				span 加油卡
 		li
-			a(href='javascript:;') 酒店
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.hotel_icon
+				span 酒店
 		li
-			a(href='javascript:;') 火车票
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.trainTicket_icon
+				span 火车票
 		li
-			a(href='javascript:;') 众筹
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.crowdFunding_icon
+				span 众筹
 		li
-			a(href='javascript:;') 理财
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.financial_icon
+				span 理财
 		li
-			a(href='javascript:;') 礼品卡
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.present_icon
+				span 礼品卡
 		li
-			a(href='javascript:;') 白条
+			a(href='javascript:;' style='background:url(images/sprite.png)')
+				i.ious_icon
+				span 白条
 
 div.entrysContent
-	span
+	span.infoMore_title
 		a(href='javascript:;') 话费
 		a(href='javascript:;') 机票
 		a(href='javascript:;') 电影票
 		a(href='javascript:;') 游戏
 	div
-		span
+		span.infoMore_title
 			a(href='javascript:;') 话费充值
 			a(href='javascript:;') 流量充值
 			a(href='javascript:;') 套餐变更
@@ -67,7 +95,7 @@ div.entrysContent
 		div 全国快速充值号码
 		div 支持部分地区移动月费138元500分钟1G流量办理变更4G套餐办理
 	div
-		span
+		span.infoMore_title
 			a(href='javascript:;') 国内机票 
 			a(href='javascript:;') 国际/港澳台
 			a(href='javascript:;') 特惠活动
@@ -75,13 +103,13 @@ div.entrysContent
 		div 单程往返出发城市到达日期出发机票查询
 		div 当季特惠机票
 	div
-		span
+		span.infoMore_title
 			a(href='javascript:;') 正在热映
 			a(href='javascript:;') 即将上映
 		div 选座购票张学友泉州演唱会
 		div 立即预定
 	div
-		span
+		span.infoMore_title
 			a(href='javascript:;') 游戏点卡
 			a(href='javascript:;') QQ
 			a(href='javascript:;') 页游

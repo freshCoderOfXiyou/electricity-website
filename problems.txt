@@ -2,3 +2,4 @@
 1.在单击sidebar以外的地方不能关闭sidebar只能通过单击关闭按钮
 2.sidebar的弹出提示没有动画效果，试因为高度的混乱导致的，必须要搞明白
 3.css的作用域如何解决
+4.jade不能加载css中background-image
