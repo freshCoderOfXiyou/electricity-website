@@ -5,6 +5,6 @@
 	// var $telCharge=$('.telCharge_icon')
 	// $telCharge.css('background-image',$img)
 	$('.telCharge_icon').hover(function () {
-		this.css('background','red')
+		alert("adsf")
 	})
 })()

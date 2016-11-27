@@ -1,3 +1,8 @@
+.hidenDiv{
+	overflow: hidden;
+	width: 100%;
+	height: 415px;
+}
 .personInfo{
 	width: 95%;
 	margin: 10px auto 0px;
@@ -84,44 +89,28 @@
 	background: blue;
 	/* display: inline-block; */
 }
+.entrys{
+	height: 10px;
+	transition: height 0.1s ease-in-out;
+
+}
 .entrys ul li {
 	float: left;
 	width: 25%;
 	height: 70px;
-	background: yellow;
+	/* background: yellow; */
 }
 	.entrys ul li i{
 		width: 100%;
 		height: 30px;
-		display: inline;
+		display: inline-block;
+		background-color: yellow;
 		/* background-image: url('./images/sprite.png'); */
 		/* background-repeat: no-repeat; */
 	}
-	.entrys ul li span{
+	.entrys ul li span:hover{
+		color: red;
+	}
+	.entrysContent div{
 		background: red;
 	}
-		.planeTicket_icon{
-			background-position: 10px 10px;
-		}.telCharge_icon{
-			background-position: 10px 10px;
-		}.filmTicket_icon{
-			background-position: 10px 10px;
-		}.game_icon{
-			background-position: 10px 10px;
-		}.corporationBuy_icon{
-			background-position: 10px 10px;
-		}.gasFillingCard_icon{
-			background-position: 10px 10px;
-		}.hotel_icon{
-			background-position: 10px 10px;
-		}.trainTicket_icon{
-			background-position: 10px 10px;
-		}.crowdFunding_icon{
-			background-position: 10px 10px;
-		}.financial_icon{
-			background-position: 10px 10px;
-		}.ious_icon{
-			background-position: 10px 10px;
-		}.present_icon{
-			background-position: 10px 10px;
-		}
