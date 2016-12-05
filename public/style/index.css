@@ -1,3 +1,10 @@
+.interval{
+	width: 1240px;
+	margin: 10px auto;
+}
+	.interval a img{
+		width: 1220px;
+	}
 .indexBanner{
 	/* background:  #FD3525; */
 	height: 500px;
@@ -346,6 +353,7 @@
 			}	
 				.title{
 					font-size: 18px;
+					margin-top: 10px;
 				}
 				#first-Floor .floor-content .grid .subTitle{
 					color: #F7A945;
@@ -441,8 +449,8 @@
 						right: 0;
 					}
 	.flagship{
-		width: 1240px;
-		height: 1100px;
+		width: 1250px;
+		height: 770px;
 		/* background: red; */
 		margin: 20px auto;
 	}
@@ -458,11 +466,21 @@
 			font-size: 14px;
 		}
 		.singleFlagship{
-			width: 612px;
+			width: 617px;
+			height: 355px;
 			float: left;
+			/* box-sizing: border-box; */
+			/* background: pink; */
+			margin-bottom: 1px;
+			margin-right: 1px;
+			border: 1px solid white;
 		}
 		.singleFlagship:hover{
 			border: 1px solid red;
+			/* box-sizing: border-box; */
+			/* width: 615px;
+			height: 353px; */
+			/* width: 611px; */
 		}
 			.heading{
 				width: 100%;
@@ -494,14 +512,10 @@
 					display: inline-block;
 				} */
 					.shopmeta{
-						/* display: inline-block; */
-						/* padding-top: 15px; */
-						/* background-color: yellow; */
 						height: 50px;
-						/* margin-top: 10px; */
-						width: 120px;
+						width: 200px;
+						text-overflow: ellipsis;
 						float: left;
-						/* padding-top: 20px; */
 					}
 						.shopmeta a{
 							font-size: 16px;
@@ -525,9 +539,13 @@
 					display: inline-block;
 					width: 200px;
 					margin: 10px 0px;
+					/* background: green; */
+					
+					transition: opacity 1s ease-in;
 				}
 				.shop-item:hover .poster{
-					opacity: .8;
+					opacity: .7;
+					transition: opacity 0.3s ease-in;
 				}
 				.shop-items li:first-child{
 					margin-left: 10px;
@@ -554,3 +572,132 @@
 							font-weight: 600;
 							line-height: 30px;
 						}
+	.guess{
+		width: 1230px;
+		/* height: 10px; */
+		/* background: red; */
+		margin: 0 auto;
+		/* overflow: hidden; */
+		/* clear: both; */
+	}
+	.cf{
+		clear: both;
+	}
+	.guess a{
+		color: black;
+	}
+	.guess a:hover{
+		text-decoration: none;
+	}
+		.guess-head{
+			margin: 0 auto;
+			/* background: yellow; */
+			width: 100px;
+			position: relative;
+		}
+			.guess-head h2{
+				font-size: 18px;
+				/* display: inline-block; */
+				color: #444;
+				/* margin-left: 10px; */
+			}
+			.guess-head span{
+				font-size: 20px;
+				color: red;
+				margin-right: 8px;
+				vertical-align: middle;
+			}
+			.guess-head em{
+				vertical-align: middle;
+			}
+
+			.dash{
+				height: 1px;
+				width: 30px;
+				background: gray;
+				position: absolute;
+				top: 12px;
+				/* left: 0; */
+			}
+			.dash-left{
+				left: -38px;
+			}
+			.dash-right{
+				right: -42px;
+			}
+		.guess-content{
+			width: 100%;
+		}
+			.guess-goods{
+				width: 232px;
+				height: 326px;
+				margin-right: 12px;
+				margin-bottom: 7px;
+				/* display: block; */
+				float: left;
+				border: 1px solid white;
+				padding: 2px;
+			}
+			.guess-goods:hover{
+				border: 1px solid red;
+			}
+				.guess-goods-link{
+					display: block;
+					width: 235px;
+				}
+				.guess-content .guess-goods img{
+					width: 226px;
+					margin-bottom: 10px;
+				}
+					.guess-content .guess-goods img:hover{
+						opacity: 0.7;
+						transition: opacity 0.3s ease-out;
+					}
+				.item-desc{
+					color: gray;
+					font-size: 13px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					width: 215px;
+					height: 34px;
+					line-height: 17px;
+					margin: 10px;
+					display: block;
+				}
+				.item-price{
+					color: red;
+					display: block;
+					font-size: 16px;
+					margin-left: 10px;
+				}
+					.item-price .price-decimal{
+						font-size: 12px;
+					}
+	.floor-gide{
+		position: fixed;
+		left: 115px;
+		bottom: 50px;
+		width: 37px;
+
+	}
+		.floor-gide div{
+			width: 36px;
+			height: 36px;
+			margin-bottom: 2px;
+			background: #626262;
+			color: white;
+			text-align: center;
+			line-height: 14px;
+			/* padding-top: 3px; */
+			padding: 5px 5px 0px;
+			cursor: pointer;
+			vertical-align: middle;
+			font-size: 12px;
+			/* display: table-cell; */
+		}
+			#nav{
+				background: red;
+			}
+			#toTop{
+				background: #ABABAB;
+			}
