@@ -14,6 +14,10 @@ html
 		include ../includes/sidebar.jade
 		include ../includes/header.jade
 		include ../includes/nav.jade
+		div.fixSearchBox#fixBox
+			form(ation='#{router}' method='post')
+					input(type='text' placeholder='#{searchWord}').inputText
+					input(type='submit' value='搜索' ).inputSummit
 		div.indexBanner
 			div.middle
 				include ../includes/banner.jade
@@ -249,6 +253,10 @@ html
 						div.img-con
 							div.img-mask
 							img(src='./images/1.webp')
+
+		div.interval
+			a(href="javascript:;")
+				img(src='./images/index/jiange/jiange3.jpg')
 		div#first-Floor.floor
 			div.floor-icon
 			h4.floor-name 亲子时光 
@@ -352,6 +360,9 @@ html
 								div.title=aaa.title
 								div.subTitle=aaa.subtitle
 								img(src='#{aaa.imgsrc}')
+		div.interval
+			a(href="javascript:;")
+				img(src='./images/index/jiange/jiange5.jpg')
 		div.flagship
 			h4 品牌旗舰店 
 				span.sm-font FLAGSHIP
@@ -374,7 +385,39 @@ html
 										div.meta
 											div.meta-title=flagGood.title
 											div.price=flagGood.price 
+		div.interval
+			a(href="javascript:;")
+				img(src='./images/index/jiange/jiange1.jpg')
+		div.guess
+			div.guess-head
+				h2
+					span.dash.dash-left
+					span.glyphicon.glyphicon-heart-empty.txt-icon
+					em 猜你喜欢
+					span.dash.dash-right
+			div.guess-content
+				ul.guess-list
+					each wonder in wonderful
+						li.guess-goods
+							a(href='javascript:;').guess-goods-link 
+								img(src='#{wonder.imgsrc}')
+								em.item-desc=wonder.desc
+								span.item-price ￥
+									span.price-inter=wonder.inter
+									span.price-decimal=wonder.decimal
+					div.cf
 		include ../includes/footer.jade
+		div.floor-gide
+			div#nav 导航
+			div 亲子时光
+			div 户外出行
+			div 打造爱巢
+			div 家居生活
+			div 潮店酷玩
+			div 美丽人生
+			div 品牌旗舰
+			div 猜你喜欢
+			div#toTop 顶部
 	script(src='./bower_components/jquery/dist/jquery.min.js')
 	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 	script(src='./script/common.js' type='text/javascript')

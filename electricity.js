@@ -401,8 +401,137 @@ app.get('/' , function(req,res){
 						},
 					]
 			}//a single flagship
-		]//end flagships
+		],//end flagships
+		wonderful:[
+			{
+				imgsrc:'./images/index/guess/guess-diai.jpg',
+				desc:'[热销]DILOVE蒂爱进口永生花礼盒玻璃罩蓝色妖姬玫瑰花鲜花全国速递顺丰',
+				inter:'138',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-chabei.jpg',
+				desc:'希诺双层玻璃杯带手柄商务办公室泡茶杯过滤网透明水晶杯子',
+				inter:'148',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-dianzi.jpg',
+				desc:'可优比婴儿爬行垫环保xpe爬爬垫加厚泡沫儿童地垫宝宝游戏垫家用',
+				inter:'197',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-diaodeng.jpg',
+				desc:'客厅欧式吊灯全铜灯具复古美式铜灯乡村大气简约餐厅卧室灯灯饰',
+				inter:'480',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-kailiou.jpg',
+				desc:'KEIKO/凯莉欧原创2016冬装新款韩版宽松毛领过膝长款加厚连帽棉衣',
+				inter:'538',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-kk.jpg',
+				desc:'韩国kk树儿童雨鞋雨衣套装宝宝雨靴男童女童雨鞋防滑小孩水鞋夏季',
+				inter:'117',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-lutou.jpg',
+				desc:'美式复古实木照片墙欧式客厅卧室创意鹿头挂墙个性相框背景墙组合',
+				inter:'228',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-luyinbi.jpg',
+				desc:'[热销]JNN S6新款手表录音笔 专业运动手环微型防窃听高清远距降噪MP3器',
+				inter:'158',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-mianfu.jpg',
+				desc:'[热销]新品大促 秋冬装棉衣男长款加厚 情侣棉衣外套潮 青年男棉服',
+				inter:'138',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-zhongguojie.jpg',
+				desc:'[热销]一红中国结壁钟时尚装饰钟表挂钟客厅创意现代石英钟大号时钟静音',
+				inter:'138',
+				decimal:'.00'
+			},
+			{
+				imgsrc:'./images/index/guess/guess-diai.jpg',
+				desc:'[热销]DILOVE蒂爱进口永生花礼盒玻璃罩蓝色妖姬玫瑰花鲜花全国速递顺丰',
+				inter:'138',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-chabei.jpg',
+				desc:'希诺双层玻璃杯带手柄商务办公室泡茶杯过滤网透明水晶杯子',
+				inter:'148',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-dianzi.jpg',
+				desc:'可优比婴儿爬行垫环保xpe爬爬垫加厚泡沫儿童地垫宝宝游戏垫家用',
+				inter:'197',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-diaodeng.jpg',
+				desc:'客厅欧式吊灯全铜灯具复古美式铜灯乡村大气简约餐厅卧室灯灯饰',
+				inter:'480',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-kailiou.jpg',
+				desc:'KEIKO/凯莉欧原创2016冬装新款韩版宽松毛领过膝长款加厚连帽棉衣',
+				inter:'538',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-kk.jpg',
+				desc:'韩国kk树儿童雨鞋雨衣套装宝宝雨靴男童女童雨鞋防滑小孩水鞋夏季',
+				inter:'117',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-lutou.jpg',
+				desc:'美式复古实木照片墙欧式客厅卧室创意鹿头挂墙个性相框背景墙组合',
+				inter:'228',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-luyinbi.jpg',
+				desc:'[热销]JNN S6新款手表录音笔 专业运动手环微型防窃听高清远距降噪MP3器',
+				inter:'158',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-mianfu.jpg',
+				desc:'[热销]新品大促 秋冬装棉衣男长款加厚 情侣棉衣外套潮 青年男棉服',
+				inter:'138',
+				decimal:'.00'
+			},//a single wonder
+			{
+				imgsrc:'./images/index/guess/guess-zhongguojie.jpg',
+				desc:'[热销]一红中国结壁钟时尚装饰钟表挂钟客厅创意现代石英钟大号时钟静音',
+				inter:'138',
+				decimal:'.00'
+			}
+		]//end wonderful
 	})//end render function
+})
+app.get('/detail',function (req,res) {
+	res.render('details',{
+		title:'detail',
+		searchWord:'箱包名品任你挑',
+		recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+	})
 })
 app.listen(app.get('port'),function(){
 	console.log("Express started on http://localhost:"+app.get('port')+";press Ctrl-c to continue")

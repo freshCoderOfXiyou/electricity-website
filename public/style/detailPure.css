@@ -1,6 +1,233 @@
 .detail{
 	width: 1190px;
-	height: 100px;
+	/* height: 100px; */
 	margin: 20px auto;
 	border: 1px dotted red;
+	overflow: hidden;
 }
+.detail a{
+	color: black;
+}
+.detail a:hover{
+	text-decoration: none;
+}
+	.detail-img{
+		width: 460px;
+		float: left;
+		
+		position: relative;
+		/* background: pink; */
+	}	
+		.manifyImg{
+			width: 416px;
+			height: 416px;
+			z-index: 10;
+			position: absolute;
+			top: 10px;
+			right: -415px;
+			/* border: 1px solid black; */
+			overflow: hidden;
+			display: none;
+		}
+			.manifyImg img{
+				width: 832px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		.detail-img-main{
+			display: block;
+			width: 418px;
+			margin: 10px auto 0px;
+			position: relative;
+			/* border: 1px solid black; */
+			cursor: move;
+		}	
+			#imgLoc{
+				width: 218px;
+				height: 218px;
+				background: skyblue;
+				opacity: .5;
+				border: #aaa 1px solid;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				display: none;
+			}
+			.detail-img-main img{
+				width: 100%;
+			}
+		.detail-img-list{
+			margin-top: 20px;
+			margin-left: 20px;
+			width: 440px;
+			height: 60px;
+		}
+			.detail-img-list>li{
+				float: left;
+				margin-left: 10px;
+				border: 2px solid white;
+			}
+			.detail-img-list>li:hover{
+				border: 2px solid black;
+			}
+			.detail-img-list>li>a{
+				width: 60px;
+				display: block;
+			}
+			.detail-img-list>li>a>img{
+				width: 100%;
+			}
+		.detail-share{
+			color: gray;
+			margin-top: 20px;
+			margin-left: 20px;
+			font-size: 13px;
+		}
+			.detail-share>a>span{
+				color: gray;
+				font-size: 13px;
+				margin-left: 5px;
+			}
+			.detail-share>a{
+				margin-left: 20px;
+			}
+			.detail-share>span{
+				float: right;
+				margin-right: 40px;
+			}
+	.detail-content{
+		width: 500px;
+		float: left;
+		/* background: skyblue; */
+	}
+		.decon-title{
+
+		}
+			.decon-title h1{
+				font-size: 16px;
+				margin: 0;
+				font-weight: 600;
+				margin-bottom: 5px;
+				margin-left: 10px;
+			}
+			.decon-title>span{
+				color: red;
+				margin-left: 10px;
+				margin-bottom: 30px;
+				display: block;
+			}
+			.price-panel{
+				color: #c40000;
+				font-size: 24px;
+				font-weight: 600;
+			}
+			.carriage span{
+				font-size: 12px;
+				margin-right: 10px;
+			}
+			.activity-panel dd{
+				font-size: 12px;
+			}
+			.detail-desc{
+				border-bottom: 1px dotted gray;
+				border-top:  1px dotted gray;
+				margin: 20px 0px;
+			}	
+				.inter-span{
+					width: 1px;
+					height: 100%;
+					background: gray;
+					/* display: inline-block; */
+				}
+				.detail-desc div{
+					text-align: center;
+
+				}
+				.detail-desc div dt{
+					margin-right: 0;
+				}
+				.detail-desc>div dd{
+					/* background: red; */
+					width: 120px;
+				}
+				.detail-desc dd{
+					color: #c40000;
+				}
+				.detail-desc dd span:first-child{
+					color: #280;
+				}
+				.detail-desc dd span:nth-child(2n){
+					color: gray;
+				}
+			.panel{
+				/* height: 35px; */
+				margin: 0;
+				margin-bottom: 2px;
+				overflow: hidden;
+				/* overflow: hidden; */
+			}
+			.panel dd {
+				line-height: 30px;
+				/* background: yellow; */
+				/* float: left; */
+				/* height: 100%; */
+			}
+			.panel dt{
+				font-size: 12px;
+				color: gray;
+				float: left;
+				line-height: 30px;
+				margin: 0px 10px;
+				width: 60px;
+				/* background: green; */
+				/* text-align: center; */
+				/* float: left; */
+			}
+			.detail-chioce .panel dd{
+				float: left;
+				/* height: 35px; */
+				display: table-cell;
+				overflow: hidden;
+				width: 400px;
+			}
+			.panel dd ul li{
+				float: left;
+				margin-right: 10px;
+				height: 35px;
+				margin-bottom: 5px;
+			}
+	.selec{
+		border: 1px solid gray;	
+		/* box-shadow: 0 0 0 2px gray; */
+		/* outline: 1px solid gray; */
+		box-sizing: border-box;
+		padding: 0 8px ;
+		font-size: 12px;
+		color: black;
+		font-weight: 600;
+		cursor: pointer;
+		position: relative;
+
+	}
+	.btn-select{
+		border: 2px solid #c40000;
+	}	
+	.has-select{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		background-image: url(./detail.png);
+		width: 12px;
+		height: 12px;
+		background-position: -65px -0px;
+	}
+				.detail-desc{
+					width: 500px;
+					overflow: hidden;
+				}
+				.detail-desc div{
+					width: 165px;
+					float: left;
+				}

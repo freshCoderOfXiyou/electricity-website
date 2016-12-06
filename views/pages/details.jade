@@ -13,7 +13,136 @@ html
 		include ../includes/header.jade
 		include ../includes/nav.jade
 		div.detail
+			div.detail-img
+				a(href='javascript:;').detail-img-main#imgMainWrap
+					img(src='./images/detail/one-plus/main.jpg')#imgMain
+					div#imgLoc
+				div.manifyImg
+					img(src='./images/detail/one-plus/main.jpg')
+				ul.detail-img-list
+					li
+						a(href='javascript:;')
+							img(src='./images/detail/one-plus/main.jpg')
+					li
+						a(href='javascript:;')
+							img(src='./images/detail/one-plus/side.jpg')
+					li
+						a(href='javascript:;')
+							img(src='./images/detail/one-plus/black-back.jpg')
+				p.detail-share
+					a(href='javascript:;')
+						span.glyphicon.glyphicon-send
+						span 分享
+					a(href='javascript:;')
+						span.glyphicon.glyphicon-star
+						span 收藏商品
+						span（66488人气）
+					span 举报
+			div.detail-content
+				div.decon-title
+					h1 
+						a(href='javascript:;') OnePlus/一加 A3000 一加手机3 一加3t
+					span 骁龙820 6G运存 64G存储 限量现货
+					dl.price-panel.panel
+						dt 价格
+						dd ￥2699.00
+					dl.carriage.panel
+						dt 运费
+						dd 
+							span 山东济南
+							span 至
+							span 西安
+							span 未央区 三桥街道
+					dl.activity-panel.panel
+						dt 活动
+						dd 购物满1000包邮
+				div.detail-desc
+					div.detail-sales
+						dl.panel
+							dt 月销量
+							dd 103
+					span.inter-span
+					div(href='javascript:;').detail-evaluation
+						a
+							dl.panel
+								dt 累计评价
+								dd 3273 
+					span.inter-span
+					div.detail-intergal
+						a(href='javascript:;')
+							dl.panel
+								dt 送天猫积分
+								dd 
+									span 269
+									span 起
+				div.detail-chioce
+					dl.panel
+						dt 版本
+						dd 
+							ul
+								li.selec A3010
+								li.selec A3000
+								li.selec 3T
+					dl.panel
+						dt 机身颜色
+						dd
+							ul
+								li.selec 冰川灰
+								li.selec 薄荷金
+					dl.panel
+						dt 套餐类型
+						dd
+							ul
+								li.selec 官方套餐
+								li.selec 套餐一
+								li.selec 套餐二
+								li.selec 套餐三
+								li.selec 套餐四
+								li.selec 套餐五
+								li.selec 套餐六
+					dl.panel
+						dt 存储容量
+						dd
+							ul
+								li.selec 64GB
+					dl.panel
+						dt 版本类型
+						dd
+							ul
+								li.selec 中国大陆
+					dl.panel
+						dt 数量
+						dd
+							input(type='number' value='件') 
+							span 库存
+							span 123
+							span 
+				div.buy-panel
+					a.buy-btn
+						span 立即购买
+					a.shopcar-btn
+						span 加入购物车
+				div.detail-chioce
+					dl
+						dt 服务承诺     
+						dd 
+							ul
+								li 
+									a 全国联保
+								li 
+									a 免居正退换货
+								li 
+									a 正品保证
+								li
+									a 急速退款
+								li
+									a 七天无理由
+							div
+								span 支付方式
+								span >
+
 		include ../includes/footer.jade
 	script(src='./bower_components/jquery/dist/jquery.min.js')
 	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 	script(src='./script/common.js' type='text/javascript')
+	script(src='./script/detail.js' type='text/javascript')
