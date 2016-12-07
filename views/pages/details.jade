@@ -33,7 +33,7 @@ html
 					a(href='javascript:;')
 						span.glyphicon.glyphicon-send
 						span 分享
-					a(href='javascript:;')
+					a(href='javascript:;')#collect
 						span.glyphicon.glyphicon-star
 						span 收藏商品
 						span（66488人气）
@@ -112,18 +112,19 @@ html
 								li.selec 中国大陆
 					dl.panel
 						dt 数量
-						dd
-							input(type='number' value='件') 
+						dd.panel-stroge
+							input(type='number' value='1').detail-count
 							span 库存
 							span 123
-							span 
+							span 件
 				div.buy-panel
 					a.buy-btn
 						span 立即购买
 					a.shopcar-btn
+						span.glyphicon.glyphicon-shopping-cart
 						span 加入购物车
 				div.detail-chioce
-					dl
+					dl.serve-commiment
 						dt 服务承诺     
 						dd 
 							ul
@@ -137,10 +138,27 @@ html
 									a 急速退款
 								li
 									a 七天无理由
-							div
-								span 支付方式
-								span >
-
+					div
+						span 支付方式
+						span >
+		div.detail-more
+			div.detail-tap
+				div.detail-tap-head
+					span.detail-tap-selec
+						a(href='#detail-tap-info') 商品详情
+					span
+						a(href='#detail-tap-param') 规格参数
+					span
+						a(href='#detail-tap-advise') 商品推荐
+					span
+						a(href='#detail-tap-service') 商品咨询
+					span
+						a(href='#detail-tap-evaluate') 累计评价
+				div#detail-tap-info
+				div#detail-tap-param
+				div#detail-tap-service
+				div#detail-tap-evaluate
+				div#detail-tap-advise
 		include ../includes/footer.jade
 	script(src='./bower_components/jquery/dist/jquery.min.js')
 	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
