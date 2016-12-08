@@ -1,3 +1,51 @@
+.tap-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background: white;
+	z-index: 11;
+	display: none;
+}	
+	.tap-middle{
+		width: 1190px;
+		margin: 0 auto;
+	}
+		.tap-wrap-null{
+			width: 238px;
+			height: 50px;
+			background: red;
+			float: left;
+		}
+		.tap-middle .detail-tap-head{
+			width: 952px;
+			margin-left: 238px;
+			/* float: left; */
+		}
+			.detail-tap-head a{
+				color: black;
+			}
+			.detail-tap-head span a:hover{
+				text-decoration: none;
+			}
+			.detail-tap-head .detail-tap-selec a{
+				color: #b10000;
+			}
+			.tap-cart{
+				background: #c40000;
+				color: white;
+				float: right;
+				height: 50px;
+				line-height: 50px;
+				font-size: 14px;
+				width: 200px;
+				text-align: center;
+				cursor: pointer;
+				position: relative;
+				/* display: block; */
+			}
+		
 .detail{
 	width: 1190px;
 	/* height: 100px; */
@@ -111,7 +159,7 @@
 				z-index: 100;
 			}
 	.detail-content{
-		width: 500px;
+		width: 720px;
 		float: left;
 		/* background: skyblue; */
 	}
@@ -333,7 +381,7 @@
 		margin: 0px auto;
 		/* border: 1px dotted #c40000; */
 		/* height: 1000px; */
-		/* overflow: hidden; */
+		overflow: hidden;
 	}
 		.detail-more a{
 			color: inherit;
@@ -341,8 +389,27 @@
 		.detail-more a:hover{
 			text-decoration: none;
 		}
+
+
+		/* detail recommand part*/
+		.detail-recommand{
+			width: 20%;
+			height: 800px;
+			background: lightblue;
+			float: left;
+			margin-top: 60px;
+		}
+
+
+
+
+
+
+
+		/* detail tap part */
 		.detail-tap{
-			width: 100%;
+			width: 80%;
+			float: left;
 			/* float: left; */
 			/* height: 240px; */
 			/* background: skyblue; */
@@ -382,6 +449,11 @@
 				.detail-tap-head a{
 					border-right: 1px dotted #d2d2d2;
 					padding: 0 20px;
+					outline: none;
+					color: gray;
+				}
+				.detail-tap-head a:active{
+					text-decoration: none;
 				}
 				.detail-tap-selec a{
 					font-weight: bold;
@@ -389,35 +461,107 @@
 					border-right: 1px solid #cfbfb1;
 					width: 100%;
 					display: block;
+					outline: none;
 				}
 			#detail-tap-info{
 				width: 100%;
-				height: 200px;
+				height: 1000px;
 				margin-top: 10px;
-				background: red;
+				/* background: red; */
+				border: 1px dotted red;
 			}
+				.detail-info-brand>div{
+					font-size: 12px;
+					color: #666;
+					margin-left: 20px;
+					margin-top: 20px;
+				}	
+
+
+					.detail-info-brand>div>a{
+						color: #35a;
+					}
+					.detail-info-brand>div>span{
+						background: #c40000;
+						color: white;
+						display: inline-block;
+						height: 25px;
+						width: 70px;
+						border-radius: 12px/12px;
+						line-height: 25px;
+						text-indent: 15px;
+						letter-spacing: 2px;
+						margin-left: 20px;
+					}
+
+				.detail-info-title{
+					width: 100%;
+					padding: 0 40px 0 20px;
+					/* height: 50px; */
+					overflow: hidden;
+					background: pink;
+				}
+					.detail-info-title p{
+						width: 70px;
+						/* height: 30px; */
+						float: left;
+						color: #666;
+						font-weight: bold;
+					}
+					.detail-info-title a{
+						float: right;
+						color: gray;
+					}
+						.more-icon{
+							background-image: 
+						}
+				.detail-info li{
+					float: left;
+					width: 240px;
+					font-size: 12px;
+					color: #666;
+					height: 18px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+					line-height: 18px;
+					margin-bottom: 5px;
+					margin-left: 20px;
+				}
 			#detail-tap-param{
 				width: 100%;
-				height: 200px;
+				height: 1000px;
 				margin-top: 10px;
-				background: red;
+				/* background: blue; */
+				border: 1px dotted red;
+				display: none;
 			}
 			#detail-tap-evaluate{
 				width: 100%;
-				height: 200px;
+				height: 1000px;
 				margin-top: 10px;
-				background: red;
+				/* background: pink; */
+				border: 1px dotted red;
+				display: none;
 			}
+				.detail-user-header img{
+					width: 50px;
+					border: 1px solid gray;
+					border-radius: 50%;
+				}
 			#detail-tap-service{
 				width: 100%;
-				height: 200px;
+				height: 1000px;
 				margin-top: 10px;
-				background: red;
+				/* background: yellow; */
+				border: 1px dotted red;
+				display: none;
 			}
 			#detail-tap-advise{
-
 				width: 100%;
-				height: 200px;
+				height: 1000px;
 				margin-top: 10px;
-				background: red;
+				/* background: brown; */
+				border: 1px dotted red;
+				display: none;
 			}

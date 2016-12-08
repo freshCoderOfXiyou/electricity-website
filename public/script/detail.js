@@ -92,6 +92,17 @@
 			var $destinaEle=$('.menubarUp .glyphicon-shopping-cart')
 			flyTo($(this),$destinaEle,$imgIcon)
 		})
+
+		$('.tap-cart').click(function (e) {
+			var imgSrc=$('.detail-img-list>li>a>img').get(0).getAttribute('src')
+			var $imgIcon=$('<img>',{
+				id:'cartImg',
+				src:imgSrc
+			})
+			$(this).append($imgIcon)
+			var $destinaEle=$('.menubarUp .glyphicon-shopping-cart')
+			flyTo($(this),$destinaEle,$imgIcon)
+		})
 		//因为收藏功能和加入购物车功能在处理逻辑是很多相同的地方，
 		//所以把飞入效果做成一个function，传入的参数点击元素，新元素以及目标元素
 		function flyTo(sourceEle,destinaEle,newEle) {
@@ -104,13 +115,17 @@
 			var disY=destinationY-sourceY
 			var speedX=disX/100
 			var speedY=0
+			var accerY=0
 			if (disY>0) {
 				speedY=15
+				accerY=(disY-speedY*100)*2/10000
 			}
 			else{
 				speedY=-15
+				accerY=(disY-speedY*100)*2/10000
 			}
-			var accerY=(disY+15*100)*2/10000
+			// accerY=(disY+15*100)*2/10000
+			// console.log('dis',disY,'speed',speedY,'accerY',accerY)
 			var nowX=0
 			var nowY=0
 			var timer=window.setInterval(function(){
@@ -143,8 +158,85 @@
 			// $node.css('',)
 		}
 
+
+		//scroll event
+		window.addEventListener('scroll', function () {
+				var stop=document.documentElement.scrollTop || document.body.scrollTop
+				if(stop>1040){
+					// $('.tap-wrap').addClass('fixSearchBoxShow')
+					$('.tap-wrap').css('display','block')
+				}
+				else{
+					// $fixsearch.removeClass('fixSearchBoxShow')
+					$('.tap-wrap').css("display",'none')
+				}
+				
+			}, false)
+		var $oldEle=$('#detail-tap-info')
+		var $oldBtn=$(".detail-btn-info")
+		$('.detail-tap-head').click(function (e) {
+			// debugger
+			console.log(e.target.className)
+			switch (e.target.className) {
+				case 'detail-btn-info':
+					
+					$oldEle.css("display",'none')
+					$('#detail-tap-info').css('display','block')
+					$oldEle=$('#detail-tap-info')
+					
+					$oldBtn.parent().removeClass('detail-tap-selec')
+					$(".detail-btn-info").parent().addClass('detail-tap-selec')
+					$oldBtn=$(".detail-btn-info")
+					break;
+				case 'detail-btn-param':
+					
+					$oldEle.css("display",'none')
+					$('#detail-tap-param').css('display','block')
+					$oldEle=$('#detail-tap-param')
+					
+					$oldBtn.parent().removeClass('detail-tap-selec')
+					$(".detail-btn-param").parent().addClass('detail-tap-selec')
+					$oldBtn=$(".detail-btn-param")
+					break;
+				case 'detail-btn-advise':
+					
+					$oldEle.css("display",'none')
+					$('#detail-tap-advise').css('display','block')
+					$oldEle=$('#detail-tap-advise')
+					
+					$oldBtn.parent().removeClass('detail-tap-selec')
+					$(".detail-btn-advise").parent().addClass('detail-tap-selec')
+					$oldBtn=$(".detail-btn-advise")
+					break;
+				case 'detail-btn-service':
+					
+					$oldEle.css("display",'none')
+					$('#detail-tap-service').css('display','block')
+					$oldEle=$('#detail-tap-service')
+					
+					$oldBtn.parent().removeClass('detail-tap-selec')
+					$(".detail-btn-service").parent().addClass('detail-tap-selec')
+					$oldBtn=$(".detail-btn-service")
+					break;
+				case 'detail-btn-evaluate':
+					
+					$oldEle.css("display",'none')
+					$('#detail-tap-evaluate').css('display','block')
+					$oldEle=$('#detail-tap-evaluate')
+					
+					$oldBtn.parent().removeClass('detail-tap-selec')
+					$(".detail-btn-evaluate").parent().addClass('detail-tap-selec')
+					$oldBtn=$(".detail-btn-evaluate")
+					break;
+				default:
+					
+					break;
+			}
+		})
 		// $('.buy-btn').click(function () {
 		// 	popup('gray','100px','100px','','',$(this))
 		// })
+
+		
 	}//end onload
 })()
