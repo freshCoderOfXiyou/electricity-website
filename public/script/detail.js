@@ -232,6 +232,18 @@
 					
 					break;
 			}
+
+			if (document.documentElement.scrollTop) {
+				if (document.documentElement.scrollTop>1040) {
+					document.documentElement.scrollTop=1041
+				}			
+			}
+			else{
+				if (document.body.scrollTop>1040) {
+					document.body.scrollTop=1041
+				}	
+				
+			}
 		})
 		// $('.buy-btn').click(function () {
 		// 	popup('gray','100px','100px','','',$(this))

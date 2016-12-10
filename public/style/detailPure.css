@@ -50,7 +50,7 @@
 	width: 1190px;
 	/* height: 100px; */
 	margin: 20px auto;
-	border: 1px dotted red;
+	/* border: 1px dotted red; */
 	/* overflow: hidden; */
 	height: 800px;
 }
@@ -395,9 +395,9 @@
 		.detail-recommand{
 			width: 20%;
 			height: 800px;
-			background: lightblue;
+			/* background: lightblue; */
 			float: left;
-			margin-top: 60px;
+			/* margin-top: 60px; */
 		}
 
 
@@ -463,20 +463,36 @@
 					display: block;
 					outline: none;
 				}
+
+
+
+			/* detail info */
 			#detail-tap-info{
-				width: 100%;
-				height: 1000px;
-				margin-top: 10px;
-				/* background: red; */
-				border: 1px dotted red;
+				display: none;
 			}
+
+			.detail-tap-info{
+				width:100% ;
+				/* border: 1px dotted red; */
+				overflow: hidden;
+				border: 1px solid #ddd;
+				margin: 10px 0px ;
+				padding: 10px;
+			}
+				.detail-tapInfo-imgWrap{
+					width: 100%;
+				}
+					.detail-tapInfo-imgWrap img{
+						width: 100%;
+					}
+
 				.detail-info-brand>div{
 					font-size: 12px;
 					color: #666;
 					margin-left: 20px;
 					margin-top: 20px;
 				}	
-
+			
 
 					.detail-info-brand>div>a{
 						color: #35a;
@@ -499,7 +515,7 @@
 					padding: 0 40px 0 20px;
 					/* height: 50px; */
 					overflow: hidden;
-					background: pink;
+					/* background: pink; */
 				}
 					.detail-info-title p{
 						width: 70px;
@@ -528,40 +544,445 @@
 					margin-bottom: 5px;
 					margin-left: 20px;
 				}
+
+			/*param */
 			#detail-tap-param{
-				width: 100%;
-				height: 1000px;
-				margin-top: 10px;
+				
+				/* height: 1000px; */
+				/* margin-top: 10px; */
 				/* background: blue; */
-				border: 1px dotted red;
+				/* border: 1px dotted red; */
 				display: none;
 			}
-			#detail-tap-evaluate{
+			.detail-tap-param{
 				width: 100%;
-				height: 1000px;
-				margin-top: 10px;
-				/* background: pink; */
-				border: 1px dotted red;
-				display: none;
 			}
-				.detail-user-header img{
-					width: 50px;
-					border: 1px solid gray;
-					border-radius: 50%;
+				.detail-tap-param table {
+					/* margin-left: 20px; */
+					/* margin-top: 20px; */
+					width: 100%;
+					border: 1px solid #CCC;
+					display: table;
+					/* border-collapse: separate; */
 				}
-			#detail-tap-service{
+
+				.detail-tap-param table tr {
+					height: 30px;
+					line-height: 30px;
+					padding-left: 20px;
+					/* display: table-row; */
+					/* width: 900px; */
+				}	
+					.detail-tap-param>table>thead>tr {
+						/* border: 1px solid red; */
+						width: 100%;
+						height: 40px;
+						font-size: 14px;
+						
+						line-height: 40px;
+						/* background: red; */
+					}
+					.detail-tap-param table thead tr th{
+						/* font-size: 16px; */
+						font-weight: bold;
+						color: #666;
+						padding-left: 20px;
+						/* width: 100%; */
+						
+						/* width: 100%; */
+
+					}
+					.detail-tapParam-subTitle{
+					
+					}
+					.detail-tapParam-content{
+						/* width: 100%; */
+						/* background: lightsalmon; */
+					}
+						.detail-tapParam-subTitle{
+							/* width: 900px; */
+							/* border-top: 1px solid #333; */
+							/* background: red; */
+							border-top: 1px solid #ccc;
+							font-size: 12px;
+						}
+						.detail-tapParam-subTitle td{
+							font-weight: bold;
+							padding-left: 20px;
+							/* background: pink; */
+							/* width: 900px; */
+							/* width: 100%; */
+						}
+						.detail-tap-param .detail-tapParam-content td:first-child{
+							/* width: 150px; */
+							text-align: right;
+							padding-right: 20px;
+							font-size: 12px;
+							color: #666;
+							/* background: lightyellow; */
+							/* background: red; */
+						}
+						.detail-tapParam-content td:last-child{
+							/* width: 750px; */
+							font-size: 12px;
+							/* background: lightgreen; */
+							/* color: ; */
+						}
+			#detail-tap-evaluate{
+				/* display: none; */
+			}
+
+			.detail-tap-evaluate{
 				width: 100%;
-				height: 1000px;
-				margin-top: 10px;
+				/* height: 1000px; */
+				/* margin-top: 10px; */
+				/* background: pink; */
+				/* border: 1px dotted red; */
+				/* display: none; */
+				font-size: 12px;
+			}
+				.detail-rate-header{
+					width: 100%;
+					padding: 15px;
+					border: 1px solid #aaa;
+					overflow: hidden;
+				}
+					.detail-tapEva-score{
+						width: 13%;
+						float: left;
+						text-align: center;
+						border-right: 1px dotted #ccc;
+					}
+						.detail-tapEva-title {
+							
+						}
+						.detail-tapEva-number{
+							font-size: 32px;
+							font-weight: bold;
+							color: #f60;
+							display: block;
+						}
+						.detail-tapEva-score span:last-child{
+							position: relative;
+							background: url('./style-icon/detail-rate.png');
+							width: 60px;
+							height: 10px;
+							display: block;
+							background-position: 0 -27px;
+							margin: 0 auto;
+						}
+							.detail-tapEva-score span em{
+								position: absolute;
+								background: url('./style-icon/detail-rate.png');
+								width: 60px;
+								height: 10px;
+								display: block;
+								background: 0 -15px;
+							}
+					.detail-tapEva-listTitle {
+						width: 2%;
+						float: left;
+						color: #aaa;
+						margin:5px 20px;
+						font-size: 12px;
+						line-height: 12px;
+					}
+					.detail-tapEva-list{
+						width: 75%;
+						float: left;
+					}
+						.detail-tapEva-list li{
+							float: left;
+							padding:2px 5px;
+							display: inline-block;
+							/* height:  */
+							margin-right: 10px;
+							margin-bottom: 10px;
+							cursor: pointer;
+							position: relative;
+						}
+							.detail-tapEva-list li i{
+								position: absolute;
+								bottom: -7px;
+								right: -9px;
+								width: 14px;
+								height: 12px;
+								/* background: pink; */
+								background: url('./style-icon/list-checked.png') no-repeat 0px 0px;
+							}
+						.detail-tapEva-well{
+							color: #b10000;
+							
+							border: 1px solid #ffd7dd;
+						}
+						.detail-tapEva-bad{
+							color: #409280;
+							border: 1px solid #d3f4e4;
+						}
+					.detail-tapEva-btn{
+						width: 20px;
+						height: 13px;
+						background: url('./style-icon/list-toggle.png') no-repeat;
+						float: left;
+						background-position: 0 -96px;
+						/* -109px */
+						cursor: pointer;
+					}
+				.detail-rate-tool{
+					width: 100%;
+					border: 1px solid #aaa;
+					padding: 5px 10px;
+					height: 35px;
+					vertical-align: middle;	
+
+				}
+					.detail-tapEva-radio{
+						float: left;
+						width: 70%;
+					}
+						.detail-tapEva-radio label{
+							margin:0px 5px 0 2px;
+						}
+					.detail-tapEva-check{
+						float: right;
+						width: 30%;
+					}
+						.detail-tapEva-select{
+							display: inline-block;
+							position: relative;
+							margin-left: 20px;
+						}	
+							.detail-tapEva-select>span{
+								border: 1px solid #ccc;
+								display: inline-block;
+								padding: 3px 10px;
+								/* margin-right: 20px; */
+
+							}
+							.detail-tapEva-select>span>span:first-child{
+								margin-right: 10px;
+							}
+							.detail-tapEva-options{
+									position: absolute;
+									top: 25px;
+									left: 0;
+									z-index: 1;
+									border: 1px solid #ccc;
+									width: 80px;
+									background: white;
+									height: 40px;
+									line-height: 20px;
+									text-indent: 10px;
+							}
+							.detail-tapEva-options li:hover{
+								background: #aaa;
+							}
+
+
+
+				.detail-rate-single{
+					border-bottom: 1px solid #aaa;
+				}
+					.detail-rate-content table{
+						table-layout: fixed;
+					}
+					.detail-rate-content>table>tbody{
+						display: table-row-group;
+					}
+					.detail-rate-single{
+						display: table-row;
+					}
+					.detail-rate-single td{
+						/* border: 1px solid red; */
+					}
+						.detail-user-header{
+							width: 20%;
+							/* vertical-align: middle; */
+							padding: 10px 10px;
+							text-align: center;
+						}
+							.detail-user-header p{
+								color: #666;
+							}
+							.detail-user-header img{
+								width: 50px;
+								border: 1px solid #aaa;
+								border-radius: 50%;
+							}
+							.detail-userHead-rate span{
+								color: #b10000;
+							}
+							.detail-userHead-icon{
+								background-image: url('./style-icon/detail-rate.png');
+								width: 100px;
+								height: 10px;
+								display: inline-block;
+								background-position: 0 -15px;
+							}
+						.detail-user-master{
+							width: 60%;
+						}
+							.detail-user-primery{
+								margin-top: 10px;
+								position: relative;
+								padding-left: 105px;
+								padding-right: 50px;
+							}
+								.detail-userPri-title{
+									/* float: left; */
+									/* width: 20%; */
+									/* height: 50px; */
+									position: absolute;
+									top: 0;
+									left: 10px;
+									color: #666;
+
+								}
+									.detail-userPri-title span:last-child{
+										display: block;
+									}
+							.detail-user-append{
+								margin-top: 10px;
+								position: relative;
+								padding-left: 105px;
+								padding-right: 50px;
+							}
+							.detail-user-reply{
+								margin-top: 10px;
+								padding: 0px 50px 0px 105px;
+							}
+								.detail-userRep-content{
+									
+									color: #AF874D;
+								}
+						.detail-user-meta{
+							width: 20%;
+							vertical-align: middle;
+							padding-left: 20px;
+							color:#aaa;
+
+						}
+							.detail-user-meta dt{
+								font-weight: normal;
+								color: #333;
+								height: 20px;
+								line-height: 20px;
+								float: left;
+								clear: left;
+							}
+							.detail-user-meta dd{
+								float: left;
+							}
+
+				.detail-rate-pages{
+					width: 100%;
+					margin-top: 20px;
+				}
+					.detail-rate-pages ul{
+						float: right;
+					}
+						.detail-rate-pages ul li{
+							border: 1px solid #ccc;
+							display: inline-block;
+							padding: 5px 10px;
+							font-size: 16px;
+
+						}
+						.detail-rate-pages ul li a{
+							color: #2953a6;
+						}
+						.detail-rate-pages .detail-rate-omit{
+							border: none;
+						}
+						.detail-rate-pages .detail-rate-nowpage {
+							color: #aaa;
+						}
+						
+			#detail-tap-service{
+				display: none;
+			}
+			.detail-tap-service{
+				width: 100%;
+				height: 100px;
+				/* margin-top: 10px; */
 				/* background: yellow; */
 				border: 1px dotted red;
-				display: none;
+				/* display: none; */
 			}
 			#detail-tap-advise{
-				width: 100%;
-				height: 1000px;
-				margin-top: 10px;
-				/* background: brown; */
-				border: 1px dotted red;
 				display: none;
+			}
+			.detail-tap-advise{
+				width: 100%;
+				/* height: 1000px; */
+				overflow: hidden;
+				/* margin-top: 10px; */
+				/* background: brown; */
+				/* border: 1px dotted red; */
+				/* display: none; */
+				padding: 40px;
+			}
+				.detail-tapAd-wrap{
+					width: 220px;
+					float: left;
+					margin-right: 40px;
+					margin-bottom: 20px;
+				/* 	margin-top: 40px;
+					margin-left: 20px; */
+				}
+
+					.detail-tapAd-wrap .detail-tapAd-imgWrap img{
+						width: 100%;
+						cursor: pointer;
+					}
+						.detail-tapAd-imgWrap{
+							position: relative;
+						}
+						.detail-tapAd-imgWrap span{
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							color: red;
+							background: black;
+							opacity: 0.65;
+							text-indent: 10px;
+							display: block;
+							height: 30px;
+							line-height: 30px;
+							font-weight: bold;
+						}
+							.detail-advise-roll>div{
+								border-bottom: 1px dashed #aaa;
+								/* width: 90%; */
+								padding:0px 5px;
+							}
+							.detail-advise-roll>div:last-child{
+								border-bottom: 1px solid #aaa;
+							}
+								.detail-adRoll-title{
+									color: #666;
+									font-size: 12px;
+									font-weight: bold;
+									margin-right: 10px;
+									height: 25px;
+									line-height: 25px;
+								}
+								.detail-adRoll-content {
+									color: #aaa;
+									font-weight: normal;
+									font-size: 12px;
+									height:25px;
+									line-height: 25px;
+								}
+			.detail-tap-title{
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				/* font-size: 16px; */
+				text-indent: 20px;
+				font-weight: bold;
+				color: white;
+				background:#8e0101;
+				margin-top: 10px;
 			}

@@ -58,12 +58,12 @@
 			}
 		}, 3000)
 
-		// $(".buttons").bind('click',function () {
-		// 	alert("123")
-		// })
-		// $images.bind('click',function () {
-		// 	alert('456')
-		// })
+		$(".buttons").bind('click',function () {
+			alert("123")
+		})
+		$images.bind('click',function () {
+			alert('456')
+		})
 		// $(".commodityDetail").bind('click',function () {
 		// 	alert('789')
 		// })

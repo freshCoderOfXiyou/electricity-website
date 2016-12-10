@@ -27,7 +27,7 @@
 			//scroll to top
 			$toUpButton.click(function () {
 				var stop=document.documentElement.scrollTop || document.body.scrollTop
-				var SPEED=60
+				var SPEED=stop/30
 				var timer=setInterval(function () {
 						if(document.documentElement.scrollTop){
 							document.documentElement.scrollTop-=SPEED
@@ -40,10 +40,11 @@
 						if(stop==0){
 							clearInterval(timer)
 						}
-						if(SPEED>20){
-							SPEED=SPEED-2
+						if(SPEED>400){
+							console.log(SPEED)
+							SPEED=SPEED/2	
 						}
-					}, 10)
+					}, 1)
 			})
 
 

@@ -1,13 +1,14 @@
 /*banner part css*/
-	.view{
-		/* border: 1px solid black; */
-		width: 867px;
-		height: 500px;
-		margin-left: 217px;
-		position: relative;
-		top: -10px;
-		overflow: hidden;
-	}
+.view{
+	/* border: 1px solid black; */
+	width: 867px;
+	height: 500px;
+	margin-left: 217px;
+	position: absolute;
+	top: 0px;
+	left: -53px;
+	overflow: hidden; 
+}
 	.imagesWrap{
 		/* border: 1px solid black; */
 		width: 6942px;

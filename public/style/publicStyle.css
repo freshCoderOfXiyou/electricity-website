@@ -142,7 +142,7 @@
 	height: 32px;
 }
 	.headerWrapDiv{
-		width: 80%;
+		width: 1190px;
 		margin: 0 auto;
 	}
 		.header ul{
@@ -212,9 +212,14 @@
 					display: inline-block;
 				}
 /*search div style*/
+.searchWrap{
+	width: 1190px;
+	margin: 0 auto;
+
+}
 	.search{
 
-		width: 35.1%;
+		width: 623px;
 		margin: 0 auto;
 		margin-top: 60px;
 		font-size: 14px;
@@ -267,17 +272,20 @@
 	{
 		color: #c40000;
 	}
-	
+
+
+/* footer section	 */
 .footer{
 	border-top: 1px solid #777;
-	
+	width: 100%;
 }
 .footerWrap{
-	width: 60%;
-	margin: 10px 20%;
+	width: 1230px;
+	border-top: 1px solid #777;
+	margin: 0 auto;
 	/* background: blue; */
 	height: 175px;
-	float: left;
+	/* float: left; */
 }	
 	.footer ul{
 		float: left;
@@ -306,6 +314,8 @@
 	transform: translateX(100%);//shit code here
 }
 
+
+/* nav section */
 .navWrap{
 	width: 100%;
 	height: 36px;
@@ -313,8 +323,10 @@
 	position: relative;
 }
 	.navMain{
-		width: 80%;
+		width: 1260px;
 		margin: 0 auto;
+		background: #DD2727;
+		height: 36px;
 	}
 		.navSubLeft  li{
 			/* width: 45%; */
@@ -325,9 +337,10 @@
 		}
 			#commodityClassTitle{
 				background: #C60A0A;
-				padding: 0px 0px;
+				/* padding: 0px 0px; */
 				cursor: pointer;
-				width: 200px;
+				width: 160px;
+				position: relative;
 			}
 			.navSubLeft i{
 				float: left;
@@ -346,7 +359,7 @@
 				font-size: 16px;
 				font-family: "Microsoft YaHei", "SimSun", "宋体", sans-serif;
 				line-height: 36px;
-				margin: 0 17px;
+				margin: 0 17px 0 0;
 			}
 			.navMain a{
 				color: white;
@@ -358,10 +371,10 @@
 	#navDetails{
 		position: absolute;
 		top: 36px;
-		left: 11.1%;
-		width: 65%;
+		left: 0px;
+		/* width:10px; */
 		height: 500px;
-		/* background: lightskyblue; */
+		background: lightskyblue;
 		font-weight: normal;
 		/* font-size: 14px; */
 		display: none;
@@ -371,7 +384,7 @@
 		display: block;
 	}
 		#navDetails .commodityClassfication{
-			width: 200px;
+			width: 160px;
 			height: 502px;
 			background: #ddd;
 		}
@@ -398,12 +411,12 @@
 			}
 		    
 		#navDetails .commodityDetail{
-			width: 100%;
+			width: 1000px;
 			height: 500px;
 			/* background: green; */
 			position: absolute;
 			top: 0;
-			left: 200px;
+			left: 160px;
 			background: white;	
 			display: none;
 		}

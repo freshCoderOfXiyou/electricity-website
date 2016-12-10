@@ -678,7 +678,7 @@
 		left: 115px;
 		bottom: 50px;
 		width: 37px;
-
+		z-index: 12;
 	}
 		.floor-gide div{
 			width: 36px;
