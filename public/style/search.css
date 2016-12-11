@@ -1,0 +1,170 @@
+/* @search page style */
+.search-main{
+	width: 1230px;
+	margin:0 auto;
+	/* height: 100px; */
+	/* background: red; */
+	border: 1px dotted red;
+}	
+	.search-main a{
+		color: black;
+	}
+	.search-main a:hover{
+		color: black;
+		text-decoration: none;
+	}
+	.search-breadnav{
+		width: 100%;
+		height: 30px;
+		/* background: pink; */
+		margin-top: 10px;
+	}
+		.search-breadnav span{
+				font-size: 12px;
+				margin: 3px;
+		}
+		.search-breadnav span:nth-child(2n){
+			color: #999;
+		}
+		.search-breadnav span:nth-child(5){
+			color: red;
+		}
+		.search-breadnav span:nth-child(3){
+			margin-right: 10px;
+		}
+	.search-conditions{
+		width: 100%;
+	}
+		.search-conditons-content{
+			width: 100%;
+			overflow: hidden;
+		}
+			.search-condition-subtitle{
+				width: 10%;
+				float: left;
+				color: #999;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+				padding: 0;
+				padding-left: 10px;
+			}
+			.search-condition-list{
+				width: 80%;
+				float: left;
+				font-size: 13px;
+			}	
+				#search-conditions-brand .search-condition-list li{
+					width: 16%;
+				}
+				.search-condition-list li{
+					float: left;
+					height: 30px;
+					margin-right: 20px;
+				}
+				.search-condition-list li a{
+					color: #333;
+				}
+				.search-condition-list li a:hover{
+					color: #b10000;
+				}
+			.search-conditon-btn {
+				width: 10%;
+				float: left;
+				cursor: pointer;
+			}
+		.search-conditions-rate{
+			width: 100%;
+			overflow: hidden;
+			/* background: pink; */
+			vertical-align: middle;
+		}
+			.search-conditions-rate ul li{
+				float: left;
+				display: inline-block;
+				padding: 8px 22px;
+				/* border: 1px solid #aaa; */
+				font-size: 12px;
+				margin: 0 10px;
+			}
+				.search-conditions-rate ul li span{
+					margin-left: 5px;
+				}
+			.search-conditions-rate .search-conditions-selc{
+				color: #b10000;
+				border: 1px solid #b10000;
+			}
+			.search-conditions-rate input{
+				width: 70px;
+				height: 18px;
+				margin: 4px ;
+				outline: none;
+				border: 1px solid #aaa;
+				/* line-height: 20px; */
+			}
+	.search-goodsList{
+		width: 100%;
+		overflow: hidden;
+	}
+		.search-singlegood{
+			width: 262px;
+			float: left;
+			margin-bottom: 15px;
+			margin-left: 15px;
+			border: 1px solid #000;
+		}
+			.search-imgwrap{
+				width: 100%;
+				overflow: hidden;
+			}
+				.search-imgbig{
+					width: 100%;
+				}
+				.search-imgsmall{
+					width: 40px;
+					float: left;
+					margin: 5px;
+					border: 1px solid #999;
+				}
+			.search-singlegood-price{
+				width: 100%;
+
+			}
+				.search-singlegood-nowprice{
+					color: #c40000;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				.search-singlegood-discount {
+					color: #c40000;
+					border: 2px dotted #c40000;
+
+				}
+				.search-singlegood-oldprice {
+					color: #999;
+					text-decoration: line-through;
+					float: right;
+
+				}
+			.search-singlegood-title{
+				height: 20px;
+				line-height: 20px;
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.search-singlegood-activity{
+				width: 100%;
+			}
+				.search-singlegood-actname{
+					display: inline-block;
+					padding: 2px 5px;
+					background: #c40000;
+					color: white;
+
+				}
+				.search-singlegood-actcontent {
+					color: #b10000;
+				}

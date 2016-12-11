@@ -159,10 +159,12 @@
 				z-index: 100;
 			}
 	.detail-content{
-		width: 720px;
+		width: 500px;
 		float: left;
 		/* background: skyblue; */
 	}
+
+
 		.decon-title{
 			margin-top: 10px;
 		}
@@ -260,6 +262,116 @@
 				height: 35px;
 				margin-bottom: 5px;
 			}
+
+	/* take look section */
+	.detail-lookRepeatedly{
+		width: 225px;
+		height: 700px;
+		/* background: pink; */
+		float: left;
+		padding: 10px 0px 0 30px;
+		font-size: 12px;
+	}
+		.detail-lookRepeatedly-wrapdiv{
+			width: 190px;
+			height: 642px;
+			overflow: hidden;
+			position: relative;
+			/* background: blue;  */
+		}
+			.detail-lookRepeatedly-absoluteDiv{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.detail-lookRepeatedly-header{
+				vertical-align: middle;
+			}	
+				.detail-lookRepeatedly-line{
+					width: 40px;
+					height: 1px;
+					border-top: 1px dotted #aaa;
+					display: inline-block;
+				}
+				.detail-lookRepeatedly-words{
+					margin:0 10px;
+					display: inline-block;
+					color: #aaa;
+
+				}
+			.detail-lookRepeatedly-single{
+				width: 215px;
+				margin-bottom: 15px;
+				position: relative;
+			}
+				.detail-lookRepeatedly-single a img{
+					width: 120px;
+				}
+				.detail-lookRepeatedly-title{
+					font-weight: normal;
+					font-size: 12px;
+					width: 160px;
+					height: 16px;
+					line-height: 16px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin: 0;
+				}
+
+			.detail-lookRepeatedly-activity{
+				color: #E31436;
+				margin: 5px 0px 5px 0px;
+				display: inline-block;
+			}
+				.detail-lookRepeatedly-price{
+					display: block;
+				}
+				.detail-lookRepeatedly-price span:first-child{
+					margin-right: 10px;
+					font-size: 18px;
+					color: #E31436;
+					font-weight: bold;
+				}
+				.detail-lookRepeatedly-price span:last-child{
+					color: #aaa;
+					text-decoration: line-through;
+				}
+			.detai-lookRepeatedly-hasEvaluate{
+				display: block;
+				color: #aaa;
+			}
+	.detail-lookRepeatedly-btn{
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		margin-top: 20px;
+	}
+		.detail-lookRepeatedly-btn span{
+			cursor: pointer;
+			font-size: 20px;
+		}
+		.detail-lookRepeatedly-btn span:hover{
+			color:#E31436 ;
+		}
+		.detail-lookRepeatedly-btn span:first-child{
+			margin-right: 50px;
+		}
+/* sell rate section */
+.detail-sellRate-number{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	color: white;
+	background: url('./style-icon/colaIcon.png') -104px -304px no-repeat;
+	font-weight: bold;
+	text-indent: 2px;
+}
+
+
+/* select section */
 	.selec{
 		border: 1px solid #bbb;	
 		/* box-shadow: 0 0 0 2px gray; */
@@ -468,7 +580,7 @@
 
 			/* detail info */
 			#detail-tap-info{
-				display: none;
+				/* display: none; */
 			}
 
 			.detail-tap-info{
@@ -629,7 +741,7 @@
 							/* color: ; */
 						}
 			#detail-tap-evaluate{
-				/* display: none; */
+				display: none;
 			}
 
 			.detail-tap-evaluate{
@@ -773,7 +885,17 @@
 									height: 40px;
 									line-height: 20px;
 									text-indent: 10px;
+									display: none;
 							}
+								.detail-tapEva-select>span>span:last-child{
+									transition: transform 0.3s ease-out;
+								}
+								.detail-tapEva-iconToggle{
+									transform: rotate(180deg);
+								}
+								.detail-tapEva-select:hover .detail-tapEva-options{
+									display: block;
+								}
 							.detail-tapEva-options li:hover{
 								background: #aaa;
 							}

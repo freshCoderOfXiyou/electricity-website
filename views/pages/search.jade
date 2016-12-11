@@ -1,0 +1,269 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		script(src='/bundle.js')
+		link(href='./style/publicStyle.css' rel='stylesheet' type='text/css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		link(href='./style/search.css' rel='stylesheet' type='text/css')
+	body
+		include ../includes/sidebar.jade
+		include ../includes/header.jade
+		include ../includes/nav.jade
+		div.search-main
+			div.search-breadnav
+				span 全部结果
+				span >
+				span “运动鞋 ”
+				span 商品共
+				span 3506
+				span 个
+			div.search-conditions
+				div.search-conditons-content#search-conditions-brand
+					h4.search-condition-subtitle 品牌：
+					ul.search-condition-list
+						li 
+							a(href='javascript:;') NIKE 耐克
+						li 
+							a(href='javascript:;') adidas 阿迪达斯
+						li 
+							a(href='javascript:;') new balance
+						li 
+							a(href='javascript:;') asics 亚瑟士
+						li 
+							a(href='javascript:;') NIKE KIDS 耐克
+						li 
+							a(href='javascript:;') DCSHOECOUSAPUMA
+						li 
+							a(href='javascript:;') 彪马
+						li 
+							a(href='javascript:;') SKECHERS 斯凯奇
+						li 
+							a(href='javascript:;') Vans 范斯
+						li 
+							a(href='javascript:;') paperplanes 纸飞机
+						li 
+							a(href='javascript:;') Onitsuka Tiger 鬼冢虎
+						li 
+							a(href='javascript:;') BOBDOG 巴布豆
+						li 
+							a(href='javascript:;') Disney 迪士尼
+						li 
+							a(href='javascript:;') CONVERSE 匡威
+						li 
+							a(href='javascript:;') Jeep XP 吉普户外
+					span.search-conditon-btn  展开
+				div.search-conditons-content
+					h4.search-condition-subtitle 国家/地区：
+					ul.search-condition-list
+						li 
+							a(href='javascript:;') 美国
+						li 
+							a(href='javascript:;') 德国
+						li 
+							a(href='javascript:;') 日本
+						li 
+							a(href='javascript:;') 意大利
+						li 
+							a(href='javascript:;') 英国
+						li 
+							a(href='javascript:;') 韩国
+						li 
+							a(href='javascript:;') 中国
+						li 
+							a(href='javascript:;') 巴西
+						li 
+							a(href='javascript:;') 法国
+						li 
+							a(href='javascript:;') 中国香港
+						li 
+							a(href='javascript:;') 西班牙
+						li 
+							a(href='javascript:;') 秘鲁
+						li 
+							a(href='javascript:;') 丹麦
+						li 
+							a(href='javascript:;') 瑞士
+						li 
+							a(href='javascript:;') 澳大利亚
+					span.search-conditon-btn
+				div.search-conditons-content 
+					h4.search-condition-subtitle 分类：
+					ul.search-condition-list
+						li 
+							a(href='javascript:;') 跑步鞋
+						li 
+							a(href='javascript:;') 女式板鞋/休闲鞋
+						li 
+							a(href='javascript:;') 休闲鞋
+						li 
+							a(href='javascript:;') 女士帆布鞋/运动鞋
+						li 
+							a(href='javascript:;') 男士帆布鞋/运动鞋
+						li 
+							a(href='javascript:;') 运动鞋
+						li 
+							a(href='javascript:;') 中性运动鞋
+					span.search-conditon-btn
+			div.search-conditions-rate
+				ul
+					li.search-conditions-selc 人气
+						span.glyphicon.glyphicon-arrow-down
+					li 销量
+						span
+					li 新品
+						span
+					li 价格
+						span
+				input(type='text' placeholder="¥")
+				span -
+				input(type='text' placeholder="¥")
+			div.search-goodsList
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+				div.search-singlegood
+					a(href='javascript:;').search-imgwrap
+						img(src='./images/search/nike1.jpg' alt='').search-imgbig
+						img(src='./images/search/nike1.jpg' alt='黑色').search-imgsmall
+						img(src='./images/search/nike1blue.jpg' alt='蓝色').search-imgsmall
+						img(src='./images/search/nike1red.jpg' alt='红色').search-imgsmall
+					div.search-singlegood-price
+						span.search-singlegood-nowprice ¥359
+						span.search-singlegood-discount 7.2折
+						span.search-singlegood-oldprice ¥499
+					h4.search-singlegood-title NIKE 耐克TANJUN SE 网面泼墨底男鞋跑步鞋休闲鞋 844887
+					div.search-singlegood-activity
+						span.search-singlegood-actname 特卖
+						span.search-singlegood-actcontent 今日特卖，限时购买省40元
+		include ../includes/footer.jade
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+	script(src='./script/common.js' type='text/javascript')
+	script(src='./script/banner.js' type='text/javascript')
+	script(src='./script/search.js' type='text/javascript')

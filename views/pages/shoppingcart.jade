@@ -1,0 +1,19 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		script(src='/bundle.js')
+		link(href='./style/publicStyle.css' rel='stylesheet' type='text/css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+	body
+		include ../includes/sidebar.jade
+		include ../includes/header.jade
+		include ../includes/nav.jade
+		div i am shoppingcart
+		include ../includes/footer.jade
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+	script(src='./script/common.js' type='text/javascript')
+	script(src='./script/banner.js' type='text/javascript')

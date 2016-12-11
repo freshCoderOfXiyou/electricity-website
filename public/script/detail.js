@@ -249,6 +249,51 @@
 		// 	popup('gray','100px','100px','','',$(this))
 		// })
 
+		// evaluate section
+		$('.detail-tapEva-list li').click(function (e) {
+			// alert(1)
+			var $i=$(this).find('i').css('background')
+			if ($i.indexOf('url')>=0) {
+				$(this).find('i').css('background','none')
+			}else {
+				$(this).find('i').css('background','url("http://127.0.0.1:3000/style/style-icon/list-checked.png")  no-repeat 0px 0px')
+			}
+		})
+		$('.detail-tapEva-select').hover(function (e) {
+			// $('.detail-tapEva-options').css('display','block')
+			// $(this).next().removeClass('glyphicon-chevron-down')
+			// $(this).next().addClass('glyphicon-chevron-up')
+			// console.log($(this).next())
+			$('#detail-tapEva-opvalue').next().toggleClass('detail-tapEva-iconToggle')
+		})
+		$('.detail-tapEva-options').click(function (e) {
+			var targetLi=e.target
+			$('#detail-tapEva-opvalue').text($(targetLi).text())
+
+		})
+		var $detailTapEvaBtn=true
+		$('.detail-tapEva-btn').click(function (e) {
+			if ($detailTapEvaBtn) {
+				$(this).css('background-position','0 -109px')
+				$detailTapEvaBtn=false
+			}
+			else {
+				$(this).css('background-position','0 -96px')
+				$detailTapEvaBtn=true
+			}
+		})
+
+
+		/*look repeatedly section*/
+		var $rollNode=$('.detail-lookRepeatedly-absoluteDiv')
+		$('.detail-lookRepeatedly-btn span:eq(0)').click(function (e) {
+			// $('.detail-lookRepeatedly-absoluteDiv').css('top','')
+			publicRoll($rollNode,false)
+		})
+		$('.detail-lookRepeatedly-btn span:eq(1)').click(function (e) {
+			publicRoll($rollNode,true)
+		})
+
 		
 	}//end onload
 })()
