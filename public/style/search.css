@@ -4,7 +4,7 @@
 	margin:0 auto;
 	/* height: 100px; */
 	/* background: red; */
-	border: 1px dotted red;
+	/* border: 1px dotted red; */
 }	
 	.search-main a{
 		color: black;
@@ -34,6 +34,8 @@
 		}
 	.search-conditions{
 		width: 100%;
+		/* height: 200px; */
+
 	}
 		.search-conditons-content{
 			width: 100%;
@@ -54,6 +56,10 @@
 				float: left;
 				font-size: 13px;
 			}	
+			#search-conditions-brand .search-condition-list{
+				height: 50px;
+				/* overflow: scroll; */
+			}
 				#search-conditions-brand .search-condition-list li{
 					width: 16%;
 				}
@@ -73,11 +79,23 @@
 				float: left;
 				cursor: pointer;
 			}
+				.search-conditon-btn:hover{
+					color: #b10000;
+				}
+				.search-conditon-btn span{
+					transition: transform 0.3 ease-out;
+					/* color: red; */
+					display: inline-block;
+				}
+				.search-condiBtn-anima{
+					transform: rotate(180deg);
+				}
 		.search-conditions-rate{
 			width: 100%;
 			overflow: hidden;
 			/* background: pink; */
-			vertical-align: middle;
+			/* display: table-cell; */
+			/* vertical-align: middle; */
 		}
 			.search-conditions-rate ul li{
 				float: left;
@@ -86,6 +104,7 @@
 				/* border: 1px solid #aaa; */
 				font-size: 12px;
 				margin: 0 10px;
+				cursor: pointer;
 			}
 				.search-conditions-rate ul li span{
 					margin-left: 5px;
@@ -97,25 +116,47 @@
 			.search-conditions-rate input{
 				width: 70px;
 				height: 18px;
-				margin: 4px ;
+				margin:0 4px ;
 				outline: none;
 				border: 1px solid #aaa;
+				transform: translateY(-4px)
 				/* line-height: 20px; */
 			}
+			.search-styletoggle-btn{
+				float: right;
+				display: inline-block;
+				cursor: pointer;
+			}
+				.search-styletoggle-btn span:hover{
+					color: #b10000;
+				}
+				.search-styleBtn-big{
+					margin: 20px;
+				}
+				.search-styleBtn-small{
+
+				}
 	.search-goodsList{
 		width: 100%;
 		overflow: hidden;
+		margin-top: 10px;
 	}
 		.search-singlegood{
-			width: 262px;
+			width: 282px;
+			padding: 10px 15px;
 			float: left;
 			margin-bottom: 15px;
-			margin-left: 15px;
-			border: 1px solid #000;
+			margin-left: 20px;
+			border: 1px solid #fff;
+		}
+		.search-singlegood:hover{
+			border: 1px solid #b10000;
 		}
 			.search-imgwrap{
 				width: 100%;
 				overflow: hidden;
+				display: block;
+
 			}
 				.search-imgbig{
 					width: 100%;
@@ -126,45 +167,167 @@
 					margin: 5px;
 					border: 1px solid #999;
 				}
+				.search-imgsmall:hover{
+					border: 1px solid #b10000;
+				}
 			.search-singlegood-price{
 				width: 100%;
+				margin-top: 8px;
 
 			}
 				.search-singlegood-nowprice{
 					color: #c40000;
 					font-size: 20px;
 					font-weight: bold;
+					display: inline-block;
+					/* margin-top: 2px; */
+					transform: translateY(2px);
 				}
 				.search-singlegood-discount {
 					color: #c40000;
-					border: 2px dotted #c40000;
+					border: 1px dotted #c40000;
+					margin-left: 10px;
 
 				}
 				.search-singlegood-oldprice {
 					color: #999;
 					text-decoration: line-through;
 					float: right;
-
+					transform: translateY(4px);
 				}
 			.search-singlegood-title{
 				height: 20px;
 				line-height: 20px;
 				font-size: 14px;
 				margin: 0;
+				margin-top: 10px;
 				padding: 0;
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
 			.search-singlegood-activity{
 				width: 100%;
+				margin-top: 10px;
 			}
 				.search-singlegood-actname{
 					display: inline-block;
-					padding: 2px 5px;
+					padding: 1px 3px;
 					background: #c40000;
 					color: white;
 
 				}
 				.search-singlegood-actcontent {
+					margin-left: 10px;
 					color: #b10000;
 				}
+			.search-singlegood-monthsales{
+				width: 100%;
+				font-size: 12px;
+				margin-top: 10px;
+			}
+				.search-singlegoodMonthsales-title{
+					color: #999;
+				}
+				.search-singlegoodMonthsales-con{
+					color: #b57c5b;
+					margin-left: 4px;
+				}
+				.search-singlegoodMonthevalus-title{
+					color: #999;
+					margin-left: 10px;
+				}
+				.search-singlegoodMonthevalus-con{
+					color: #38b;
+					margin-left: 4px;
+				}
+	.search-rate-pages{
+		width: 100%;
+		margin-top: 20px;
+		overflow: hidden;
+	}
+		.search-rate-pages ul{
+			float: right;
+		}
+			.search-rate-pages ul li{
+				border: 1px solid #ccc;
+				display: inline-block;
+				padding: 5px 10px;
+				font-size: 16px;
+
+			}
+			.search-rate-pages ul li a{
+				color: #2953a6;
+			}
+			.search-rate-pages .search-rate-omit{
+				border: none;
+			}
+			.search-rate-pages .search-rate-nowpage {
+				color: #aaa;
+			}
+	.search-guesslike{
+		width: 100%;
+		padding: 10px 20px;
+		overflow: hidden;
+	}	
+		.search-guesslike>h4{
+			padding: 0;
+			font-size: 18px;
+			font-weight: bold;
+			clear: left;
+			margin-top: 20px;
+		}
+		.search-guesslike>h4>span{
+			font-size: 16px;
+			color: #999;
+			margin-left: 15px;
+		}
+		.search-guesslike-con{
+			width: 100%;
+		}
+			.search-guesslike-single{
+				width: 215px;
+				margin-bottom: 15px;
+				position: relative;
+				/* border: 1px dotted red; */
+				float: left;
+				margin-left: 20px;
+				padding: 2px 10px;
+			}
+				.search-guesslike-single a img{
+					width: 184px;
+				}
+				.search-guesslike-title{
+					font-weight: normal;
+					font-size: 12px;
+					width: 160px;
+					height: 16px;
+					line-height: 16px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin: 0;
+				}
+
+			.search-guesslike-activity{
+				color: #E31436;
+				margin: 5px 0px 5px 0px;
+				display: inline-block;
+				font-size: 12px;
+			}
+				.search-guesslike-price{
+					display: block;
+				}
+				.search-guesslike-price span:first-child{
+					margin-right: 10px;
+					font-size: 18px;
+					color: #E31436;
+					font-weight: bold;
+				}
+				.search-guesslike-price span:last-child{
+					color: #aaa;
+					text-decoration: line-through;
+				}
+			.search-guesslike-hasEvaluate{
+				display: block;
+				color: #aaa;
+				font-size: 12px;
+			}

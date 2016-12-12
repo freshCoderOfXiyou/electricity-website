@@ -7,13 +7,72 @@ html
 		script(src='/bundle.js')
 		link(href='./style/publicStyle.css' rel='stylesheet' type='text/css')
 		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		link(href='./style/shoppingcart.css' rel='stylesheet' type='text/css')
 	body
 		include ../includes/sidebar.jade
 		include ../includes/header.jade
 		include ../includes/nav.jade
-		div i am shoppingcart
+		div.spcart-main
+			div.spcart-header
+				a.spcart-header-title
+					em.spcart-headerTitle-con 全部商品
+					span.spcart-headerTitle-number 5
+					span.spcart-headerTitle-pie
+				a.spcart-header-title
+					em.spcart-headerTitle-con 降价商品
+					span.spcart-headerTitle-number 0
+					span.spcart-headerTitle-pie 
+				a.spcart-header-title
+					em.spcart-headerTitle-con 库存紧张
+					span.spcart-headerTitle-number 0
+				div.spcart-header-tool
+					span 已选商品（不含运费）
+					span 0.00
+					a 结 算
+			div.spcart-rollbar
+				div.spcart-rollsubbar
+			div.spcart-list-tool
+				input(type='checkbox' name='all-select')
+				label(for='all-select') 全选
+				span 商品信息
+				span 单价
+				span 数量
+				span 金额
+				span 操作
+			div.spcart-list
+				div.spcart-single
+					input(type='checkbox')
+					img(src='')
+					div.spcart-single-title
+						a 【1212年终盛典】李宁/LINING跑步系列速干男修身训练紧身运动长裤压缩裤AULK049
+					div.spcart-single-meta
+						p 颜色分类：黑色【AULK049】
+						p 尺码：S（165/72A）
+					div.spcart-single-price
+						span ￥169.00
+						span ￥89.00
+					div.spcart-single-number
+						span -
+						input(type='checkbox')
+						span +
+					div.spcart-single-totalprice 00000
+					div.spcart-single-operation
+						a 移入收藏夹
+						a 删除
+			div.spcar-footer
+				input(type='checkbox')
+				label(for='all-select') 全选
+				a(href='javascript:;') 删除
+				a(href='javascript:;') 移入收藏夹
+				div.spcar-footer-settlement
+					span 已选商品
+					span 0
+					span 件
+					span 合计（不含运费）：
+					span 0.00
+					a(href='javascript:;') 结 算
 		include ../includes/footer.jade
 	script(src='./bower_components/jquery/dist/jquery.min.js')
 	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
 	script(src='./script/common.js' type='text/javascript')
-	script(src='./script/banner.js' type='text/javascript')
+	script(src='./script/shoppingcart.js' type='text/javascript')

@@ -1,1 +1,78 @@
 /* @shoppingcart page style */
+.spcart-main{
+	width: 1230px;
+	margin: 10px auto;
+	border: 1px dotted red;
+}	
+	.spcart-main a{
+		color: black;
+	}
+	.spcart-main a:hover{
+		color: black;
+		text-decoration: none;
+	}
+
+
+
+
+
+
+/**/
+	.spcart-header{
+		width: 100%;
+	}
+		.spcart-header-title{
+
+		}
+			.spcart-headerTitle-con{
+
+			}
+			.spcart-headerTitle-number{
+
+			}
+			.spcart-headerTitle-pie{
+
+			}
+	.spcart-rollbar{
+		width: 100%;
+	}
+		.spcart-rollsubbar{
+
+		}
+	.spcart-list-tool{
+		width: 100%;
+	}
+	.spcart-list{
+		width: 100%;
+	}
+		/* the most important style */
+		.spcart-single{
+
+		}
+			.spcart-single-title{
+
+			}
+			.spcart-single-meta{
+
+			}
+			.spcart-single-price{
+
+			}
+			.spcart-single-number{
+
+			}
+			.spcart-single-totalprice{
+
+			}
+			.spcart-single-operation{
+
+			}
+
+
+	/* spcar footer section */
+	.spcar-footer{
+		width: 100%;
+	}
+		.spcar-footer-settlement{
+
+		}
