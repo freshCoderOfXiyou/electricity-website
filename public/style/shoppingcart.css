@@ -3,6 +3,7 @@
 	width: 1230px;
 	margin: 10px auto;
 	border: 1px dotted red;
+	padding: 15px;
 }	
 	.spcart-main a{
 		color: black;
@@ -19,60 +20,326 @@
 
 /**/
 	.spcart-header{
-		width: 100%;
+		width: 1170px;
 	}
 		.spcart-header-title{
-
+			cursor: pointer;
 		}
+			.spcart-header-selecTitle  .spcart-headerTitle-con{
+				color: #c40000;
+			}
 			.spcart-headerTitle-con{
-
+				font-size: 18px;
+				margin: 0px 0px 0px 30px;
+				font-weight: bold;
+			}
+			.spcart-headerTitle-con:hover{
+				color:  #c40000;
 			}
 			.spcart-headerTitle-number{
-
+				font-size: 16px;
+				color:  #c40000;
+				margin-left: 5px;
 			}
 			.spcart-headerTitle-pie{
 
 			}
+			.spcart-header-tool{
+				float:right;
+			}
+				.spcart-header-tool span:nth-child(2){
+					color:  #c40000;
+					margin: 0px 10px 0px 5px;
+				}
+				.spcart-header-tool a{
+					background: #999;
+					color: white;
+					display: inline-block;
+					padding: 5px 10px;
+					border-radius: 10%/20%;
+				}
+				.spcart-header-tool a:hover{
+					color: white;
+					cursor: pointer;
+				}
 	.spcart-rollbar{
-		width: 100%;
+		width: 1190px;
+		height: 3px;
+		background: #CCC;
+		border-radius: 10%;
+		margin-top: 10px;
+		position: relative;
 	}
 		.spcart-rollsubbar{
-
+			width: 120px;
+			height: 3px;
+			background: #c40000;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	.spcart-list-tool{
-		width: 100%;
+		width: 1190px;
+		margin-top: 10px;
 	}
+		.spcart-list-tool input{
+			margin-left: 20px;
+			margin-right: 5px;
+		}
+		.spcart-list-tool label{
+			font-weight: normal;
+		}
+		.spcart-list-toolInfo{
+			width: 510px;
+			display: inline-block;
+			margin-left: 70px;
+		}
+		.spcart-list-toolPrice{
+			width: 150px;
+			display: inline-block;
+
+		}
+		.spcart-list-toolCount{
+			width: 150px;
+			display: inline-block;
+
+		}
+		.spcart-list-toolFee{
+			width: 170px;
+			display: inline-block;
+
+		}
+		.spcart-list-toolOperation{
+			/* width: 200px; */
+			display: inline-block;
+
+		}
 	.spcart-list{
 		width: 100%;
 	}
 		/* the most important style */
 		.spcart-single{
-
+			border: 1px solid #ddd;
+			width: 1198px;
+			padding: 10px;
+			overflow: hidden;
+			font-size: 12px;
 		}
+			.spcart-single input{
+				float: left;
+			}
+			.spcart-single img{
+				float: left;
+			}
 			.spcart-single-title{
-
+				float: left;
+				width: 226px;
+				margin:0 20px;
 			}
 			.spcart-single-meta{
+				float: left;
+				width: 226px;
+				margin-left: 30px;
 
 			}
 			.spcart-single-price{
+				float: left;
+				width: 140px;
+				/* font-size: 14px; */
 
 			}
+				.spcart-single-price span{
+					display: block;
+				}
+				.spcart-single-price span:first-child{
+					color: #999;
+					text-decoration: line-through;
+				}
+				.spcart-single-price span:nth-child(2){
+					color: #c40000;
+					font-size: 16px;
+					font-weight: 700;
+				}
 			.spcart-single-number{
+				float: left;
+				width: 140px;
+				/* text-align: center; */
 
 			}
+				.spcart-single-number span{
+					float: left;
+					display: inline-block;
+					border: 1px solid #999;
+					width: 25px;
+					height: 25px;
+					text-align: center;
+					/* background:  */
+					color: #999;
+					/* font-weight: 100; */
+					font-size: 25px;
+					line-height: 18px;
+					cursor: pointer;
+				}
+				.spcart-single-number input{
+					width: 20px;
+					display: inline-block;
+					height: 25px;
+					width: 50px;
+					border: 1px solid #999;
+					border-width: 1px 0px;
+					color: #999;
+					text-align: center;
+				}
 			.spcart-single-totalprice{
-
+				float: left;
+				width: 110px;
+				margin-left: 30px;
+				/* margin-left: 0px; */
+				color:  #c40000;
+				font-size: 18px;
 			}
 			.spcart-single-operation{
+				float: left;
+				width: 100px;
+				margin-left: 30px;
+				font-size: 14px;
 
 			}
-
+				.spcart-single-operation a{
+					display: block;
+					cursor: pointer;
+					color: #999;
+				}
+				.spcart-single-operation a:hover{
+					color:#c40000 ;
+				}
 
 	/* spcar footer section */
 	.spcar-footer{
-		width: 100%;
+		width: 1198px;
+		height: 50px;
+		background: #ccc;
+		/* padding: 5px 10px; */
+		line-height: 50px;
 	}
-		.spcar-footer-settlement{
-
+		.spcar-footer-allselec{
+			float: left;
 		}
+			.spcar-footer-allselec input{
+				margin-left:15px ;
+			}
+			.spcar-footer-allselec label{
+				margin:0 5px;
+			}
+		
+		.spcar-footer a{
+			float: left;
+			width: 70px;
+			margin-left: 40px;
+			color: #666;
+		}
+			.spcar-footer>a:hover{
+				color:#c40000 ;
+			}
+		.spcar-footer-settlement{
+			float: right;
+		}
+			.spcar-footerSet-hasSelecTitle{
+
+			}
+			.spcar-footerSet-number{
+				color: #c40000;
+				margin: 10px;
+			}
+			.spcar-footerSet-totalPrice{
+				color: #c40000;
+				font-size: 20px;
+				font-weight: 900;
+				margin: 20px;
+			}
+			.spcar-footer-settlement a{
+				float: right;
+				width: 100px;
+				height: 50px;
+				display: inline-block;
+				background: #999;
+				text-align: center;
+				/* padding-top: 10px; */
+				font-size: 18px;
+				font-weight: 700;
+				color: white;
+			}
+			.spcar-footer-settlement a:hover{
+				color: white;
+			}
+.mask{
+	width: 100%;
+	height: 100%;
+	background:black;
+	opacity: .4;
+	z-index: 200;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.mask-popup{
+	width: 518px;
+	height: 200px;
+	background: white;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	opacity: 1;
+	z-index: 201;
+	padding: 10px 20px;
+}
+	.mask-popup h4{
+		color: #999;
+		width: 100%;
+		border-bottom: 1px #ccc dotted;
+		font-size: 20px;
+		font-weight: bold;
+		padding-bottom: 10px;
+	}
+	.mask-popup p{
+		font-size: 20px;
+		font-weight: bold;
+		width: 100%;
+		text-align: center;
+		margin: 15px 0;
+	}
+	.mask-popup a{
+		display: inline-block;
+		width:92px;
+		height: 36px;
+		/* background: #aaa; */
+		vertical-align: middle;
+		text-align: center;
+		line-height: 36px;
+		color: #999;
+		border: 1px solid #999;
+	}
+	.mask-popup .maskBtn-yes{
+		background: #b10000;
+		color: white;
+	}
+	.mask-close{
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		cursor: pointer;
+		transition: transform 0.2s ease-out;
+		color: #999;
+		font-size: 20px;
+	}
+	.mask-close:hover{
+		color: #b10000;
+		transform: rotate(180deg);
+	}
+	.maskBtn{
+		margin-right: 20px;
+	}
+html,body{
+	height: 100%;
+}

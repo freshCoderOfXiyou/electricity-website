@@ -103,49 +103,7 @@
 			var $destinaEle=$('.menubarUp .glyphicon-shopping-cart')
 			flyTo($(this),$destinaEle,$imgIcon)
 		})
-		//因为收藏功能和加入购物车功能在处理逻辑是很多相同的地方，
-		//所以把飞入效果做成一个function，传入的参数点击元素，新元素以及目标元素
-		function flyTo(sourceEle,destinaEle,newEle) {
-			// body...
-			var sourceX=sourceEle.offset().left
-			var sourceY=sourceEle.offset().top
-			var destinationX=destinaEle.offset().left
-			var destinationY=destinaEle.offset().top
-			var disX=destinationX-sourceX
-			var disY=destinationY-sourceY
-			var speedX=disX/100
-			var speedY=0
-			var accerY=0
-			if (disY>0) {
-				speedY=15
-				accerY=(disY-speedY*100)*2/10000
-			}
-			else{
-				speedY=-15
-				accerY=(disY-speedY*100)*2/10000
-			}
-			// accerY=(disY+15*100)*2/10000
-			// console.log('dis',disY,'speed',speedY,'accerY',accerY)
-			var nowX=0
-			var nowY=0
-			var timer=window.setInterval(function(){
-				nowX+=speedX
-				speedY+=accerY
-				// console.log(accerY,speedY)
-				nowY+=speedY
-				newEle.css('top',nowY)
-				newEle.css('left',nowX)
-				if (nowX>disX) {
-					clearInterval(timer)
-					var temPen=document.getElementById(newEle.attr('id'))
-					temPen.parentNode.removeChild(temPen)
-					destinaEle.css('color','#c40000')
-					setTimeout(function  () {
-						destinaEle.css('color','white')
-					}, 100)
-				}
-			},15)
-		}
+		
 
 		//在显示业务中遇到了大量需要弹出层的地方，这些弹出层大小不一，颜色不一，样式不一，内容不一。
 		function popup(color,width,height,content,loc,parentNode) {
