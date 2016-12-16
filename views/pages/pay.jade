@@ -1,0 +1,83 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		script(src='/bundle.js')
+		link(href='./style/publicStyle.css' rel='stylesheet' type='text/css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		link(href='./style/pay.css' rel='stylesheet' type='text/css')
+	body
+		include ../includes/sidebar.jade
+		include ../includes/header.jade
+		include ../includes/nav.jade
+		div.pay-main 
+			div.pay-address
+				h4 选择收货地址
+				div.pay-sinaddress.pay-sinaddress-selec
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+				div.pay-sinaddress
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+				div.pay-sinaddress
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+				div.pay-sinaddress
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+				div.pay-sinaddress
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+				div.pay-sinaddress
+					div.pay-sinadress-default 默认地址
+					div.pay-sinadress-header 陕西西安（江杨阳 收）
+					div.pay-sinadress-con 雁塔小寨路西安市雁塔区长安南路563号西安邮电大学188******** 
+					a.pay-sinadress-eidt 修改
+			div.pay-info
+				h2.pay-info-title 确认订单信息
+				div.pay-info-caption
+					div.pay-infoCap-name 商品
+					div.pay-infoCap-meta 商品属性
+					div.pay-infoCap-price 单价
+					div.pay-infoCap-count 数量
+					div.pay-infoCap-subTotal 小计
+				div.pay-single
+					div.pay-single-name
+						img(src='./images/shoppingcart/anta.jpg')
+						a(href='javascript:;') 安踏 男装 长袖T恤2016秋季吸湿速干弹力紧身衣男健身服 15637431
+					div.pay-single-meta 
+						span 颜色分类：YY174
+						span 灰花灰-3尺码：M/170
+					div.pay-single-price 159.00
+					div.pay-single-count 1
+					div.pay-single-subTotal 119.00
+			div.pay-summary
+				dl.pay-sumary-con
+					dt 实付款 ：
+					dd.pay-sumary-price ￥124.00
+					dt 寄送至：
+					dd 陕西西安雁塔小寨路西安市雁塔区长安南路563号西安邮电大学
+					dt 收货人：
+					dd 
+						span 江杨阳
+						sapn 18829291427
+				div.pay-summary-btn
+					a(href='javascript:;').pay-sumBtn-pay 提交订单
+					a(href='javascript:;').pay-sumBtn-back 返回购物车
+		include ../includes/footer.jade
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+	script(src='./script/common.js' type='text/javascript')
+	script(src='./script/pay.js' type='text/javascript')

@@ -21,9 +21,16 @@
 /**/
 	.spcart-header{
 		width: 1170px;
+		overflow: hidden;
 	}
 		.spcart-header-title{
 			cursor: pointer;
+			/* background: red; */
+			/* display: inline-block; */
+			margin-right: 1px;
+			height: 35px;
+			float: left;
+			/* padding-bottom: 10px; */
 		}
 			.spcart-header-selecTitle  .spcart-headerTitle-con{
 				color: #c40000;
@@ -67,7 +74,7 @@
 		height: 3px;
 		background: #CCC;
 		border-radius: 10%;
-		margin-top: 10px;
+		/* margin-top: 10px; */
 		position: relative;
 	}
 		.spcart-rollsubbar{
@@ -209,6 +216,7 @@
 					display: block;
 					cursor: pointer;
 					color: #999;
+					position: relative;
 				}
 				.spcart-single-operation a:hover{
 					color:#c40000 ;
@@ -281,6 +289,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: none;
 }
 .mask-popup{
 	width: 518px;
@@ -293,6 +302,12 @@
 	opacity: 1;
 	z-index: 201;
 	padding: 10px 20px;
+	display: none;
+	/* transition: all 0.5s ease-in; */
+	/* transform: scale(0.5); */
+}
+.mask-popup-bigger{
+	/* transform: scale(1); */
 }
 	.mask-popup h4{
 		color: #999;
@@ -305,10 +320,21 @@
 	.mask-popup p{
 		font-size: 20px;
 		font-weight: bold;
-		width: 100%;
+		width: 240px;
+		/* margin: ; */
 		text-align: center;
-		margin: 15px 0;
+		margin: 30px auto;
+		/* background: blue; */
 	}
+		.mask-alert{
+			float: left;
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			background: #b10000;
+			border-radius: 50%;
+			color: white;
+		}
 	.mask-popup a{
 		display: inline-block;
 		width:92px;
@@ -320,16 +346,25 @@
 		color: #999;
 		border: 1px solid #999;
 	}
-	.mask-popup .maskBtn-yes{
-		background: #b10000;
-		color: white;
+	.mask-popup-btngroup{
+		/* background: blue; */
+		width: 205px;
+		margin: 0 auto;
 	}
+		.mask-popup .maskBtn-yes{
+			background: #b10000;
+			color: white;
+			margin-right: 20px;
+			/* font-weight: bold; */
+			/* font-size: 18px; */
+			border: none;
+		}
 	.mask-close{
 		position: absolute;
 		top: 5px;
 		right: 10px;
 		cursor: pointer;
-		transition: transform 0.2s ease-out;
+		transition: transform 0.5s ease-out;
 		color: #999;
 		font-size: 20px;
 	}
@@ -337,9 +372,20 @@
 		color: #b10000;
 		transform: rotate(180deg);
 	}
-	.maskBtn{
-		margin-right: 20px;
-	}
 html,body{
 	height: 100%;
+}
+.addfavorites-tip{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 25px;
+	line-height: 20px;
+	color: #333;
+	padding: 2px;
+	text-indent: 5px;
+	border: 2px solid #ccc;
+	background: lightgreen;
+	/* z-index: 1000; */
 }

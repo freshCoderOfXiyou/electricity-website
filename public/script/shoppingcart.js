@@ -7,7 +7,11 @@
 		var timer1
 		var timer2
 		var timer3
+		var timer4
+		var timer5
+		var timer6
 		$('#spcart-headerTitle-first').mouseenter(function  (e) {
+			clearInterval(timer4)
 			var dis=-rollspeed
 			timer1=window.setInterval(function (e) {
 				var loc=parseInt($rollbar.css('left'))+dis
@@ -17,13 +21,14 @@
 				}
 			}, 1)
 		})
-		$('#spcart-headerTitle-first').mouseout(function  (e) {
+		$('#spcart-headerTitle-first').mouseleave(function  (e) {
 			clearInterval(timer1)
-			window.setTimeout(rollToSource(), 1000)
+			timer4=window.setTimeout(rollToSource(), 1000)
 			
 		})
 
 		$('#spcart-headerTitle-second').mouseenter(function  (e) {
+			clearInterval(timer5)
 			var $rollbar=$('.spcart-rollsubbar')
 			var dis=rollspeed
 			if (125-parseInt($rollbar.css('left'))<0) {
@@ -43,15 +48,15 @@
 					clearInterval(timer2)
 					}
 				}
-				
 			}, 1)
 		})
-		$('#spcart-headerTitle-second').mouseout(function  (e) {
+		$('#spcart-headerTitle-second').mouseleave(function  (e) {
 			clearInterval(timer2)
-			window.setTimeout(rollToSource(), 1000)
+			timer5=window.setTimeout(rollToSource(), 1000)
 		})
 
 		$('#spcart-headerTitle-thrid').mouseenter(function  (e) {
+			clearInterval(timer6)
 			var $rollbar=$('.spcart-rollsubbar')
 			var dis=rollspeed
 			if (parseInt($rollbar.css('left'))<0) {
@@ -69,9 +74,9 @@
 				
 			}, 1)
 		})
-		$('#spcart-headerTitle-thrid').mouseout(function  (e) {
+		$('#spcart-headerTitle-thrid').mouseleave(function  (e) {
 			clearInterval(timer3)
-			window.setTimeout(rollToSource(), 2000)
+			timer6=window.setTimeout(rollToSource(), 2000)
 		})
 
 		//roll bar go back to old location
@@ -212,5 +217,54 @@
 		function popup () {
 			
 		}
+
+		$('.maskBtn-cancel').click(function  (e) {
+			$('.mask').css('display','none')
+			$('.mask-popup').css('display','none')
+		})
+
+		$('.mask-close').click(function  (e) {
+			$('.mask').css('display','none')
+			$('.mask-popup').css('display','none')
+		})
+		var deleteNode=null
+		$('.spcart-single-deleteBtn').click(function  (e) {
+			$('.mask').css('display','block')
+			$('.mask-popup').css('display','block')
+			$('.mask-popup').addClass('mask-popup-bigger')
+			deleteNode=$(this).parent().parent()
+		})
+		$('.maskBtn-yes').click(function  (e) {
+			// deleteNode.parent().remove(deleteNode)
+			console.log(deleteNode.parent())
+			deleteNode.remove()
+			$('.mask').css('display','none')
+			$('.mask-popup').css('display','none')
+		})
+
+		$('.spcar-footer-allDelete').click(function  (e) {
+			var $sinCheck=$('.spcart-single-checkbox')
+			for (var i = $sinCheck.length - 1; i >= 0; i--) {
+				if($sinCheck[i].checked){
+					// console.log(i+$sinCheck[i].parent())
+					$($sinCheck[i]).parent().remove()
+				}
+			}
+		})
+
+
+		// add to favorites
+		$('.spcart-single-addFavorite').click(function  (e) {
+			var $temdiv=$('<div></div>')
+			$temdiv.addClass('addfavorites-tip').text('移入收藏夹成功')
+			$(this).append($temdiv)
+			var $this=$(this)
+			console.log($temdiv)
+			setTimeout(function () {
+				$temdiv.remove()
+				$this.parent().parent().remove()
+			}, 1000)
+
+		})
 	})//end ready
 })()

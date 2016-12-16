@@ -547,6 +547,14 @@ app.get('/shoppingcart',function (req,res) {
 		recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
 	})
 })
+
+app.get('/pay',function (req,res) {
+	res.render('pay',{
+		title:'支付页面',
+		searchWord:'箱包名品任你挑',
+		recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+	})
+})
 app.listen(app.get('port'),function(){
 	console.log("Express started on http://localhost:"+app.get('port')+";press Ctrl-c to continue")
 })

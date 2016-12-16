@@ -12,17 +12,26 @@ html
 		include ../includes/sidebar.jade
 		include ../includes/header.jade
 		include ../includes/nav.jade
+		div.mask
+		div.mask-popup 
+			h4 提示
+			p 确认要删除该商品吗?
+				span.mask-alert !
+			div.mask-popup-btngroup
+				a(href='javascript:;').maskBtn-yes 确 定
+				a(href='javascript:;').maskBtn-cancel 关 闭
+			span.mask-close X
 		div.spcart-main
 			div.spcart-header
-				a.spcart-header-title
+				div.spcart-header-title.spcart-header-selecTitle#spcart-headerTitle-first
 					em.spcart-headerTitle-con 全部商品
 					span.spcart-headerTitle-number 5
 					span.spcart-headerTitle-pie
-				a.spcart-header-title
+				div.spcart-header-title#spcart-headerTitle-second
 					em.spcart-headerTitle-con 降价商品
 					span.spcart-headerTitle-number 0
 					span.spcart-headerTitle-pie 
-				a.spcart-header-title
+				div.spcart-header-title#spcart-headerTitle-thrid
 					em.spcart-headerTitle-con 库存紧张
 					span.spcart-headerTitle-number 0
 				div.spcart-header-tool
@@ -34,15 +43,15 @@ html
 			div.spcart-list-tool
 				input(type='checkbox' name='all-select')
 				label(for='all-select') 全选
-				span 商品信息
-				span 单价
-				span 数量
-				span 金额
-				span 操作
+				span.spcart-list-toolInfo 商品信息
+				span.spcart-list-toolPrice 单价
+				span.spcart-list-toolCount 数量
+				span.spcart-list-toolFee 金额
+				span.spcart-list-toolOperation 操作
 			div.spcart-list
 				div.spcart-single
-					input(type='checkbox')
-					img(src='')
+					input.spcart-single-checkbox(type='checkbox')
+					img(src='./images/shoppingcart/linin.jpg')
 					div.spcart-single-title
 						a 【1212年终盛典】李宁/LINING跑步系列速干男修身训练紧身运动长裤压缩裤AULK049
 					div.spcart-single-meta
@@ -52,24 +61,82 @@ html
 						span ￥169.00
 						span ￥89.00
 					div.spcart-single-number
-						span -
-						input(type='checkbox')
-						span +
-					div.spcart-single-totalprice 00000
+						span.spcart-single-reduce -
+						input(type='text' value='1')
+						span.spcart-single-add +
+					div.spcart-single-totalprice ￥89.00
 					div.spcart-single-operation
-						a 移入收藏夹
-						a 删除
+						a.spcart-single-addFavorite(href='javascript:void(0);') 移入收藏夹
+						a.spcart-single-deleteBtn(href='javascript:void(0);') 删除
+				div.spcart-single
+					input.spcart-single-checkbox(type='checkbox')
+					img(src='./images/shoppingcart/anta.jpg')
+					div.spcart-single-title
+						a 安踏 男装 长袖T恤2016秋季吸湿速干弹力紧身衣男健身服 15637431
+					div.spcart-single-meta
+						p 颜色分类：YY174灰花灰-3
+						p 尺码：M/170
+					div.spcart-single-price
+						span ￥159.00
+						span ￥119.00
+					div.spcart-single-number
+						span.spcart-single-reduce -
+						input(type='text' value='1')
+						span.spcart-single-add +
+					div.spcart-single-totalprice ￥119.00
+					div.spcart-single-operation
+						a.spcart-single-addFavorite(href='javascript:void(0);') 移入收藏夹
+						a.spcart-single-deleteBtn(href='javascript:void(0);') 删除
+				div.spcart-single
+					input.spcart-single-checkbox(type='checkbox')
+					img(src='./images/shoppingcart/newbalance2.jpg')
+					div.spcart-single-title
+						a 【1212年终盛典】李宁/LINING跑步系列速干男修身训练紧身运动长裤压缩裤AULK049
+					div.spcart-single-meta
+						p 颜色分类：黑色【AULK049】
+						p 尺码：S（165/72A）
+					div.spcart-single-price
+						span ￥569.00
+						span ￥489.00
+					div.spcart-single-number
+						span.spcart-single-reduce -
+						input(type='text' value='1')
+						span.spcart-single-add +
+					div.spcart-single-totalprice ￥489.00
+					div.spcart-single-operation
+						a.spcart-single-addFavorite(href='javascript:void(0);') 移入收藏夹
+						a.spcart-single-deleteBtn(href='javascript:void(0);') 删除
+				div.spcart-single
+					input.spcart-single-checkbox(type='checkbox')
+					img(src='./images/shoppingcart/newbalance.jpg')
+					div.spcart-single-title
+						a 【1212年终盛典】李宁/LINING跑步系列速干男修身训练紧身运动长裤压缩裤AULK049
+					div.spcart-single-meta
+						p 颜色分类：黑色【AULK049】
+						p 尺码：S（165/72A）
+					div.spcart-single-price
+						span ￥869.00
+						span ￥589.00
+					div.spcart-single-number
+						span.spcart-single-reduce -
+						input(type='text' value='1')
+						span.spcart-single-add +
+					div.spcart-single-totalprice ￥589.00
+					div.spcart-single-operation
+						a.spcart-single-addFavorite(href='javascript:void(0);') 移入收藏夹
+						a.spcart-single-deleteBtn(href='javascript:void(0);') 删除
 			div.spcar-footer
-				input(type='checkbox')
-				label(for='all-select') 全选
-				a(href='javascript:;') 删除
+				div.spcar-footer-allselec
+					input(type='checkbox' name='all-select')
+					label(for='all-select') 全选
+				a(href='javascript:;').spcar-footer-allDelete 删除
 				a(href='javascript:;') 移入收藏夹
 				div.spcar-footer-settlement
-					span 已选商品
-					span 0
-					span 件
-					span 合计（不含运费）：
-					span 0.00
+					span.spcar-footerSet-hasSelecTitle 已选商品
+					span.spcar-footerSet-number 0
+					span.spcar-footerSet 件
+					span.spcar-footerSet 合计（不含运费）：
+					span.spcar-footerSet-totalPrice ￥0.00
 					a(href='javascript:;') 结 算
 		include ../includes/footer.jade
 	script(src='./bower_components/jquery/dist/jquery.min.js')
