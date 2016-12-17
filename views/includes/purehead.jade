@@ -3,7 +3,7 @@ div.header
 		ul
 			li 嘿，欢迎来到电子商城
 			li 
-				a(href='http://127.0.0.1:3000/load') 请登录
+				a(href='javascript:void();') 请登录
 			li 
 				a(href='javascript:void();') 免费注册
 		ul.fl
@@ -29,14 +29,3 @@ div.header
 						a(href='javascript:void();') 收藏的宝贝
 					li 
 						a(href='javascript:void();') 收藏的店铺
-div.searchWrap
-	div.logo
-		img
-	div.search
-		form(ation='#{router}' method='post')
-			input(type='text' placeholder='#{searchWord}').inputText
-			input(type='submit' value='搜索' ).inputSummit
-			each recom in recommands
-				span
-					a(href='javascript:void();')=recom
-		

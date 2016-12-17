@@ -1,0 +1,59 @@
+doctype
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width')
+		link(href='./style/load.css' rel='stylesheet' type='text/css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+	body
+		div.load-head
+			h3 电子商城
+			span 欢迎登录
+		div.load-main-wrap
+			div.load-main
+				img(src='./images/load/584e8201Na592d125.jpg')
+				div.load-form
+					div.load-choose
+						span.load-choose-form.load-choose-select 账户登录
+						span.load-choose-scan 扫码登录
+					div.load-wrap
+						div.load-wrap-inner
+							div.load-wrap-form
+								span.load-form-alert 公共场所不建议自动登录，以防账号丢失
+									span.glyphicon.glyphicon-exclamation-sign
+								form(method='post').load-form-content
+									div.load-formCon-line
+										span.glyphicon.glyphicon-user.load-formCon-icon
+										input(type='text' placeholder='邮箱/用户名/手机').load-formCon-input
+									div.load-formCon-line
+										span.glyphicon.glyphicon-lock.load-formCon-icon
+										input(type='password' placeholder='密码').load-formCon-input
+									div.load-form-forget
+										input(type='checkbox')
+										span 自动登录
+										a(href='javascript:;') 忘记密码
+									input(type='submit' value='登 录').load-formCon-submit
+							div.load-scan
+								h4 手机扫码，安全登录
+								div.load-scan-img
+									img(src='./images/load/TB13XJiOVXXXXaHXpXXwu0bFXXX.png')
+								div.load-scan-descri 打开 手机 扫一扫登录
+									i.glyphicon.glyphicon-phone
+					ul.load-other
+						li
+							span.load-other-qq
+							a(href='javascript:;') QQ
+						li
+							span.load-other-weixin
+							a(href='javascript:;') 微信
+						li
+							span.load-other-zhi
+							a(href='javascript:;') 支付宝
+						li
+							a(href='javascript:;').load-other-register 立即注册
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./script/load.js' type='text/javascript')
+
+    
+

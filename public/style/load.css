@@ -1,0 +1,259 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	color: black;
+}
+a:hover{
+	/* color:; */
+	text-decoration: none;
+}
+.load-head{
+	width: 990px;
+	margin: 0 auto;
+	height: 100px;
+}
+	.load-head h3{
+		float: left;
+		color: #b10000;
+	}
+	.load-head span{
+		/* display: inline-block; */
+		float: left;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+.load-main-wrap{
+	width: 100%;
+	background: #E8C99A;
+	
+}
+	.load-main{
+		width: 990px;
+		margin: 0 auto;
+		position: relative;
+
+	}
+	.load-form{
+		position: absolute;
+		width: 320px;
+		height: 360px;
+		top: 30px;
+		right: 0;
+		background: white;
+		padding: 10px 20px;
+		/* box-sizing:  */
+		/* position: relative; */
+	}
+		.load-choose{
+			width: 100%;
+			height: 40px;
+			margin-top: 15px;
+		}	
+			.load-choose span{
+				display: inline-block;
+				width: 50%;
+				font-size: 18px;
+				color: gray;
+				line-height: 30px;
+				text-align: center;
+			}
+			.load-choose span:hover{
+				font-weight: bold;
+				color: #b10000;
+				cursor: pointer;
+			}
+			.load-choose .load-choose-select{
+				font-weight: bold;
+				color: #b10000;
+				cursor: pointer;
+
+			}
+	/* load wrap */
+	.load-wrap{
+		width: 285px;
+		height: 220px;
+		/* border: 1px dotted red; */
+		overflow: hidden;
+		position: relative;
+	}
+		.load-wrap-inner{
+			width: 570px;
+			/* border: 1px solid green; */
+			/* overflow: hidden; */
+			height: 220px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}	
+	/* load content section */
+	.load-wrap-form{
+		width: 280px;
+		float: left;
+	}
+		.load-form-alert{
+			width: 100%;
+			background: #FEF4E5;
+			border: 2px solid #F6C090;
+			text-align: center;
+			font-size: 12px;
+			color: #343434;
+			display: inline-block;
+			padding: 2px;
+		}
+			.load-form-alert span{
+				float: left;
+				color: red;
+				font-size: 16px;
+				margin-left: 15px;
+			}
+	.load-form-content{
+		width: 100%;	
+	}
+		.load-formCon-line{
+			width: 100%;
+			margin: 10px 0;
+			/* background: red; */
+			/* overflow: hidden; */
+			height: 38px;
+		}
+			.load-formCon-icon{
+				width: 35px;
+				height: 35px;
+				/* line-height: 35px; */
+				border: 1px solid #BDBDBD;
+				background: #F3F3F3;
+				color: #D2D2D2;
+				/* background: blue; */
+				/* float: left; */
+				padding-top: 8px;
+				padding-left: 10px;
+				/* font-size: 18px; */
+				border-right: none;
+			}
+			.load-formCon-input{
+				width: 240px;
+				height: 35px;
+				line-height: 35px;
+				border: 1px solid #BDBDBD;
+				outline: none;
+				text-indent: 8px;
+				/* border-left: none; */
+				/* float: left; */
+			}		
+				.load-form-forget{
+					width: 100%;
+					color: #999;
+					font-size: 12px;
+				}
+					.load-form-forget a{
+						float: right;
+						color: #999;
+					}
+					.load-form-forget input[type='checkbox']{
+						outline: none;
+						margin: 0px 3px 0 2px;
+						display: inline-block;
+					}
+				input[type='submit']{
+					width: 100%;
+					height: 30px;
+					margin-top: 20px;
+					background: #b10000;
+					color: white;
+					font-size: 18px;
+					/* font-weight: bold; */
+					border: none;
+					outline: none;
+				}
+
+
+	/* load scan section	 */
+	.load-scan{
+			width: 280px;
+			float: left;
+		}
+	.load-scan h4{
+		margin-left: 10px;
+	}
+	.load-scan-img{
+		/* display: inline-block; */
+		margin: 0 auto;
+		width: 140px;
+	}
+	.load-scan-descri{
+		margin: 0 auto ;
+		width: 170px;
+		margin-top: 20px;
+	}
+		.load-scan-descri i{
+			float: left;
+			color: #b10000;
+			margin-right: 10px;
+		}
+
+
+	/* load other section */
+	.load-other{
+		width: 100%;
+		margin-top: 20px;
+		/* position: absolute;
+		bottom: -30px;
+		left: 15px; */
+		/* background: red; */
+		overflow: hidden;
+	}
+		.load-other li{
+			float: left;
+			/* height: 30px; */
+			/* line-height: 30px; */
+			color: #aaa;
+			margin-right: 10px;
+			position: relative;
+
+		}
+		.load-other li span{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-image: url('./style-icon/colaIcon.png') ;
+			background-repeat:no-repeat;
+			margin-right: 5px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.load-other-register{
+			margin-left: 16px;
+		}
+		.load-other li a{
+			color: #999;
+			margin-left: 22px;
+			/* line-height: 20px; */
+			/* font-size:  */
+		}
+		.load-other-qq{
+			background-position:  -760px -358px;
+		}
+		.load-other-weixin{
+			background-position:  -760px -275px;
+
+		}
+		.load-other-zhi{
+			background-position:  -760px -301px;
+
+		}
+		.load-other-register{
+			/* background-position:  -760px -358px; */
+			/* margin-left */
+		}
+		
+
+

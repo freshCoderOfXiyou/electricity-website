@@ -1,7 +1,7 @@
 .pay-main{
 	width: 1000px;
 	/* height: 500px; */
-	border: dotted 1px red;
+	/* border: dotted 1px red; */
 	margin: 10px auto;
 	overflow: hidden;
 }
@@ -56,7 +56,9 @@
 		display: block;
 	}
 .pay-info{
-
+	margin-bottom: 20px;
+	border-top: 1px dotted lightblue;
+	/* border-bottom: 3px dotted lightblue; */
 }
 	.pay-info-title{
 		font-size: 16px;
@@ -73,34 +75,39 @@
 		margin-left: 2px;
 		border-bottom: 2px solid #666;
 		text-align: center;
+		font-size: 16px;
 	}
 		.pay-infoCap-name{
-			width: 255px;
+			width: 300px;
 		}
 		.pay-infoCap-meta {
-			width: 180px;
+			width: 200px;
 		}
 		.pay-infoCap-price{
-			width: 120px;
+			width: 150px;
 		}
 		.pay-infoCap-count{
-			width: 120px;
+			width: 150px;
 		}
 		.pay-infoCap-subTotal{
-			width: 130px;
+			width: 190px;
 			clear: right;
 		}
 	.pay-single{
 		width: 100%;
 		overflow: hidden;
-		font-size: 12px;
+		/* font-size: 12px; */
+		margin-top: 10px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #999;
+		padding-bottom: 10px;
 	}
 	.pay-single>div{
 		float: left;
 		text-align: center;
 	}
 		.pay-single-name{
-			width: 255px;
+			width: 300px;
 		}
 			.pay-single-name a{
 				/* margin-left: 80px; */
@@ -110,17 +117,17 @@
 				float: left;
 			}
 		.pay-single-meta{
-			width: 180px;
+			width: 200px;
 			color: #999;
 		}
 		.pay-single-price{
-			width: 120px;
+			width: 150px;
 		}
 		.pay-single-count{
-			width: 120px;
+			width: 150px;
 		}
 		.pay-single-subTotal{
-			width: 130px;
+			width: 190px;
 			color: #c40000;
 		}
 .pay-summary{
