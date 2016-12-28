@@ -138,12 +138,13 @@
 .header{
 	border-bottom:1px solid #ddd ;
 	width: 100%;
-	float: left;
+	/* float: left; */
 	height: 32px;
 }
 	.headerWrapDiv{
 		width: 1190px;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 		.header ul{
 			list-style-type: none;
