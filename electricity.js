@@ -565,6 +565,11 @@ app.get('/load',function (req,res) {
 		title:'登录'
 	})
 })
+app.get('/mindex',function(req,res){
+	res.render('m-index',{
+		title:'hello mobile web'
+	})
+})
 app.listen(app.get('port'),function(){
 	console.log("Express started on http://localhost:"+app.get('port')+";press Ctrl-c to continue")
 })

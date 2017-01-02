@@ -7,4 +7,6 @@
 	$('.telCharge_icon').hover(function () {
 		alert("adsf")
 	})
+	var $images=$('#images')
+	imagesmove($images)
 })()

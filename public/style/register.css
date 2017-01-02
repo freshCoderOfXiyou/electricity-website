@@ -61,7 +61,7 @@ a:hover{
 				float: left;
 				line-height: 46px;
 				text-align: center;
-				letter-spacing: 5px;
+				letter-spacing: 3px;
 			}
 			.regcon-main form div input[type='text'],input[type='password']{
 				width: 548px;

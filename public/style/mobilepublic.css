@@ -1,0 +1,91 @@
+@media screen and ( min-width: 212px){
+/*213px显示屏样式 LG Optimus One*/
+	html{
+		font-size: 21.2px!important;
+		/* background: #800000; */
+	}
+}
+@media screen and ( min-width: 320px){
+/*320px显示屏样式 苹果4/4S/5C/5S黑莓Z30 */
+	html{
+		font-size: 32px!important;
+		/* background: #ffb6c1; */
+	}
+}
+@media screen and ( min-width: 360px){
+/*360px显示屏样式 索尼Z1*/
+	html{
+		font-size: 36px!important;
+		/* background: lightpink; */
+	}
+}
+@media screen and ( min-width: 375px){
+/*375px iphone6*/
+	html{
+		font-size: 37.5px!important;
+		/* background: lightpink; */
+	}
+}
+@media screen and ( min-width: 383px){
+/*384px显示屏样式 黑莓Z10 谷歌 Nexus 6 LG Optimus G*/
+	html{
+		font-size: 38.3px!important;
+		/* background: lightgreen; */
+	}
+}
+@media screen and ( min-width: 399px){
+/*399px显示屏样式 三星galaxyNote*/
+	html{
+		font-size: 39.9px!important;
+		/* background: lightblue; */
+	}
+}
+@media screen and ( min-width: 414px){
+/*414px显示屏样式 苹果6plus*/
+	html{
+		font-size: 41.4px!important;
+		/* background: yellow; */
+	}
+}
+@media screen and ( min-width: 423px){
+/*424px显示屏样式 LG 4X */
+	html{
+		font-size: 42.3px!important;
+		/* background: green; */
+	}
+}
+@media screen and ( min-width: 479px){
+/*480px显示屏样式 索尼MT27i Xperia sola*/
+	html{
+		font-size: 47.9px!important;
+		/* background: blue; */
+	}
+}
+@media screen and ( min-width: 539px){
+/*640px显示屏样式 摩托罗拉Droid3/4/Razr Atrix 4g*/
+	html{
+		font-size: 53.9px!important;
+		/* background: orange; */
+	}
+}
+@media screen and ( min-width: 639px){
+/*640px显示屏样式*/
+	html{
+		font-size: 63.9px!important;
+		/* background: red; */
+	}
+}
+@media screen and ( min-width: 640px){
+/*640px以上显示屏样式*/
+	html{
+		font-size: 64.0px!important;
+		/* background: #b22222; */
+	}
+} 
+@media screen and ( min-width: 768px){
+/*640px以上显示屏样式*/
+	html{
+		font-size: 76.8px!important;
+		/* background: #b22222; */
+	}
+} 

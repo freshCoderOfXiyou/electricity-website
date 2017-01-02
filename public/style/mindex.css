@@ -1,0 +1,160 @@
+.header{
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	background: -webkit-linear-gradient(top,rgba(0, 0, 0, .7),rgba(0, 0, 0, 0));
+	height: 1rem;
+	padding-top: 0.1rem;
+}
+	.header span{
+		flex: 1.5;
+		color: white;
+		/* margin-left: 0.1rem; */
+		text-align: center;
+		/* margin-top: 0.1rem */
+		line-height: 0.8rem;
+		/* background: white; */
+	}
+	.header input{
+		flex: 6;
+		border: none;
+		border-top-left-radius: 0.1rem;
+		border-bottom-left-radius: 0.1rem;
+		margin-top: 1px;
+
+		/* border-radius: 0.1rem/0.1rem; */
+		/* border-right: none; */
+		height: 0.8rem;
+		text-indent: 0.3rem;
+		outline: none;
+		padding: 0;
+	}
+	.header .header-icon{
+		background: white;
+		height: 0.8rem;
+		color: black;
+		border: none;
+		flex: 1;
+		border-top-right-radius: 0.1rem;
+		border-bottom-right-radius: 0.1rem;
+	}
+.entry-list{
+	list-style-type: none;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+	.entry-list li{
+		float: left;
+		width: 2rem;
+		/* background: green; */
+		text-align: center;
+	}
+		.entry-list a{
+			color: black;
+		}
+		.entry-list a:hover{
+			color: black;
+		}
+			.entry-list a img{
+				width: 60%;
+				/* margin: auto; */
+				margin: 0.2rem 20% 0.05rem;
+			}
+.rollInfo{
+	display: flex;
+}
+	.rollInfo-title{
+		flex: 2;
+		border-right: 1px solid #cecece;
+	}
+	.rollInfo-icon{
+		width: 0.8rem;
+		height: 0.8rem;
+	}
+	.rollInfo-content{
+		flex: 7;
+		position: relative;
+	}
+		.rollInfo-wrap{
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+			.rollInfo-single{
+				width: 100%;
+			}	
+				.rollInfo-single span{
+					width: 100%;
+					display: inline-block;
+				}
+				.rollInfo-single span:nth-child(2){
+					color: #c40000;
+				}
+.sidebar{
+
+}
+.banner{
+	width: 10rem;
+	height: 5rem;
+	position: relative;
+	overflow: hidden;
+}
+	.bannerwrap{
+		width: 80rem;
+		position: absolute;
+		top: 0;
+		left: -10rem;
+	}
+		.bannerwrap img{
+			width: 10rem;
+		}
+	.bannerbtn{
+		position: absolute;
+		bottom: 0.5rem;
+		left: 3.5rem;
+		height: 0.2rem;
+		width: 3rem;
+		/* background: green; */
+	}
+		.bannerbtn span{
+			display: inline-block;
+			width: 0.25rem;
+			height: 0.25rem;
+			background: rgba(10, 10, 10, 0.58);
+			border-radius: 50%;
+			border: 2px solid #666;
+			margin-right: 0.2rem;
+		}
+.footer{
+	width: 100%;
+	height: 1rem;
+	/* background: red; */
+	position: fixed;
+	bottom: 0;
+	/* border-top: 1px solid #777; */
+	/* box-shadow: 0 -1px 0px 1px #666; */
+	/* padding-top: 0.1rem; */
+}
+	.footer ul{
+		list-style-type: none;
+		display: flex;
+		background: white;
+		padding: 0;
+	}
+		.footer ul li{
+			float: left;
+			flex: 1;
+			/* border: 1px dotted black; */
+			text-align: center;
+		}
+			.footer ul li a {
+				width: 100%;
+			}
+			.footer ul li a img{
+				width: 65%;
+			}
