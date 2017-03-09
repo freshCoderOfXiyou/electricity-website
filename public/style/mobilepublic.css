@@ -82,6 +82,11 @@
 		/* background: #b22222; */
 	}
 } 
+@media screen and ( min-width: 736px){
+	html{
+		font-size: 73.6px !important;
+	}
+}
 @media screen and ( min-width: 768px){
 /*640px以上显示屏样式*/
 	html{

@@ -7,7 +7,7 @@
 	width: 100%;
 	background: -webkit-linear-gradient(top,rgba(0, 0, 0, .7),rgba(0, 0, 0, 0));
 	height: 1rem;
-	padding-top: 0.1rem;
+	padding-top: 0.1rem; 
 }
 	.header span{
 		flex: 1.5;
@@ -70,14 +70,24 @@
 	.rollInfo-title{
 		flex: 2;
 		border-right: 1px solid #cecece;
+		font-size: 0.4rem;
+		margin-left: 0.1rem;
 	}
 	.rollInfo-icon{
-		width: 0.8rem;
-		height: 0.8rem;
+		width: 0.6rem;
+		height: 0.6rem;
+		margin-top: 0.2rem;
+		margin-left: 0.1rem;
+		margin-right: 0.1rem;
 	}
 	.rollInfo-content{
 		flex: 7;
 		position: relative;
+		margin-left: 0.1rem;
+		font-size: 12px;
+		/*background: red;*/
+		overflow: hidden;
+		height: 1rem;
 	}
 		.rollInfo-wrap{
 			width: 100%;
@@ -87,6 +97,8 @@
 		}
 			.rollInfo-single{
 				width: 100%;
+				/*padding-top: 0.1rem;*/
+				height: 1rem;
 			}	
 				.rollInfo-single span{
 					width: 100%;
@@ -130,6 +142,175 @@
 			border: 2px solid #666;
 			margin-right: 0.2rem;
 		}
+
+/*content style*/
+.content{
+	width: 10rem;
+	background: #eee;
+	height: 10rem;
+}
+	.slide{
+		height: 3.5rem;
+		padding-top: 0.1rem;
+		padding-left: 0.1rem;
+		width: 10rem;
+		overflow: hidden;
+		position: relative;
+	}
+		.slidewrap{
+			height: 100%;
+			width: 17.1rem;	
+			position: absolute;
+			top: 0.1rem;
+			left: 0px;
+			transform: translate3d(0px,0,0);
+		}
+			.slidewrap img{
+				height: 100%;
+				width: 5.5rem;
+				margin-right: 0.2rem;
+			}
+			.slidewrap p{
+
+			}
+	/*floor style*/
+	.floor{
+		width: 100%;
+		/*height: 3rem;*/
+		margin-top: 0.1rem;
+		/*padding-top: 0.1rem;*/
+		background: white;
+	}
+		.floor-title{
+			/*width: 5rem;*/
+			text-align: center;
+			/*width: auto;*/
+			margin: 0 auto;
+
+		}
+			#firstfloor .floor-title span{
+				border-color: #f70000;
+				color: #f70000;
+			}
+			#secondfloor .floor-title span{
+				border-color: #4A84E2;
+				color: #4A84E2;
+			}
+			#thridfloor .floor-title span{
+				border-color: #FF8000;
+				color: #FF8000;
+			}
+			#fourthfloor .floor-title span{
+				border-color: #43AF00;
+				color: #43AF00;
+			}
+			#fifthfloor .floor-title span{
+				border-color: #8828DD;
+				color: #8828DD;
+			}
+			#sixthfloor .floor-title span{
+				border-color: #E24AA5;
+				color: #E24AA5;
+			}
+			#seventhfloor .floor-title span{
+				border-color: #17B7FF;
+				color: #17B7FF;
+			}
+			#eighthfloor .floor-title span{
+				border-color: #5E4AE2;
+				color: #5E4AE2;
+			}
+			.title-modified{
+				width: 1rem;
+				height: 0;
+				display: inline-block;
+				border-bottom: 1px solid ;
+				margin-bottom: 5px;
+			}
+			.title-words{
+				margin-right: 4px;
+			}
+			.floor-title img{
+				width: 0.4rem;
+				/*margin-bottom: 5px;*/
+				margin:0 4px 5px;
+			}
+		.floor-content{
+
+		}
+			.floor-inner{
+				display: flex;
+				width: 10rem;
+				list-style-type: none;
+				padding: 0;
+				margin:0;
+				/*vertical-align: middle;*/
+				text-align: center;
+			}
+				.floor-inner img{
+					width: 3.3rem;
+				}
+				.floor-sinlink{
+					width: 2.5rem;
+					display: block;
+					color:#2f2f2f;
+					/*font-size: 0.3rem;*/
+				}
+				.floor-sinlink img{
+					width: 1.7rem;
+					display: inline-block;
+					margin:0.4rem;
+				}
+					.price{
+						color: #f40000;	
+						font-size: 0.3rem;
+						margin-right: 0.1rem;
+					}
+					.original-price{
+						color: #9b9b9b;
+						font-size: 0.3rem;
+						text-decoration: line-through;
+					}
+				.floor-content-single{
+					height: 2rem;
+				}
+				/*.floor-sin{
+					width: 2.5rem;
+					border:1px solid black;
+				}*/
+					.floor-sin img{
+						width: 90%;
+					}
+				.floor-content-single{
+					width: 4.8rem;
+					display: inline-block;
+
+					overflow: hidden;
+					height: 7rem;
+					position: relative;
+					margin:0.1rem;
+				}
+					.floor-content-single img{
+						width: 4.8rem;
+						margin:0 0.1rem;
+
+					}
+					.floor-content-single .title{
+						color: #999;	
+						display: inline-block;
+						margin:0.1rem 0.2rem;
+						height: 1.2rem;
+						line-height: 0.6rem;
+						overflow: hidden;
+					}
+					.floor-content-single .discount-price{
+						color:#f40000;
+						margin-left: 0.2rem;
+						font-size: 0.5rem;
+						/*position: absolute;*/
+						/*bottom: 0px;*/
+						/*z-index: 100;*/
+					}
 .footer{
 	width: 100%;
 	height: 1rem;
@@ -158,3 +339,8 @@
 			.footer ul li a img{
 				width: 65%;
 			}
+	.kong{
+		width: 10rem;
+		height: 1.5rem;
+		background: #eee;
+	}

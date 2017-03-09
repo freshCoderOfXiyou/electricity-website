@@ -2,8 +2,6 @@
 function imagesmove ($node) {
 	// body... 
 	var imagesCount=$node.children('a').length
-
-	// var imageWidth=$images.children('a').width()
 	var imageWidth=$node.width()
 	var singleImageWidth=$node.find('img').width()
 	var lastImageLeft=-singleImageWidth*(imagesCount-1)
@@ -11,6 +9,10 @@ function imagesmove ($node) {
 	var oldIndex=1
 	$('#bt1').css("background",'rgba(255,255,255,0.8)')
 	window.setInterval(function () {
+		var imagesCount=$node.children('a').length
+		var imageWidth=$node.width()
+		var singleImageWidth=$node.find('img').width()
+		var lastImageLeft=-singleImageWidth*(imagesCount-1)
 		var nowLeft=parseInt($node.css('left'))
 		var nextLeft=nowLeft-singleImageWidth
 		nowIndex=-nowLeft/singleImageWidth

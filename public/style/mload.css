@@ -1,0 +1,87 @@
+/*@mload.css*/
+html,body{
+	background-color: #f0f0f0;
+}
+.title{
+	width: 10rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	text-align: center;
+	font-size: 0.42rem;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.load-form{
+	width: 10rem;
+	background: #f0f0f0;
+}
+	.load-form-user{
+		width: 10rem;
+		padding-top: 0.5rem;
+		/*background: #f0f0f0;*/
+		margin-bottom: 0.05rem;
+	}
+		.load-form-label{
+			/*background: #fff;*/
+			display: inline-block;
+			/*height: 0.7rem;*/
+			/*border: 1px solid #000;*/
+			height: 1.3rem;
+			line-height: 1.3rem;
+			width: 2rem;
+			text-indent: 0.1rem;
+			background: #fff;
+			color:#666;
+
+		}
+		.load-form-input{
+			height: 1.3rem;
+			width: 8rem;
+			text-indent: 0.15rem;
+			border: none;
+			outline: none;
+		}
+	.load-form-psw{
+
+	}
+	.load-form-submit{
+		margin:0.5rem 0.5rem;
+		width: 9rem;
+		border:none;
+		background: #c40000;
+		border-radius: 3px;
+		letter-spacing: 0.3rem;
+		height: 1.3rem;
+		line-height: 1.3rem;
+		color: #e8e8e8;
+	}
+.otherway{
+	width: 10rem;
+	padding:0 0.5rem;
+	background:#f0f0f0;
+}
+	.otherway a{
+		color:#c40000;
+		text-decoration: none;
+	}
+	.otherway a:last-child{
+		float: right;
+	}
+	.message-ask-wrap{
+		background: #f0f0f0;
+		width: 10rem;
+		padding-top: 1rem;
+	}
+.message-ask{
+	color:#f40;
+	border:1px solid #f40;
+	background: #f0f0f0;
+	width: 5rem;
+	height: 1rem;
+	line-height: 1rem;
+	display: block;
+	text-align: center;
+	border-radius: 4px;
+	margin:0 2.5rem;
+}

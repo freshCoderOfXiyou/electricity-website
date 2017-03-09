@@ -1,0 +1,139 @@
+/*@mobile detail style sheet*/
+.header{
+	width: 10rem;
+	height: 1.35rem;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background: #f0f0f0;
+}
+	.header>span{
+		width: 3.3rem;
+		display: inline-block;
+		line-height: 1.35rem;
+		text-align: center;
+		font-size: 0.47rem;
+		/*cursor: pointer;*/
+	}
+	.header-focus{
+		border-top: 2px solid #f40000;
+		color:#f40000;
+	}
+.middle-outer{
+	width: 10rem;
+	/*border: 1px solid black;*/
+	position: relative;
+	height: 20rem;
+	overflow: hidden;
+}
+.middle{
+	width: 30rem;
+	height: 20rem;
+	/*background: red;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin:1.35rem 0 1.55rem 0;
+
+	overflow: hidden;
+}
+	.middle>div{
+		width: 10rem;
+		height: 20rem;
+		float: left;
+	}
+	.info{
+		background: #e7e7e7;
+	}
+		.piclist-outer{
+			width: 10rem;
+			height: 10rem;
+			overflow: hidden;
+			position: relative;
+		}
+			.piclist-inner{
+				width: 50rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.piclist-inner img{
+				width: 10rem;
+
+			}
+			.piclist-signal{
+				position: absolute;
+				bottom: 1rem;
+				width: 5rem;
+				height: 0.5rem;
+				background: red;
+			}
+	.more{
+		background: pink;
+	}
+	.comment{
+		background: lightgreen;
+	}
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 10rem;
+	height: 1.45rem;
+	z-index: 2;
+	background: #f6f6f6;
+	/*padding: 0.1rem 0;*/
+}
+.footer-iconlist{
+	/*border:1px black solid;*/
+	width: 4.8rem;
+	/*display: inline-block;*/
+	float: left;
+}
+
+.footer-iconlist>a{
+	width: 1.6rem;
+	display: inline-block;
+	text-align: center;
+	margin-top: 0.2rem;
+}
+.footer-iconlist>a>span{
+	width: 1.6rem;
+} 
+.footer-iconlist>a>span:first-child{
+	font-size: 0.6rem;
+	color:#999;
+}
+.footer-iconlist>a>span:last-child{
+	font-size: 0.35rem;
+	color: #666;
+}
+#footer-btns{
+	background: pink;
+	width: 5.2rem;
+	float: right;
+	/*display: inline-block;*/
+}
+#footer-btns .footer-btn{
+	width: 2.6rem;
+	display: block;
+	float: left;
+	/*outline: none;*/
+	border:none;
+	height: 1.45rem;
+	line-height: 1.55rem;
+	text-align: center;
+	color: white;
+	font-size: 0.45rem;
+	/*float: right;*/
+	/*display: inline-block;*/
+	/*padding: 0;*/
+	/*margin: 0;*/
+}
+
+
+.footer-btn-addToCart{
+	background: #ff9500;
+}
+.footer-btn-buyNow{
+	background: #DD2727;
+}
