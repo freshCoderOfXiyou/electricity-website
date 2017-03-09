@@ -1,0 +1,31 @@
+doctype
+html
+	head
+		title #{title}
+		link(rel='stylesheet' href='./style/mobilepublic.css')
+		link(rel='stylesheet' href='./style/mload.css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1')
+		meta(name='aplus' content='1')
+		meta(name='apple-mobile-web-app-title' content='商城')
+		meta(name='apple-mobile-web-app-capable' content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+		meta(name='format-detection' content='telephone=no,address=no')
+		body
+			div.title 商城账户登录 
+			form(method='post').load-form
+				div.load-form-user
+					span.load-form-label 账户
+					input.load-form-input(type='text' placeholder='手机号/邮箱/会员名')
+				div.load-form-psw
+					span.load-form-label 登录密码
+					input.load-form-input(type='password' placeholder='请输入密码')
+				input(type='submit' value='登录').load-form-submit
+			div.otherway
+				a(href='javascript:;') 免费注册 
+				a(href='javascript:;') 忘记密码
+			div.message-ask-wrap
+				a(href='javascript:;').message-ask 短信校验码登录
+

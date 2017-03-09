@@ -1,0 +1,56 @@
+doctype
+html
+	head
+		title #{title}
+		link(rel='stylesheet' href='./style/mobilepublic.css')
+		link(rel='stylesheet' href='./style/mdetail.css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1')
+		meta(name='aplus' content='1')
+		meta(name='apple-mobile-web-app-title' content='商城')
+		meta(name='apple-mobile-web-app-capable' content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+		meta(name='format-detection' content='telephone=no,address=no')
+		body
+			div.header
+				span#header-info.header-focus 基本信息
+				span#header-more 商品详情
+				span#header-comment 评价1734
+			div.middle-outer
+				div.middle 
+					div.info 
+						div.piclist-outer
+							div.piclist-inner
+								img(src='./images/mobile/detail/nike-slide.webp' alt='nike pic')
+								img(src='./images/mobile/detail/nike-slide2.webp' alt='nike pic')
+								img(src='./images/mobile/detail/nike-slide3.webp' alt='nike pic')
+								img(src='./images/mobile/detail/nike-slide4.webp' alt='nike pic')
+								img(src='./images/mobile/detail/nike-slide5.jpg' alt='nike pic')
+						ul.piclist-signal
+							li
+							li
+							li
+							li
+							li
+					div.more 
+						div
+					div.comment 
+						div
+			div.footer
+				div.footer-iconlist
+					a(href='javascript:;')
+						span.glyphicon.glyphicon-user
+						span 客服
+					a(href='javascript:;')
+						span.glyphicon.glyphicon-star-empty
+						span 收藏
+					a(href='javascript:;')
+						span.glyphicon.glyphicon-shopping-cart
+						span 购物车
+				div#footer-btns
+					a(href='javascript:;').footer-btn.footer-btn-addToCart 加入购物车
+					a(href='javascript:;').footer-btn.footer-btn-buyNow 立即购买
+		script(src='./bower_components/jquery/dist/jquery.min.js')
+		script(src='./script/mdetail.js')

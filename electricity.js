@@ -565,9 +565,20 @@ app.get('/load',function (req,res) {
 		title:'登录'
 	})
 })
-app.get('/mindex',function(req,res){
+app.get('/mload',function (req,res) {
+	res.render('m-loade',{
+		title:'登录'
+	})
+})
+app.get('/mindex',function (req,res) {
 	res.render('m-index',{
-		title:'hello mobile web'
+		title:'登录'
+	})
+})
+
+app.get('/mdetail',function (req,res) {
+	res.render('m-detail',{
+		title:'Nike'
 	})
 })
 app.listen(app.get('port'),function(){
