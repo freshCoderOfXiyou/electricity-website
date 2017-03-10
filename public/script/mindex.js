@@ -29,10 +29,10 @@
 				// }
 				// var distanceY=startY-touches[0].pageY
 				if (distanceX>=50) {
-					// $('.main').css('background','red')
+					$('.header').css('background','red')
 				}
 				if (distanceX<=-50) {
-					// $('.main').css('background','yellow')
+					$('.header').css('background','yellow')
 				}
 				// if (distanceY>=50) {
 				// 	$('.main').css('background','green')
