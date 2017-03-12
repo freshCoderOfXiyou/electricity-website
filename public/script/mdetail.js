@@ -6,6 +6,7 @@
 		var header_focus_item='header-info'
 		var focus_id=1
 		var clickbtn=1
+		// var transx=0
 		$('#header-info').click(function () {
 			// console.log($(this).attr('id'))
 			if (header_focus_item==$(this).attr('id')) {
@@ -95,8 +96,15 @@
 		}//end func move
 		// slide(1,2)
 
+		// @begin finger js
 		var slidewrap=document.getElementsByClassName("piclist-outer")[0]
-		console.log(slidewrap)
+		var slideInner= document . getElementsByClassName("piclist-inner")[0]
+		var page=0
+		var distanceX=0
+		var transX=0
+		var listUl=document.getElementsByClassName("piclist-signal")[0].getElementsByTagName("li")
+		// var listUl=document.getElementsByClassName("piclist-signal")[0]
+		// console.log(listSin)
 		/*define a handle */
 		function handlestart (e) {
 			if(e.touches.length!==1){
@@ -105,44 +113,71 @@
 			startX=e.touches[0].pageX
 			startY=e.touches[0].pageY
 			slidewrap.addEventListener('touchmove',handlemove,false)
-			console.log('123')
+			console.log("sx is: "+ startX+"sy is : " + startY)
 		}	
 
 		function handlemove (e) {
+			transX = - page * screenWidth
+			console.log("page:"+(-page * screenWidth))
+			slideInner.style.transform="translate3d("+transX+"px,0,0)"
 			var touches=e.touches
 			if (touches&&touches.length) {
-				var distanceX=startX-touches[0].pageX
-				var slidewrapLoc=parseInt($('.slidewrap').css('left'))
-				var nowLoc=-slidewrapLoc-distanceX
-				$('.slidewrap').css('left',nowLoc+'px')
-				console.log(nowLoc)
-				console.log(distanceX)
-				// if (distanceX>0) {
-
-				// }
-				// else{
-				// 	return
-				// }
-				// var distanceY=startY-touches[0].pageY
-				if (distanceX>=50) {
-					$('.header').css('background','red')
-				}
-				if (distanceX<=-50) {
-					$('.header').css('background','yellow')
-				}
-				// if (distanceY>=50) {
-				// 	$('.main').css('background','green')
-				// }
-				// if (distanceY<=-50) {
-				// 	$('.main').css('background','pink')
-				// }
-				// if (Math.abs(distanceX)>=50 || Math.abs(distanceY) >= 50) {
-				// 	main.removeEventListener('touchmove', handlemove)
-				// }
+				distanceX=startX-touches[0].pageX
+				var transX=-distanceX-page * screenWidth
+				console.log(distanceX-page * screenWidth)
+				slideInner.style.transform="translate3d("+transX+"px,0,0)"
+				console.log("handlemove"+transX)
 			}
 			e.preventDefault()
 		}	
-		slidewrap.addEventListener('touchstart',handlestart,false)
 
-	}
+		function handleend(argument) {
+			transX=- page * screenWidth - distanceX
+			var move_time =1
+			var move_dis=2
+			console.log("move end")
+				if (distanceX>=100) {
+					listUl[page].style.background="#e0e0e0"
+					page++
+					listUl[page].style.background="#c40000"
+					var timer=setInterval(function () {
+
+						slideInner.style.transform="translate3d("+transX+"px,0,0)"
+						transX-=move_dis
+						// console.log("transX:"+transX)
+						// console.log("page:"+-page*(screenWidth + 1))
+						if (transX <= -page * (screenWidth + 1)) {
+							clearInterval(timer)
+						}
+					},move_time)
+				}
+				else if (distanceX<=-100) {
+					listUl[page].style.background="#e0e0e0"
+					page--
+					listUl[page].style.background="#c40000"
+					var timer=setInterval(function () {
+						slideInner.style.transform="translate3d("+transX+"px,0,0)"
+						transX+=move_dis
+						// console.log("transX:"+transX)
+						// console.log("page:"+-page*(screenWidth + 1))
+						if (transX >= -page * (screenWidth + 1)) {
+							clearInterval(timer)
+						}
+					},move_time)
+				}
+				else{
+					transX=- page * screenWidth
+					slideInner.style.transform="translate3d("+transX+"px,0,0)"
+				}
+		}
+
+		function setList(num){
+			for(var i=0,len=listSin.length;i < len;I++){
+
+			}
+		}
+		slidewrap.addEventListener('touchstart',handlestart,false)
+		slidewrap.addEventListener("touchend",handleend,false)
+
+	}//the all most outer
 })()
