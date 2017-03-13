@@ -103,6 +103,7 @@
 		var distanceX=0
 		var transX=0
 		var listUl=document.getElementsByClassName("piclist-signal")[0].getElementsByTagName("li")
+		var listUlLen=listUl.length
 		// var listUl=document.getElementsByClassName("piclist-signal")[0]
 		// console.log(listSin)
 		/*define a handle */
@@ -113,20 +114,23 @@
 			startX=e.touches[0].pageX
 			startY=e.touches[0].pageY
 			slidewrap.addEventListener('touchmove',handlemove,false)
-			console.log("sx is: "+ startX+"sy is : " + startY)
+			// console.log("sx is: "+ startX+"sy is : " + startY)
 		}	
 
 		function handlemove (e) {
 			transX = - page * screenWidth
-			console.log("page:"+(-page * screenWidth))
+			// console.log("page:"+(-page * screenWidth))
 			slideInner.style.transform="translate3d("+transX+"px,0,0)"
 			var touches=e.touches
 			if (touches&&touches.length) {
 				distanceX=startX-touches[0].pageX
+				// console.log("distanceX :"+distanceX)
+				// console.log("handlemove"+transX)
+				if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
+					distanceX=distanceX / 3
+				}
 				var transX=-distanceX-page * screenWidth
-				console.log(distanceX-page * screenWidth)
 				slideInner.style.transform="translate3d("+transX+"px,0,0)"
-				console.log("handlemove"+transX)
 			}
 			e.preventDefault()
 		}	
@@ -134,8 +138,13 @@
 		function handleend(argument) {
 			transX=- page * screenWidth - distanceX
 			var move_time =1
-			var move_dis=2
+			var move_dis=8
 			console.log("move end")
+				if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
+					transX=- page * screenWidth
+					slideInner.style.transform="translate3d("+transX+"px,0,0)"
+					return
+				}
 				if (distanceX>=100) {
 					listUl[page].style.background="#e0e0e0"
 					page++

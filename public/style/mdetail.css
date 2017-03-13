@@ -23,7 +23,7 @@
 	width: 10rem;
 	/*border: 1px solid black;*/
 	position: relative;
-	height: 20rem;
+	height: 40rem;
 	overflow: hidden;
 }
 .middle{
@@ -32,9 +32,9 @@
 	/*background: red;*/
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -414px;
 	margin:1.35rem 0 1.55rem 0;
-
+	float: left;
 	overflow: hidden;
 }
 	.middle>div{
@@ -91,6 +91,12 @@
 	.more{
 		background: pink;
 	}
+		.more-wrapper{
+			width: 10rem;
+		}
+		.more-wrapper img{
+			width: 10rem;
+		}
 	.comment{
 		background: lightgreen;
 	}
