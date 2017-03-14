@@ -28,19 +28,21 @@
 }
 .middle{
 	width: 30rem;
-	height: 20rem;
+	/*height: 20rem;*/
 	/*background: red;*/
 	position: absolute;
 	top: 0;
-	left: -414px;
-	margin:1.35rem 0 1.55rem 0;
+	/*left: -414px;*/
+	left: 0;
 	float: left;
 	overflow: hidden;
 }
 	.middle>div{
 		width: 10rem;
-		height: 20rem;
+		/*height: 20rem;*/
 		float: left;
+		overflow: hidden;
+		padding:1.35rem 0 1.55rem 0;
 	}
 	.info{
 		background: #e7e7e7;
@@ -88,6 +90,75 @@
 			.piclist-signal .piclist-signal-selec{
 				background: #f40000;
 			}
+		.info-info{
+			width: 10rem;
+			background: #fff;
+			margin-top:0.1rem ;
+			padding: 0.2rem ;
+		}
+			.info-info-title{
+				font-size: 0.4rem;
+			}
+			.info-info-price{
+				font-size: 0.55rem;
+				color:#dd2727;
+				margin:0.3rem 0;
+			}
+			.info-info-other {
+				display: flex;
+				width: 10rem;
+			}
+				.info-info-other span{
+					flex: 1;
+					text-align: center;	
+					color: gray;
+				}
+				.info-info-other span:first-child{
+					text-align: left;
+				}
+				.info-info-other span:last-child{
+					text-align: right;
+				}
+		.info-vouchers{
+
+		}
+			.voucher-item{
+
+			}
+				.vouchers-titel{
+
+				}
+				.button{
+
+				}
+			.vochers-divider{
+
+			}
+			.integral{
+
+			}
+				.vouchers-titel{
+
+				}
+				.text-btn{
+
+				}
+			.info-selec{
+
+			}
+			.goods-popular{
+
+			}
+				.goods-popular-title{
+
+				}
+				.goods-popular-content{
+
+				}
+					.goods-popular-singer{
+
+					}
+
 	.more{
 		background: pink;
 	}
