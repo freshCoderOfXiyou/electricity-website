@@ -217,5 +217,17 @@
 		slidewrap.addEventListener('touchstart',handlestart,false)
 		slidewrap.addEventListener("touchend",handleend,false)
 
+		//add goods to shoppingcart
+		$(".selec .text-btn").click(addToCart)
+		$(".footer-btn-addToCart").click(addToCart)
+		function addToCart(argument) {
+			$(".cover").css("display","block")
+			$(".info-selec").css("display","block")
+		}
+		$(".cover").click(closeCover)
+		function closeCover(argument) {
+			$(".cover").css("display","none")
+			$(".info-selec").css("display","none")
+		}
 	}//the all most outer
 })()

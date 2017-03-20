@@ -1,7 +1,10 @@
 /*@mobile detail style sheet*/
+a:visited{
+	text-decoration: none;
+}
 .header{
 	width: 10rem;
-	height: 1.35rem;
+	height: 1rem;
 	position: fixed;
 	top: 0;
 	z-index: 1;
@@ -10,9 +13,9 @@
 	.header>span{
 		width: 3.3rem;
 		display: inline-block;
-		line-height: 1.35rem;
+		line-height: 1rem;
 		text-align: center;
-		font-size: 0.47rem;
+		font-size: 0.37rem;
 		/*cursor: pointer;*/
 	}
 	.header-focus{
@@ -42,7 +45,7 @@
 		/*height: 20rem;*/
 		float: left;
 		overflow: hidden;
-		padding:1.35rem 0 1.55rem 0;
+		padding:1rem 0 1.55rem 0;
 	}
 	.info{
 		background: #e7e7e7;
@@ -118,49 +121,187 @@
 				}
 				.info-info-other span:last-child{
 					text-align: right;
+					margin-right: 0.4rem;
 				}
 		.info-vouchers{
-
+			width: 10rem;
+			background: #fff;
+			margin-top: 0.1rem;
+			padding:0.2rem;
 		}
 			.voucher-item{
-
+				height: 0.7rem;
 			}
 				.vouchers-titel{
-
+					background: #e7e7e7;
+					padding:0.01rem 0.05rem;
+					border:1px solid #c40000;
+					border-radius: 4px;
+					color: #c40000;
+					width: 1.5rem;
+					text-align: center;
+					display: inline-block;
+					margin-right: 0.5rem;
+					/*color:;*/
 				}
 				.button{
-
+					float: right;
+					color:#a7a7a7;
+					border: gray;
+					border: 1px solid gray;
+					padding:0 0.1rem;
 				}
 			.vochers-divider{
-
+				width: 9rem;
+				margin:0.1rem 0.5rem;
+				border-top: 0.05rem solid #e0e0e0	;
 			}
 			.integral{
-
+				height: 0.7rem;
 			}
 				.vouchers-titel{
-
+					line-height: 0.7rem;
 				}
 				.text-btn{
+					float: right;
+					font-size: 0.5rem;
+					line-height: 0.5rem;
+					color:#a7a7a7;
+				}
+			.selec{
+				width: 10rem;
+				background: #fff;
+				padding: 0.2rem ;
+				margin-top: 0.1rem;
+				height: 1rem;
+				/*line-height: 0.7rem;*/
+			}
+				.selec span{
+					line-height: 0.7rem;
+				}
+				/*.selec .txt*/
+			.cover{
+				width: 10rem;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 11;
+				background: rgba(0,0,0,0.7);
+				display: none;
+			}
+			.info-selec{
+				/*display: none;*/
+				position: fixed;
+				bottom: 0;
+				height: 14rem;
+				width: 10rem;
+				background: #e5e5e5;
+				z-index: 12;
+				transform: translate3d(0,100%,0);
+			}
+				.info-selec-title{
 
 				}
-			.info-selec{
+					.info-selec-imgwrap{
 
-			}
+					}
+					.info-selec-title{
+
+					}
+						.infoSeTit-price{
+
+						}
+						.infoSeTit-last{
+
+						}
+						.infoSeTie-haschoose{
+
+						}
+					.info-selec-close{
+
+					}
+				.info-selec-btnarea{
+
+				}
+					.info-selec-btntitle{
+
+					}
+					.info-selec-btns{
+
+					}
+				.info-selec-number{
+
+				}
+				.info-selec-yes{
+					width: 10rem;
+					display: block;
+					position: absolute;
+					bottom: 0;
+					height: 1.1rem;
+					line-height: 1.1rem;
+					text-align: center;
+					color:#fff;
+					font-size: 0.4rem;
+					/*font-weight: bold;*/
+					background: #c40000;
+				}
 			.goods-popular{
-
+				margin-top: 0.1rem;
+				width: 10rem;
+				background: #fff;
+				padding: 0.2rem;
 			}
 				.goods-popular-title{
 
 				}
 				.goods-popular-content{
-
+					width: 100%;
+					overflow: hidden;
 				}
 					.goods-popular-singer{
+						float: left;
+						/*border: 1px solid black;*/
+						width: 3rem;
+						margin-left: 0.1rem;
+						padding: 0.1rem;
+					}
+					.goods-popular-singer img{
+						width: 100%;
+					}
+					.goodsPopSinTil{
+						width: 100%;
+						height: 1rem;
+						overflow: hidden;
+						display: block;
+						text-overflow: ellipsis;
+						color:#333;
+						line-height: 0.5rem;
+						/*background: red;*/
+
+					}
+					.goodsPopSinOldPrice{
+						width: 100%;
+						height: 0.3rem;
+						display: block;
+						color:#ccc;
+						font-size: 0.3rem;
+						text-decoration: line-through;
+						line-height: 0.3rem;
+					}
+					.goodsPopSinPrice{
+						width: 100%;
+						height: 0.5rem;
+						display: block;
+						/*background: green;*/
+						color: #c40000;
+						font-size: 0.4rem;
+						font-weight: bold;
 
 					}
 
 	.more{
-		background: pink;
+		/*background: pink;*/
 	}
 		.more-wrapper{
 			width: 10rem;
@@ -175,7 +316,7 @@
 	position: fixed;
 	bottom: 0;
 	width: 10rem;
-	height: 1.45rem;
+	height: 1.2rem;
 	z-index: 2;
 	background: #f6f6f6;
 	/*padding: 0.1rem 0;*/
@@ -197,11 +338,11 @@
 	width: 1.6rem;
 } 
 .footer-iconlist>a>span:first-child{
-	font-size: 0.6rem;
+	font-size: 0.45rem;
 	color:#999;
 }
 .footer-iconlist>a>span:last-child{
-	font-size: 0.35rem;
+	font-size: 0.3rem;
 	color: #666;
 }
 #footer-btns{
@@ -216,11 +357,11 @@
 	float: left;
 	/*outline: none;*/
 	border:none;
-	height: 1.45rem;
-	line-height: 1.55rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
 	text-align: center;
 	color: white;
-	font-size: 0.45rem;
+	font-size: 0.35rem;
 	/*float: right;*/
 	/*display: inline-block;*/
 	/*padding: 0;*/
