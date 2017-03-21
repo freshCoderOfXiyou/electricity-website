@@ -223,11 +223,15 @@
 		function addToCart(argument) {
 			$(".cover").css("display","block")
 			$(".info-selec").css("display","block")
+			$(".info-selec").addClass("show")
 		}
 		$(".cover").click(closeCover)
+		$(".info-selec-close").click(closeCover)
 		function closeCover(argument) {
 			$(".cover").css("display","none")
+			$(".info-selec").removeClass("show")
 			$(".info-selec").css("display","none")
 		}
+		addToCart()
 	}//the all most outer
 })()

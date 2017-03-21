@@ -194,45 +194,149 @@ a:visited{
 				/*display: none;*/
 				position: fixed;
 				bottom: 0;
-				height: 14rem;
+				height: 12rem;
 				width: 10rem;
-				background: #e5e5e5;
+				background: white;
 				z-index: 12;
 				transform: translate3d(0,100%,0);
+				transition: transform 0.3s ease-in-out;
+			}
+			.info .show{
+				transform: translate3d(0,0,0);
+				transition: transform 0.3s ease-in-out;
 			}
 				.info-selec-title{
-
+					position: absolute;
+					top: 0;
+					width: 10rem;
+					height: 2.3rem;
+					/*background: lightblue;*/
+					border:1px solid #ddd;
+					/*padding: 0.2rem;*/
 				}
 					.info-selec-imgwrap{
-
+						position: absolute;
+						width: 2.5rem;
+						top: -0.5rem;
+						left: 0.2rem;
+						z-index: 11;
+						padding: 0.05rem;
+						border: 1px solid #aaa;
+						border-radius: 2px;
+						background: white;
 					}
-					.info-selec-title{
-
+						.info-selec-imgwrap img{
+							width: 2.4rem;
+							/*height: */
+						}
+					.info-selec-main{
+						margin-left: 2.9rem;
+						width: 7rem;
+						height: 2rem;
+						/*background: red;*/
+						padding-top: 0.1rem;
 					}
+						.info-selec-main>span{
+							width: 100%;
+							display: block;
+						}
 						.infoSeTit-price{
-
+							color: #c40000;
+							font-size: 0.5rem;
+							font-weight: 400;
 						}
 						.infoSeTit-last{
+							/*color: #aaa;*/
 
 						}
+							.infoSeTit-last>span{
+								margin-right: 0.3rem;
+							}
 						.infoSeTie-haschoose{
-
+							/*color:#aaa;*/
 						}
+							.infoSeTie-haschoose>span{
+								margin-right: 0.3rem;
+							}
 					.info-selec-close{
-
+						position: absolute;
+						top: 0.1rem;
+						right: 0.1rem;
+						display: block;
+						border: 1px solid #aaa;
+						width: 0.5rem;
+						height: 0.5rem;
+						text-align: center;
+						color: #aaa;
+						vertical-align: middle;
+						display: table-cell;
+						border-radius: 50%;
 					}
+				.info-selec-btnsarea{
+					margin-top: 2.3rem;	
+					height: 5rem;
+					/*background: red;*/
+					height: 8.61rem;
+					overflow: scroll;		
+				}
+				.devider{
+					width: 9.6rem;
+					margin: 0 0.2rem;
+					border-top: 1px solid #ddd;
+				}
 				.info-selec-btnarea{
-
+					padding: 0.2rem;
 				}
 					.info-selec-btntitle{
-
-					}
+						width: 10rem;
+						margin-left: 0.1rem;
+						margin-top: 0.1rem;
+					}	
 					.info-selec-btns{
-
+						width: 10rem;
+						overflow: hidden;
 					}
+						.info-selec-btns .btn-selected{
+							border:1px solid #c40000;
+						}
+						.info-selec-btns>span{
+							display: block;
+							border: 1px solid #c7c7c7;
+							border-radius: 2px;
+							float: left;
+							padding:0.1rem 0.3rem;
+							font-size: 0.4rem;
+							margin:0.1rem 0.1rem;
+						}
 				.info-selec-number{
 
-				}
+				}	
+					.info-selec-number .btn-unable{
+						color:#aeaeae;
+					}
+					.info-selec-number>span{
+						display: block;
+						float: left;
+						width: 0.8rem;
+						border: 1px solid #aeaeae;
+						height: 0.8rem;
+						text-align: center;
+						vertical-align: middle;
+						line-height: 0.8rem;
+						font-size: 0.5rem;
+						font-weight: 900;
+					}
+					.info-selec-number>input{
+						float: left;
+						border: 1px solid #aeaeae;
+						display: block;
+						height: 0.8rem;
+						width: 1rem;
+						line-height: 0.8rem;
+						text-align: center;
+						font-size: 0.4rem;
+						font-weight: 900;
+					}
 				.info-selec-yes{
 					width: 10rem;
 					display: block;
