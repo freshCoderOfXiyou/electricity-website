@@ -58,6 +58,7 @@
 			header_focus_item='header-comment'
 
 		})
+		$("#header-comment").click()
 		//function slide 
 		function slide(nowPosId,nextPosId) {
 			var dis=nextPosId - nowPosId
@@ -232,6 +233,47 @@
 			$(".info-selec").removeClass("show")
 			$(".info-selec").css("display","none")
 		}
-		addToCart()
+		// addToCart()
+
+		//select button js
+		$(".info-selec-btns1>span").click(function () {
+			var $this=$(this)
+			$this.siblings().removeClass("btn-selected")
+			$this.addClass("btn-selected")
+			var selectValue=$this.text()
+			$($(".infoSeTie-haschoose>span").get("1")).text(selectValue)
+		})
+		$(".info-selec-btns2>span").click(function () {
+			var $this=$(this)
+			$this.siblings().removeClass("btn-selected")
+			$this.addClass("btn-selected")
+			var selectValue=$this.text()
+			$($(".infoSeTie-haschoose>span").get("2")).text(selectValue)
+		})
+		$(".number-addBtn").click(function () {
+			var $input=$(".number-input")
+			var value =parseInt($input.attr("value"))
+				value++
+				$input.attr("value",value )
+				if (value>1) {
+					$(".number-decreaseBtn").removeClass("btn-unable")
+				}
+			
+		})
+		$(".number-decreaseBtn").click(function () {
+			var $input=$(".number-input")
+			var value =parseInt($input.attr("value"))
+			if (value>1) {
+				value--
+				$input.attr("value",value )
+			}else{
+				return
+			}
+			if (value<=1) {
+				$(this).addClass("btn-unable")
+			}
+			
+		})
+
 	}//the all most outer
 })()

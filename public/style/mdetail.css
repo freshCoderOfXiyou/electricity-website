@@ -8,7 +8,7 @@ a:visited{
 	position: fixed;
 	top: 0;
 	z-index: 1;
-	background: #f0f0f0;
+	background: #fff;
 }
 	.header>span{
 		width: 3.3rem;
@@ -199,11 +199,11 @@ a:visited{
 				background: white;
 				z-index: 12;
 				transform: translate3d(0,100%,0);
-				transition: transform 0.3s ease-in-out;
+				transition: transform 0.5s ease-in-out;
 			}
 			.info .show{
 				transform: translate3d(0,0,0);
-				transition: transform 0.3s ease-in-out;
+				transition: transform 0.5s ease-in-out;
 			}
 				.info-selec-title{
 					position: absolute;
@@ -292,14 +292,14 @@ a:visited{
 						margin-left: 0.1rem;
 						margin-top: 0.1rem;
 					}	
-					.info-selec-btns{
+					.info-selec-btns1 , .info-selec-btns2{
 						width: 10rem;
 						overflow: hidden;
 					}
-						.info-selec-btns .btn-selected{
+						.info-selec-btns1>.btn-selected,.info-selec-btns2>.btn-selected{
 							border:1px solid #c40000;
 						}
-						.info-selec-btns>span{
+						.info-selec-btns1>span , .info-selec-btns2>span{
 							display: block;
 							border: 1px solid #c7c7c7;
 							border-radius: 2px;
@@ -414,8 +414,44 @@ a:visited{
 			width: 10rem;
 		}
 	.comment{
-		background: lightgreen;
+		background: #eee;
 	}
+		.comment-keyword{
+			background: white;
+			margin-top: 0.25rem;
+			border-top: 1px solid #ddd;
+		}
+			.keywords-selected{
+
+			}
+			.comment-keyword>span{
+
+			}
+		.comment-divider{
+
+		}
+		.comment-content{
+
+		}
+			
+			.comment-sin{
+
+			}
+				.comment-sin-title{
+
+				}
+				.comment-sin-main{
+
+				}
+					.main-text{
+
+					}
+					.main-img{
+
+					}
+				.goods-info{
+
+				}
 .footer{
 	position: fixed;
 	bottom: 0;
