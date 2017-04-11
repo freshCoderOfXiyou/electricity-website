@@ -581,6 +581,16 @@ app.get('/mdetail',function (req,res) {
 		title:'Nike'
 	})
 })
+app.get("/mpay",function  (req,res) {
+	res.render("m-pay",{
+		title:"mobile pay page"
+	})
+})
+app.get("/videotest" , function  (req,res) {
+	res.render("videotest",{
+		title:"aaa"
+	})
+})
 app.listen(app.get('port'),function(){
 	console.log("Express started on http://localhost:"+app.get('port')+";press Ctrl-c to continue")
 })
