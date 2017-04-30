@@ -1,4 +1,5 @@
 // param direction:true mean up,false mean down
+// 纵向的滚动
 function publicRoll(node,direction) {
 	// debugger
 	var selfHeight=parseInt(node.css('height'))
