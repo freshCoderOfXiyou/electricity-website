@@ -135,80 +135,90 @@
 		var listUl=document.getElementsByClassName("piclist-signal")[0].getElementsByTagName("li")
 		var listUlLen=listUl.length
 		// var listUl=document.getElementsByClassName("piclist-signal")[0]
-		// console.log(listSin)
-		/*define a handle */
-		function handlestart (e) {
-			if(e.touches.length!==1){
-				return
-			}
-			startX=e.touches[0].pageX
-			startY=e.touches[0].pageY
-			slidewrap.addEventListener('touchmove',handlemove,false)
-			// console.log("sx is: "+ startX+"sy is : " + startY)
-		}	
+		// console.log(listSin) 
+//触摸的开始事件的处理函数
+function handlestart (e) {
+	if(e.touches.length!==1){
+		return
+	}
+	//获取触摸时的横纵坐标
+	startX=e.touches[0].pageX
+	startY=e.touches[0].pageY
+	slidewrap.addEventListener('touchmove',handlemove,false)
+	// console.log("sx is: "+ startX+"sy is : " + startY)
+}	
 
-		function handlemove (e) {
-			transX = - page * screenWidth
-			// console.log("page:"+(-page * screenWidth))
-			slideInner.style.transform="translate3d("+transX+"px,0,0)"
-			var touches=e.touches
-			if (touches&&touches.length) {
-				distanceX=startX-touches[0].pageX
-				// console.log("distanceX :"+distanceX)
-				// console.log("handlemove"+transX)
-				if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
-					distanceX=distanceX / 3
-				}
-				var transX=-distanceX-page * screenWidth
-				slideInner.style.transform="translate3d("+transX+"px,0,0)"
-			}
-			e.preventDefault()
-		}	
-
-		function handleend(argument) {
-			transX=- page * screenWidth - distanceX
-			var move_time =1
-			var move_dis=8
-			// console.log("move end")
-				if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
-					transX=- page * screenWidth
-					slideInner.style.transform="translate3d("+transX+"px,0,0)"
-					return
-				}
-				if (distanceX>=100) {
-					listUl[page].style.background="#e0e0e0"
-					page++
-					listUl[page].style.background="#c40000"
-					var timer=setInterval(function () {
-
-						slideInner.style.transform="translate3d("+transX+"px,0,0)"
-						transX-=move_dis
-						// console.log("transX:"+transX)
-						// console.log("page:"+-page*(screenWidth + 1))
-						if (transX <= -page * (screenWidth + 1)) {
-							clearInterval(timer)
-						}
-					},move_time)
-				}
-				else if (distanceX<=-100) {
-					listUl[page].style.background="#e0e0e0"
-					page--
-					listUl[page].style.background="#c40000"
-					var timer=setInterval(function () {
-						slideInner.style.transform="translate3d("+transX+"px,0,0)"
-						transX+=move_dis
-						// console.log("transX:"+transX)
-						// console.log("page:"+-page*(screenWidth + 1))
-						if (transX >= -page * (screenWidth + 1)) {
-							clearInterval(timer)
-						}
-					},move_time)
-				}
-				else{
-					transX=- page * screenWidth
-					slideInner.style.transform="translate3d("+transX+"px,0,0)"
-				}
+//触摸的移动事件处理函数
+function handlemove (e) {
+	transX = - page * screenWidth
+	// console.log("page:"+(-page * screenWidth))
+	slideInner.style.transform="translate3d("+transX+"px,0,0)"
+	var touches=e.touches
+	if (touches&&touches.length) {
+		distanceX=startX-touches[0].pageX
+		// console.log("distanceX :"+distanceX)
+		// console.log("handlemove"+transX)
+		//如果当前是第一张幻灯或者最后一张幻灯，则让滑动速度降为原来的三分之一，已到达提示用户已不可滑动。
+		if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
+			distanceX=distanceX / 3
 		}
+		//通过改变transform属性值来达到移动的效果
+		var transX=-distanceX-page * screenWidth
+		slideInner.style.transform="translate3d("+transX+"px,0,0)"
+	}
+	e.preventDefault()
+}	
+
+//触摸的结束事件处理函数
+function handleend(argument) {
+	transX=- page * screenWidth - distanceX
+	var move_time =1
+	var move_dis=8
+	// console.log("move end")
+	//如果是第一张幻灯并向左滑动或者最后一张幻灯向右滑动的情况下，在滑动结束时显示原先的幻灯不发生改变
+	if ((page == 0 && distanceX < 0) || (page == (listUlLen - 1) && distanceX > 0)) {
+		transX=- page * screenWidth
+		slideInner.style.transform="translate3d("+transX+"px,0,0)"
+		return
+	}
+	//如果滑动的距离大于100px，则向右切换幻灯片
+	if (distanceX>=100) {
+		listUl[page].style.background="#e0e0e0"
+		page++
+		listUl[page].style.background="#c40000"
+		//通过定时器实现滑动的动画效果
+		var timer=setInterval(function () {
+			slideInner.style.transform="translate3d("+transX+"px,0,0)"
+			transX-=move_dis
+			// console.log("transX:"+transX)
+			// console.log("page:"+-page*(screenWidth + 1))
+			if (transX <= -page * (screenWidth + 1)) {
+				clearInterval(timer)
+			}
+		},move_time)
+	}
+	//如果滑动距离小于100px，则向左切换幻灯片
+	else if (distanceX<=-100) {
+		listUl[page].style.background="#e0e0e0"
+		page--
+		listUl[page].style.background="#c40000"
+		var timer=setInterval(function () {
+			slideInner.style.transform="translate3d("+transX+"px,0,0)"
+			transX+=move_dis
+			// console.log("transX:"+transX)
+			// console.log("page:"+-page*(screenWidth + 1))
+			if (transX >= -page * (screenWidth + 1)) {
+				clearInterval(timer)
+			}
+		},move_time)
+	}
+	//如果滑动的距离没有达到临界的距离则不切换
+	else{
+		transX=- page * screenWidth
+		slideInner.style.transform="translate3d("+transX+"px,0,0)"
+	}
+}
+
 
 		function setList(num){
 			for(var i=0,len=listSin.length;i < len;I++){
