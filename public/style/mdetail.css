@@ -414,43 +414,87 @@ a:visited{
 			width: 10rem;
 		}
 	.comment{
-		background: #eee;
+		/* background: #eee; */
 	}
 		.comment-keyword{
 			background: white;
 			margin-top: 0.25rem;
 			border-top: 1px solid #ddd;
+			padding: 0.1rem;
+			overflow: hidden;
 		}
-			.keywords-selected{
-
+			.comment-keyword .keywords-selected{
+				background: red;
+				color: #fff;
 			}
 			.comment-keyword>span{
-
+				display: block;
+				float: left;
+				/* border: 2px solid  */
+				background: #FEE;
+				padding: 0.2rem 0.3rem;
+				margin: 0.2rem;
+				border-radius: 0.2rem;
+				color: gray;
+				font-size: 0.3rem;
 			}
 		.comment-divider{
+			width: 9.4rem;
+			border-top: 1px solid #d5d5d5;
+			/* margin: 0 0.2rem; */
 
 		}
 		.comment-content{
-
+			padding: 0.3rem 0;
+			background: #cdcdcd;
 		}
 			
 			.comment-sin{
-
+				/* width: 9.4rem; */
+				background: #fff;
+				padding: 0.1rem 0.3rem;
 			}
 				.comment-sin-title{
-
+					width: 100%;
+					overflow: hidden;
+					height: 1rem;
+					line-height: 1rem;
 				}
+					.comment-sin-title>span{
+						color: gray;
+					}
+					.comment-sin-title-name{
+						float: left;
+					}
+					.comment-sin-title-headerimg{
+						float: left;
+						border-radius: 50%;
+						width: 0.8rem;
+						margin-right: 0.2rem;
+					}
+					.comment-sin-title-date{
+						float: right;
+					}
 				.comment-sin-main{
-
+					padding-top: 0.2rem;
 				}
+					.main-mark{
+						color: #c40000;
+					}
 					.main-text{
-
+						font-size: 13px;
 					}
 					.main-img{
-
+						margin: 0.2rem 0;
 					}
+						.main-img>img{
+							width: 2rem;
+							margin-left: 0.3rem;
+							border-radius: 5px;
+						}
 				.goods-info{
-
+					color: gray;
+					font-size: 12px;
 				}
 .footer{
 	position: fixed;

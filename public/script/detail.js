@@ -1,6 +1,7 @@
 (function  () {
 	window.onload=function () {
 		//toggle img 
+		//鼠标悬停在小图上实时改变大图的内容
 		var $mainImg=$('.detail-img-main img')
 		$('.detail-img-list>li>a>img').hover(function (e) {
 			var targetEle=e.target
@@ -9,16 +10,20 @@
 		})
 		
 		//magnify
+		//放大镜效果
 		var $imgWrap=$('.detail-img-main')
+		//监听鼠标进入事件
 		$imgWrap.mouseenter(function (e) {
 			$('#imgLoc').css('display','block')
 			$('.manifyImg').css('display','block')
 			
 		})
+		//监听鼠标离开事件
 		$imgWrap.mouseleave(function (e) {
 			$('#imgLoc').css('display','none')
 			$('.manifyImg').css('display','none')
 		})
+		//监听鼠标的移动事件
 		$imgWrap.mousemove(function (e) {
 			var imgX=document.getElementById('imgMainWrap').getBoundingClientRect().left
 			var imgY=document.getElementById('imgMainWrap').getBoundingClientRect().top

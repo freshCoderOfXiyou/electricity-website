@@ -1,7 +1,7 @@
 doctype
 html
 	head
-		title #{title}
+		title #{title} 
 		link(rel='stylesheet' href='./style/mobilepublic.css')
 		link(rel='stylesheet' href='./style/mdetail.css')
 		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
@@ -127,38 +127,33 @@ html
 					div.comment 
 						div.comment-keyword
 							span.keywords-selected 全部
-							span 追加
-							span 有图
-							span 鞋子不错
-							span 做工一般
-							span 舒适度不错
-						div.comment-divider
+							span 追加(569)
+							span 有图(453)
+							span 鞋子不错(452)
+							span 做工一般(12)
+							span 舒适度不错(659)
 						div.comment-content
 							div.comment-sin
-								div.comment-sin-title m***n
+								div.comment-sin-title 
+									img.comment-sin-title-headerimg(src='./images/mobile/detail/header1.jpg') 
+									span.comment-sin-title-name m******n
+									span.comment-sin-title-date 2017-04-03
+								div.comment-divider
 								div.comment-sin-main
+									div.main-mark
+										span.glyphicon.glyphicon-star
+										span.glyphicon.glyphicon-star
+										span.glyphicon.glyphicon-star
+										span.glyphicon.glyphicon-star
+										span.glyphicon.glyphicon-star-empty
 									div.main-text 鞋子不错，设计也很到位，刚到，其他的等先穿几天在追评
 									div.main-img
-										img(src="" alt="")
-										img(src="" alt="")
-								div.goods-info 颜色分类：深藏青蓝/银灰色/大学红 
-							div.comment-sin
-								div.comment-sin-title
-								div.comment-sin-main
-									div.main-text
-									div.main-img
-										img(src="" alt="")
-										img(src="" alt="")
-								div.goods-info
-							div.comment-sin
-								div.comment-sin-title
-								div.comment-sin-main
-									div.main-text
-									div.main-img
-										img(src="" alt="")
-										img(src="" alt="")
-								div.goods-info
-						div
+										img(src="./images/mobile/detail/nike-comment1.jpg" alt="nike comment img")
+										img(src="./images/mobile/detail/nike-comment1.jpg" alt="nike comment img")
+								div.goods-info 颜色分类：深藏青蓝/银灰色/大学红
+								div.goods-info 购买时间：2017-03-12 10:45:12
+								div.comment-divider
+								video(src="./video/MVI_2389.MOV" controls="controls" width="300")
 			div.footer
 				div.footer-iconlist
 					a(href='javascript:;')
@@ -174,4 +169,4 @@ html
 					a(href='javascript:;').footer-btn.footer-btn-addToCart 加入购物车
 					a(href='javascript:;').footer-btn.footer-btn-buyNow 立即购买
 		script(src='./bower_components/jquery/dist/jquery.min.js')
-		script(src='./script/mdetail.js')
+script(src='./script/mdetail.js')
