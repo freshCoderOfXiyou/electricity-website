@@ -1,0 +1,175 @@
+express提供的页面响应函数是app.get，它有两个参数，第一个参数是请求的路由，第二个参数是一个回调函数，回调函数有两个参数，第一个是请求对象，第二个是响应对象，这两个对象只和顺序相关，和对象的名称无关。
+当express需要引入文件时，作为服务器不同于单机，需要定义文件路径，在定义文件路径之前还需要加上路径模块和serve-static模块
+#code:var path = require("path")
+           var serveStatic=require("serve-static")\
+          app.use(serveStatic('/public'))
+          app.use(expressf.static(path.join(__dirname+'/public'))
+When express need import documents, as the server is different from the single machine, you need to define the file path, also need to add file path ('path' module) and 'serve - static' module  before definition
+# code: var path = the require (" path ")
+Var serveStatic = the require \ (" serve - static ")
+App. Use (expressf. Static (path. Join (__dirname + '/ public')) 
+
+
+###使用webpack时应该注意在入口文件添加其他文件应该是：
+require('./main.js' )而不是require('main.js')。前面一种会导致错误。
+
+When using the webpack should pay attention to in the  file which is entryence for adding other documents should be:
+
+"Require ('. / main. Js')" rather than " require (' main. Js')". Frist one can leads to errors. 
+
+
+
+#####css-loader用来加载样式，style-loader用来计算样式
+#####The text input and submit input doesn't on the same baseline,add css attribute 'float:left'
+#####.search  span:nth-child(7) a
+	{
+		color: #c40000;
+	}
+####link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+don't forget the attributes like 'rel' and 'type'
+####$().ready(
+		function () {
+			alert(123)
+		}
+	)//don't forget the 	bracket
+####没有与原无故的空白，一定是什么元素撑开了，用开发者模式调整，delete删除某个元素
+####构造函数应该使用大写字母开头以区分普通的函数，因为构造函数在忘记使用new关键字情况下会创建一个全局对象
+####$('#user').addClass('detailDivShow') 
+	addClass is a function ,so don't forget bracket ,and param don't have '.'
+
+####为了让页面的每个局部都拥有相同的左右空白边距，所以要设置内容区域的宽度是多少，再水平居中
+####在商品分类某个品类的详情div中布局遇到了很多困难，首先是要满足链接不能出现在换行的地方，第二要满足标题和详情内容区域的分离，第三是详情区域的面积不应是固定的，应该是随着内容多少的变化而变化
+#####设置颜色/字体大小等必须到达最终元素，一般而言是链接
+#属性的继承会带来很大问题，所以在定义父级元素时要注意定义的越精确对后面早成的影响也就越小。
+#1、使用筛选条件
+
+$('#test span.demo')
+
+2、使用find()函数
+
+$('#test').find('span.demo')
+
+3、使用children()函数
+
+$('#test').children('span.demo') 
+
+#遇到的新问题，banner中的按钮时间没有响应，有可能是nav的详细链接区域遮挡了banner导致事件没有被捕捉
+ 经过给导航的详细条目绑定事件，在轮播图上点击，详细的导航条也没有响应。
+
+
+ # 开始手机页面的制作：
+1.使用meta元标签确定手机的缩放比以及屏幕适应性
+<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1'>
+<meta name='aplus' content='1'>
+<meta name='apple-mobile-web-app-title' content='商城'>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+<meta name='format-detection' content='telephone=no,address=no'>
+
+`
+ 手机页面居中显示的方案，因为手机浏览器都集中浏览器一些比较新的特性，因此可以使用比较新的语法。例如flex布局，需要对父元素设置display=flex;子元素设置为flex=整数，可以使子元素始终充满父元素。此外，在居中的解决方案上，父元素设置justify-content:center;设置子元素水平垂直，aligns-items:center;设置子元素垂直居中，dispaly:flex
+ flex的其他属性：1.flex-direction:row/row-reverse/column/column-reverse;
+2.flex-wrap:nowrap/wrap;
+3.justify-content:flex-start（左浮动）/flex-end（有浮动）/center（水平居中）/space-between（左右两端）/space-around（带有间距的左右两端;（对父元素进行设置）
+4.align-self:flex-start/flex-end/center/auto/baseline/stretch（对子元素设置）
+5.align-items:flex-start/flex-end/center/auto/baseline/strech（对父元素设置）
+6.flex-flow:flex-direction flex-wrap;（是flex-wrap和flex-direction的简写形式）
+7.align-content:(子元素的换行方式) flex-start(按照默认高度填充好一行) flex-end（子元素从底部开始排版） center（子元素从中间开始排版） space-between(在上下排版，空开中间的区域) space-around(等比划分) strech（全部填充）
+8.order：整数
+
+flex对与安卓4.4版本不能兼容，所以需要使用老版本flex-box。
+display:-webkit-flex-box;相当display:-webkit-flex;
+-webkit-flex-box:1;相当-webkit-flex:1;
+box-pack:center;相当justify-content:center;
+box-align:center;相当align-items:center;
+
+
+网页的响应式布局：
+@media screen and (max-width:1024px) {样式表}
+移动样式需要注意的地方：
+1.retina屏幕带来的图像模糊问题，因为在iPhone5一个px等于两个dp，使用两个实际像素去渲染一个像素将导致图片被拉伸，所以渲染的像素值应该是图片的大小除以dpr。iPhone5的dpr等于二，iPhone6的dpr等于三。
+2.一像素边框的解决方案,通过伪类解决：
+element:before{
+position:absolute; top:-1px; left:0; content:''; width:100%; height:1px; border-top:1px solid #ddd; -webkit-transform:scaleY(0.5)}
+3.使用rem相对单位
+使用相对单位的目的是为了适应各大手机的屏幕。rem=screen.width/20
+因为css中没有变量所以通过媒体查询来完成不同设备的切换
+html{ font-size:32px;}
+@media (min-device-width:375px){ font-size:37.5px; }
+@media(min-device-width:414px){font-size:41.4px;}
+使用rem需要注意的地方，rem并不使用于字体，因为字体在所有设备中应该保持统一。
+4.多行文本溢出和多行文本溢出，
+//单行文本溢出 overflow:hidden;white-space:nowrap; text-overflow:ellipsis;
+//多行文本溢出 display:-webkit-box !important; overflow:hidden; text-overflow:ellipisis; word-break:break-all; -webkit-box-orient:vertical; -webkit-line-clamp:2;
+
+移动端交互问题：
+1.300毫秒的延迟问题，移动设备访问的页面都是pc上的页面，默认情况下是在宽度为980px的viewport中展示，存在双击放大或者滑动两个手指放大的情况，所以需要通过一个300毫秒来判断。
+为了避免300毫秒的问题，使用tap事件代替click事件，自定义tap事件，tap事件通过touch事件来模拟，计算touchstart  ， touchend来计算touch时间长度，通过touchmove来计算touch的移动距离，最后判断时间的长度和移动的距离是否是在tap事件的合理范围内，一般认为时间不能超过200毫秒。在移动框架库Zepto会帮助我们做这样的事情。tap事件有一个bug就是在按钮上放置一个蒙层，点击蒙层的位置恰好在按钮上就会在按钮上也产生了点击事件，这个bug就成为”点击穿透“。解决方案：1.蒙层消失延迟300毫秒，2.添加中间层，3.使用zepto库。
+2.touch的基础事件，touchstart在手指触摸时触发，touchmove在手指移动时不断的触发，touchend在手指离开时触发。除了这些常见的事件外，还有一些常见的属性，比如说touches，是一个数组保存touch对象。touches对象的属性有，clientX（触摸目标在视口中的x坐标），clientY（触摸目标在视口中的y坐标），identifier（标示触摸的唯一id），pageX/pageY（在页面中的位置，包含滚动），screenX（触摸目标在屏幕中的x坐标），screenY（触摸目标在屏幕中的y坐标），target触摸的DOM节点目标。
+3.安卓的touch事件bug，触发一次touchstart，一次touchmove，不会触发touchend。fixed的方法是在touchmove的事件中添加 event.preventDefault(),但会导致默认事件不能发生，比如说滚动不能发生。
+4.弹性滚动，局部滚动开启弹性滚动，body{overflow:scroll; -webkit-overflow-scrolling:touch;}安卓不支持原生的弹性滚动，需要借助第三方库来实现，比如iScroll。 
+
+Zepto和jquery的比较，Zepto更加的轻量，只提供了一些基本的js库，包括事件。而jquery mobile不仅提供了js库，还提供了一些特定的组件，可以快速的开发出网页应用。jquery mobile体量比较大，不利于性能的优化，并且不利于生成那种高度定制的页面。
+Zepto存在的问题，执行的速度并没有jquery优秀。补充说明在安卓4.1以上的版本，如果通过meta标签禁止用户放大屏幕就会取消click300ms的延时。
+
+
+jquery mobile是依赖于jquery存在的，并且jquery mobile还包含css样式，因此需要这样写代码：
+<link rel='stylesheet' href='css/jquery.mobile-1.4.3.css'>
+<script src='js/jquery-min.js'>
+<script src='js/jquery-mobile-min.js'>
+
+/home/jyy/workspace/
+/opt/onewave/tomcat_portal/webapps/ROOT/templates/iptvtest/runtime/default/ythot/jlphot
+
+linux source list:
+# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
+
+# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
+# newer versions of the distribution.
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted
+
+## Major bug fix updates produced after the final release of the
+## distribution.
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted
+
+## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
+## team, and may not be under a free licence. Please satisfy yourself as to
+## your rights to use the software. Also, please note that software in
+## universe WILL NOT receive any review or updates from the Ubuntu security
+## team.
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial universe
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial universe
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates universe
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates universe
+
+## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu 
+## team, and may not be under a free licence. Please satisfy yourself as to 
+## your rights to use the software. Also, please note that software in 
+## multiverse WILL NOT receive any review or updates from the Ubuntu
+## security team.
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial multiverse
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates multiverse
+
+## N.B. software from this repository may not have been tested as
+## extensively as that contained in the main release, although it includes
+## newer versions of some applications which may provide useful features.
+## Also, please note that software in backports WILL NOT receive any review
+:## or updates from the Ubuntu security team.
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+
+## Uncomment the following two lines to add software from Canonical's
+## 'partner' repository.
+## This software is not part of Ubuntu, but is offered by Canonical and the
+## respective vendors as a service to Ubuntu users.
+# deb http://archive.canonical.com/ubuntu xenial partner
+# deb-src http://archive.canonical.com/ubuntu xenial partner
+
+deb http://security.ubuntu.com/ubuntu xenial-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted
+deb http://security.ubuntu.com/ubuntu xenial-security universe
+# deb-src http://security.ubuntu.com/ubuntu xenial-security universe
+deb http://security.ubuntu.com/ubuntu xenial-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu xenial-security multiverse
