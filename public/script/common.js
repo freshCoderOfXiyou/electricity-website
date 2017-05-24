@@ -10,6 +10,7 @@
 			var $menubar=$('.menubar')
 			var sideshow=false
 			var $detailDivs=$(".detailDiv")
+			var $floorgide=$(".floor-gide")
 			// $menubar.hide()
 			// console.log($userButton.innerHTML())
 			window.addEventListener('scroll', function () {
@@ -17,10 +18,12 @@
 				if(stop>800){
 					$fixsearch.addClass('fixSearchBoxShow')
 					$toUpButton.css('display','block')
+					$floorgide.css("display" , 'block')
 				}
 				else{
 					$fixsearch.removeClass('fixSearchBoxShow')
 					$toUpButton.css("display",'none')
+					$floorgide.css("display"  , "none")
 				}
 			}, false)
 

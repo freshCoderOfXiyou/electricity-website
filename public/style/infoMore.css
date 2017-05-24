@@ -49,9 +49,26 @@
 		background: #E01222;
 		color: white!important;
 	}
+.user_profit{
+	background: blue;
+	position: relative;
+	height: 100px;
+	width:170px;
+
+}
 .user_profit a{
 	margin: 5px 0px 0px 10px ;
+	float: left;
+	/*position: absolute;*/
+}/*
+.buttonLink2{
+	bottom: 30px;
+	left: 0;
 }
+.buttonLink1{
+	bottom: 30px;
+	right: 0;
+}*/
 .announcement{
 	position: relative;
 	white-space: nowrap;
@@ -86,7 +103,7 @@
 .slimMain{
 	height: 5px;
 	width: 170px;
-	background: blue;
+	/*background: blue;*/
 	/* display: inline-block; */
 }
 .entrys{

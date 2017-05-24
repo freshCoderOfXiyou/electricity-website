@@ -194,12 +194,16 @@
 			}
 			.header ul li:hover .exchange{
 				display: block;
+				z-index: 1000;
+				width: 100px;
+				height: 100px;
 			}
 			.exchange{
 				background: white;
 				position: absolute;
 				bottom: -50px;
 				display: none;	
+
 			}
 			.ws{
 				width: 86px;

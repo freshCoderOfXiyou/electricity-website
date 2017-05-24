@@ -2,12 +2,15 @@ div.hidenDiv
 	div.personInfo
 		img(src='./images/tmll-load.gif' alt='header portrait')
 		div.personInfoLinks
-			h5 Hi，欢迎来到商城！
-			a(href='javascript:;') 登录
-			a(href='javascript:;') 注册
-	p.user_profit
-		a(href='javascript:;').buttonLink 新人福利
-		a(href='javascript:;').buttonLink PLUS会员
+			-var load = hasload
+			if hasload
+				h5 Hi，#{loadername} 欢迎来到商城！
+			else
+				a(href='javascript:;') 登录
+				a(href='javascript:;') 注册
+	div.user_profit
+		a(href='javascript:;').buttonLink1 新人福利
+		a(href='javascript:;').buttonLink2 PLUS会员
 	div.announcement
 		span.infoMore_title
 			a(href='javascript:;')#slimFirst 促销

@@ -2,10 +2,16 @@ div.header
 	div.headerWrapDiv
 		ul
 			li 嘿，欢迎来到电子商城
-			li 
-				a(href='http://127.0.0.1:3000/load') 请登录
-			li 
-				a(href='javascript:void();') 免费注册
+			-var isload = hasload
+			if isload
+				li 
+					a(href='javascript:void();') #{loadername}
+			else
+				li 
+					a(href='http://127.0.0.1:3000/load') 请登录
+				li 
+					a(href='javascript:void();') 免费注册
+
 		ul.fl
 			li.fix
 				a(href='javascript:void();') 我的商城

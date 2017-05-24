@@ -22,18 +22,18 @@ html
 							div.load-wrap-form
 								span.load-form-alert 公共场所不建议自动登录，以防账号丢失
 									span.glyphicon.glyphicon-exclamation-sign
-								form(method='post').load-form-content
+								form(method='post' action="/pcload" ).load-form-content
 									div.load-formCon-line
 										span.glyphicon.glyphicon-user.load-formCon-icon
-										input(type='text' placeholder='邮箱/用户名/手机').load-formCon-input
+										input(type='text' placeholder='邮箱/用户名/手机' name="userid").load-formCon-input#idinput
 									div.load-formCon-line
 										span.glyphicon.glyphicon-lock.load-formCon-icon
-										input(type='password' placeholder='密码').load-formCon-input
+										input(type='password' placeholder='密码' name="userpsw").load-formCon-input#pswinput
 									div.load-form-forget
 										input(type='checkbox')
 										span 自动登录
 										a(href='javascript:;') 忘记密码
-									input(type='submit' value='登 录').load-formCon-submit
+									span.load-formCon-submit 登 录
 							div.load-scan
 								h4 手机扫码，安全登录
 								div.load-scan-img

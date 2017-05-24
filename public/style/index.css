@@ -28,6 +28,7 @@
 		position: absolute;
 		right: 0;
 		top: 10px;
+		/*display: none;*/
 	}
 	#firstAnnounSub{
 		display: none;
@@ -675,9 +676,10 @@
 					}
 	.floor-gide{
 		position: fixed;
-		left: 115px;
+		left: 1%;
 		bottom: 50px;
 		width: 37px;
+		display: none;
 		z-index: 12;
 	}
 		.floor-gide div{

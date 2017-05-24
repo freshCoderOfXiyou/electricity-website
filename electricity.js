@@ -1,3 +1,4 @@
+// @老版本的主文件，没有和数据库做连接、没有处理参数、没有动态生成、没有处理表单、没有构建模块
 var express=require('express')
 var serveStatic=require('serve-static')
 var path=require('path')
@@ -7,7 +8,7 @@ app.set('port' , process.env.PORT || 3000)
 app.set('views','./views/pages')
 app.set('view engine','jade')
 // app.use(serveStatic('/public'))
-app.use(express.static(path.join(__dirname,'/public')))
+app.use(express.static(path.join(__dirname,'/public'))) 
 app.get('/' , function(req,res){
 	// res.type('text/html')
 	// res.send('welcome to electicity !')

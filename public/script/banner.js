@@ -7,6 +7,9 @@ function imagesmove ($node) {
 	var lastImageLeft=-singleImageWidth*(imagesCount-1)
 	var nowIndex=0
 	var oldIndex=1
+	var colors = ["#936FAF","#8D0706","#5CA498","#FF0041","#AE1330","#9C899D"]
+	
+	$(".indexBanner").css("background" , colors[0])
 	$('#bt1').css("background",'rgba(255,255,255,0.8)')
 	window.setInterval(function () {
 		var imagesCount=$node.children('a').length
@@ -55,5 +58,6 @@ function imagesmove ($node) {
 				// statements_def
 				break;
 		}
-	}, 3000)
+				$(".indexBanner").css("background" , colors[oldIndex-1])
+	}, 2000)
 }
