@@ -1,0 +1,37 @@
+doctype
+html
+	head
+		title #{title}
+		link(rel='stylesheet' href='./style/mobilepublic.css')
+		link(rel='stylesheet' href='./style/mregister.css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1')
+		meta(name='aplus' content='1')
+		meta(name='apple-mobile-web-app-title' content='商城')
+		meta(name='apple-mobile-web-app-capable' content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+		meta(name='format-detection' content='telephone=no,address=no')
+	body
+		div.header
+			a(href="javascript:;").back 返回　
+			h2.title 设置账户信息　
+		div.content
+			div.sininfo
+				div.sininfo-input
+					label.sinInfo-input-title 登录密码　
+					input(type="text" placeholder="输入新密码　" ).sinInfo-input-content
+					span.sinInfo-suggest 密码由６－２０为英文字符、数字或者符号组成
+			div.sininfo
+				div.sininfo-input 
+					label.sinInfo-input-title 会员名
+					input(type="text" placeholder="２－２５个字符" ).sinInfo-input-content
+					span.sinInfo-suggest ２－２５个字符，推荐使用中文，请勿包含姓名／身份证／银行卡等信息，可用户登录或找回密码
+			div.sininfo
+				div.sininfo-input
+					label.sinInfo-input-title 手机号
+					input(type="text" placeholder="输入在用的手机号，可用户登录　" ).sinInfo-input-content
+					span.sinInfo-suggest
+		div.commit 确定
+　　　　　　

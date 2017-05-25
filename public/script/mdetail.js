@@ -1,6 +1,7 @@
 (function () {
 	window.onload=function () {
 		var screenWidth=$(window).width()
+		$(".info-selec").css("display","none")
 		// console.log(document.body.scrollWidth)
 		var setpmove=screenWidth/10
 		// console.log(setpmove)
@@ -161,7 +162,7 @@ function handlestart (e) {
 }	
 
 //触摸的移动事件处理函数
-function handlemove (e) {
+function handlemove (e) { 
 	transX = - page * screenWidth
 	// console.log("page:"+(-page * screenWidth))
 	slideInner.style.transform="translate3d("+transX+"px,0,0)"

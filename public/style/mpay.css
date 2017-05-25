@@ -1,0 +1,174 @@
+/*mpay.css*/
+.header{
+	width:10rem;
+	height: 2.5rem;
+	border-bottom: 1px solid #c9c0c7;
+	font-size: 
+}
+	.header>div{
+		float: left;
+		height: 2rem;
+	}
+	.header-icon{
+		width: 0.5rem;
+		position: relative;
+		color:lightblue;
+	}
+		.header-icon>span{
+			position: absolute;
+			top: 40%;
+			left: 10%;
+		}
+	.header-receiver{
+		width: 9rem;
+		/*background:red;*/
+		position: relative;
+		/*padding: 0 0.1rem;*/
+	}
+		.header-receiver-person{
+			width: 9rem;
+			/*background: yellow;*/
+			float: left;
+			position: absolute;
+			top: 0.3rem;
+			left: 0;
+			padding: 0 0.3rem;
+			/*display: inline-block;*/
+			/*display: block;*/
+		}
+			.headerRecePerName{
+				color: #909090;
+			}
+			.headerRecePerPhone{
+				float: right;
+				color:#454545;
+			}
+		.header-receiver-loc{
+			width: 9rem;
+			/*background: green;*/
+			float: left;
+			/*display: inline-block;*/
+			padding: 0 0.3rem;
+			position: absolute;
+			top: 1rem;
+			left: 0;
+			color: #909090;
+		}
+			.header-receiver-locTit{
+				/*float: left;*/
+			}
+			.header-receiver-locCon{
+				/*float: left;*/
+			}
+	.header-more{
+		width: 0.5rem;
+		position: relative;
+		color: #909090;
+	}
+		.header-more>span{
+			position: absolute;
+			top: 40%;
+			left:10%;
+		}
+/*section*/
+.goodslist{
+	background: #e6e6e6;
+	padding: 0.3rem 0;
+}
+	.goodslistTil{
+		width: 100%;
+		height: 1rem;
+		background: white;
+		/*margin-top: 0.5rem;*/
+		line-height: 1rem;
+		padding: 0 0.5rem;
+		margin-bottom: 0.3rem;
+	}
+	.goodslistSin{
+		/*background: white;*/
+		width: 10rem;
+		display: flex;
+		height: 3rem;
+		color:#464545;
+	}
+		.listSinImg{
+			/*width: 2rem;*/
+			flex: 3;
+			padding: 0.25rem 0.25rem;
+			padding-right: 0rem;
+		}
+			.listSinImg>img{
+				width: 2.5rem;
+			}
+		.listSininfo{
+			flex: 5;
+			padding-top: 0.2rem;
+			/*background:red;*/
+		}
+			.listSinInfo-name{
+				margin: 0;
+			}
+			.listSinInfo-standard{
+				color:#acacac;
+			}
+		.listprice{
+			flex: 2;
+			padding-right: 0.2rem;
+			padding-top: 0.5rem;
+		}
+			.listprice-price{
+				color:#c40000;
+				font-size: 0.5rem;
+				text-align: right;
+				/*text-indent: 0.1rem;*/
+				display: block;
+				width: 100%;
+				font-weight: 600;
+			}
+			.listprice-count{
+				color:#232323;
+				text-align: right;
+				width: 100%;
+				display: block;
+			}
+
+/*section*/
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 10rem;
+	height: 1.2rem;
+	display: flex;
+	z-index: 10;
+}
+	.footerLeft{
+		flex: 7;
+		height: 1.2rem;
+		border-top: 1px solid #c9c0c7;
+		padding-top: 0.2rem;
+		padding-left: 0.2rem;
+		background: white;
+	}
+		#footerLeftCount{
+			color:red;
+			font-weight: 700;
+			margin: 0.1rem;
+		}
+		.totalPrice{
+
+		}
+			.totalPrice>span{
+				color:red;
+			}
+			#footerPrice{
+				font-weight: 700;
+				margin: 0.1rem;
+			}
+	.footerSubmit{
+		flex: 3;
+		height: 1.2rem;
+		background:red;
+		color: white;
+		text-align: center;
+		line-height: 1.2rem;
+	}

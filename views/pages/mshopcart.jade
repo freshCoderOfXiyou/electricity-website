@@ -1,0 +1,49 @@
+doctype
+html
+	head
+		title #{title}
+		link(rel='stylesheet' href='./style/mobilepublic.css')
+		link(rel='stylesheet' href='./style/mshopcart.css')
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1')
+		meta(name='aplus' content='1')
+		meta(name='apple-mobile-web-app-title' content='商城')
+		meta(name='apple-mobile-web-app-capable' content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+		meta(name='format-detection' content='telephone=no,address=no')
+	body
+		div.header
+			a.back 返回　
+			h2.title 购物车
+		div.content
+			div.conHeader
+				label 全选
+				button.select
+				span.edit　编辑
+			div.conSin
+				div.conSin-left
+					button.select 
+				div.conSin-middle
+					img(src="./images/mobile/detail/nike-slide.webp")
+				div.conSin-right
+					h4.goodsName 耐克科比四代篮球鞋　
+					div.goodsDetail
+						span.standard 活力红；42
+						span.nowprice ￥899
+						span.oldprice ￥499
+						span.count *1
+		div.footer
+			div.footer-left
+				button.select
+				label.footer-selectTitle 全选
+			div.footer-middle
+				span.footer-middle-price 
+					label.price-title 合计:
+					span.footer-price ￥0
+				span.footer-middle-add 
+			div.footer-right
+				span.footer-right-text 结算（
+				span.footer-right-count ０
+				span.footer-right-text ）
