@@ -1,72 +1,230 @@
 /*mshopcart.css*/
 .header{
-
+	width: 10rem;
+	height: 1.3rem;
+	border-bottom: 1px solid #bbb;
+	/*display: flex;*/
+	position: relative;
 }
 	.back{
-
+		color:#051b28;
+		display: block;
+		position: absolute;
+		top:0.3rem;
+		left: 0.5rem;
 	}
 	.title{
-
+		font-size: 0.6rem;
+		margin:0;
+		float: left;
+		/*flex: 9;*/
+		width: 10rem;
+		text-align: center;
+		height: 1.3rem;
+		line-height: 1.3rem;
 	}
 /*section devider*/
 .content{
-
+	width: 10rem;
+	background: rgb(240, 242, 245);
+	padding:0.2rem 0 1rem;
 }
 	.conHeader{
-
+		width: 10rem;
+		height: 1rem;
+		line-height: 1rem;
+		background: white;
+		padding: 0 0.3rem 0 0.2rem;
+		display: flex;
 	}
-		.select{
-
-		}
-		.edit{
-
-		}
-	.conSin{
-
-	}
-		.conSin-left{
-
+		.conHeaderSelect{
+			flex: 5;
+			height: 1rem;
+			line-height: 1rem;
 		}
 			.select{
-
+				width: 0.6rem;
+				height: 0.6rem;
+				margin: 0.1rem 0.2rem 0 0rem;
+				border-radius: 50%;
+				border:2px solid #cecece;
+				background: white;
+				outline: none;
+				/*background: red;*/
+			}
+		.edit{
+			flex: 5;
+			height: 1rem;
+			line-height: 1rem;
+			text-align: right;
+		}
+	.conSin{
+		background: #fff;
+		overflow: hidden;
+		height: 3.5rem;
+		display: flex;
+		/*border-bottom: 1px solid #bbb ;*/
+		position: relative;
+		margin: 0.15rem 0.15rem;
+		/*border-top:  1px solid #787978 ;*/
+		position: relative;
+	}
+		.conSin>div{
+			float: left;
+		}
+		.conSin-left{
+			flex: 1;
+			position: relative;
+		}
+			.conSin-left>.select{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				/*transform: ;*/
 			}
 		.conSin-middle{
-
+			flex: 2.5;
+			padding:0.25rem 0rem;
 		}
-
+			.conSin-middle>img{
+				width: 2.5rem;
+			}
 		.conSin-right{
-
+			flex: 6.5;
+			padding: 0.25rem 0.2rem;
+			position: relative;
 		}
 			.goodsName{
-
+				font-size: 0.4rem;
+				margin: 0;
+				height: 1rem;
+				/*background: red;*/
+				line-height: 0.5rem;
+				overflow: hidden;
+				/*display: none;*/
 			}
 			.goodsDetail{
 
 			}
 				.standard{
-
+					font-size: 0.4rem;
+					width: 100%;
+					display: inline-block;
+					color:#999;
 				}
-				.price{
-
+				.goodsDetailPrice{
+					width: 100%;
+					display: inline-block;
 				}
-				.count{
+					.nowprice{
+						color: red;
+						font-size: 0.5rem;
+						font-weight: 600;
+						margin-right: 0.1rem;
+					}
+					.oldprice {
+						text-decoration: line-through;
+						color:#999;
+					}
+					.count{
+						float: right;
+						/*font-size: 0.5rem;*/
+						position: relative;
+						width: 3rem;
+					}
+						.countAdd{
+							width: 1rem;
+							height: 1rem;
+							border: 1px solid #eee;
+							display: block;
+							height: 0.7rem;
+							text-align: center;
+							font-size: 0.5rem;
+							font-size: bold;
+							position: absolute;
+							top: 0;
+							left: 0;
 
-				}
+						}
+						.countNumber{
+							width: 1rem;
+							height: 1rem;
+							height: 0.7rem;
+							text-align: center;
+							border: 1px solid #eee;
+							position: absolute;
+							top: 0;
+							left: 1rem;
+						}
+						.countReduce{
+							width: 1rem;
+							height: 1rem;
+							border: 1px solid #eee;
+							display: inline-block;
+							height: 0.7rem;
+							text-align: center;
+							font-size: 0.5rem;
+							font-size: bold;
+							position: absolute;
+							top: 0;
+							left: 2rem;
+						}
+					.goodsDetaiEdit{
+						position: absolute;
+						bottom: 0.1rem;
+						right: 0.2rem;
+					}
+						.editbtn{
+							/*display: none;*/
+						}
+						.editshow{
+							display: none;
+						}
+					.goodsDetailPrice{
+
+					}
+
+		.conSin-edit{
+			position: absolute;
+			width: 6.5rem;
+			height: 3rem;
+			top: 0;
+			left: 3.5rem;
+			z-index: 10;
+			background: #eee;
+			transform: translateX(0px);
+			display: none;	
+		}
 /*section devider*/
 .footer{
-
+	width: 10rem;
+	height: 1.2rem;
+	position: fixed;
+	background: white;
+	bottom: 0;
+	z-index: 10;
+	display: flex;
 }
 	.footer-left{
-
+		flex:2;
+		border-top: 1px solid #999;
+		padding-left: 0.2rem;
 	}
-		.select{
+		.footer-left>.select{
 
 		}
 		.footer-selectTitle{
-
+			height: 1.2rem;
+			line-height: 1.2rem;
 		}
 	.footer-middle{
-
+		flex:5;
+		border-top: 1px solid #999;
+		line-height: 1.2rem;
+		height: 1.2rem;
+		text-align: right;
+		padding-right: 0.2rem;
 	}
 		.footer-middle-price{
 
@@ -74,14 +232,24 @@
 			.price-title{
 
 			}
-			.footer-price{
-
+			.footer-price-sign{
+				color: red;
+			}
+			#footer-price{
+				color:red;
 			}
 		.footer-middle-add{
 
 		}
 	.footer-right{
-
+		flex:3;
+		background: red;
+		text-align: center;
+		height: 1.2rem;
+		line-height: 1.2rem;
+		color:white;
+		font-size: 0.5rem;
+		font-weight: 600;
 	}
 		.footer-right-text{
 
@@ -92,3 +260,64 @@
 		.footer-right-text{
 			
 		}
+/*section*/
+.bodyalert{
+	position: fixed;
+	width: 8rem;
+	height: 5rem;
+	background: white;
+	z-index: 12;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50% , -50% , 0);
+	border-radius: 0.4rem;
+	overflow: hidden;
+	/*line-height: */
+	border: none;
+}
+	.bodyalert-con{
+		width: 100%;
+		height: 3.5rem;
+		text-align: center;
+		line-height: 3.5rem;
+		font-size: .6rem;
+	}
+	.bodyalert-btn{
+		width: 100%;
+		height: 1.5rem;
+		/*border-top: 1px solid #ccc;*/
+	}
+		.btn-yes{
+			width: 50%;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			border-right: 1px solid #ccc;
+			float: left;
+			
+			text-align: center;
+			background: #f23030;
+			color: white;
+			/*vertical-align: middle;*/
+		}
+		.btn-no{
+			width: 50%;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			float: left;
+			text-align: center;
+			border-top: 1px solid #ccc;
+		}
+/*section*/
+.mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 11;
+	top: 0;
+	left: 0;
+}
+/*section*/
+.edit{
+
+}
