@@ -39,6 +39,9 @@
 			console.log(temp)
 			$.post("/registerajax" , temp , function (res) {
 				console.log(res)
+				if (res.result) {
+					window.location.href="/pcload"
+				}
 			})
 		})
 

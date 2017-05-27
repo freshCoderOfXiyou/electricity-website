@@ -46,7 +46,13 @@ html,body{
 
 	}
 	.load-form-submit{
-		margin:0.5rem 0.5rem;
+		display: block;
+		text-align: center;
+		font-size: 0.5rem;
+		color:#fff;
+		font-weight: 900;
+		margin:0.5rem 0.5rem 0;
+		/*padding-bottom: 0.5rem;*/
 		width: 9rem;
 		border:none;
 		background: #c40000;
@@ -57,8 +63,9 @@ html,body{
 		color: #e8e8e8;
 	}
 .otherway{
+
 	width: 10rem;
-	padding:0 0.5rem;
+	padding:0.5rem 0.5rem 0;
 	background:#f0f0f0;
 }
 	.otherway a{
@@ -85,3 +92,40 @@ html,body{
 	border-radius: 4px;
 	margin:0 2.5rem;
 }
+.mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+	.content{	
+		width: 9rem;
+		height: 3rem;
+		border-radius: 0.2rem;
+		background: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		overflow: hidden;
+	}
+		.contentTitle{	
+			width: 100%;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			text-align: center;
+			color:#999;
+		}
+		.contentBtn{
+			width: 100%;
+			height: 1.5rem;
+			/*background: red;*/
+			border-top: 1px solid #aaa;
+			text-align: center;
+			line-height: 1.5rem;
+			color:red;
+			font-size: 0.5rem;
+		}

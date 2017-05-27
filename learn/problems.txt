@@ -7,3 +7,5 @@ details遗留的问题：
 （1）用户评级有待完善
 （2）用户的评论有待完善
 （3）价格随着套餐的变化
+
+xinput set-prop 15 "Device Enabled" 0

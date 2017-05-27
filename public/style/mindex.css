@@ -313,10 +313,11 @@
 					}
 .footer{
 	width: 100%;
-	height: 1rem;
+	height: 1.2rem;
 	/* background: red; */
 	position: fixed;
 	bottom: 0;
+	box-shadow: 0 -0.1rem 0.1rem #ddd;
 	/* border-top: 1px solid #777; */
 	/* box-shadow: 0 -1px 0px 1px #666; */
 	/* padding-top: 0.1rem; */
@@ -337,7 +338,7 @@
 				width: 100%;
 			}
 			.footer ul li a img{
-				width: 65%;
+				width: 80%;
 			}
 	.kong{
 		width: 10rem;

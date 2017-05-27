@@ -1,33 +1,93 @@
 /*mregister.css*/
 .header{
-
+	width: 10rem;
+	height: 1rem;
+	line-height: 1rem;
+	background: #ececec;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 0 0.1rem 0.1rem #ddd;
 }
 	.back{
-
+		position: absolute;
+		top: 0;
+		left:0.2rem;
 	}
 	.title{
-
+		margin: 0;
+		font-size: 0.6rem;
+		line-height: 1rem;
+		text-align: center;
+		font-weight: normal;
 	}
 /*section devider*/
+/*body{
+	background: #efefef;
+}*/
 .content{
-
+	width: 10rem;
+	background: #efefef;
+	padding:0.5rem 0;
 }
 	.sininfo{
+		width: 10rem;
+		height: 2.5rem;
+		/*background: lightblue;*/
+		margin-bottom: 2px;
+		padding: 0.5rem 0;
 
 	}
 		.sininfo-input{
-
+			width: 10rem;
+			height: 1rem;
+			line-height: 1rem;
+			background: white;
+			display: flex;
+			position: relative;
+			padding: 0 0.5rem;
+			border-bottom: 1px solid #ccc;
 		}
 			.sinInfo-input-title{
-
+				font-size: 0.5rem;
+				font-weight: normal;
+				flex: 3;
+				/*text-align: center;*/
 			}
 			.sinInfo-input-content{
-
+				line-height:0.7rem; 
+				flex: 7;
+				border: none;
+				outline: none;
 			}
-			.sinInfo-suggest{
-				
+			.sinInfo-input-exchange{
+				position: absolute;
+				top: 0;
+				right: 0.2rem;
+				color:red;
 			}
+		.sinInfo-suggest{
+			font-size: 0.3rem;
+			display: block;
+			padding: 0 0.5rem;
+			color:#aaa;
+			margin-top: 0.2rem;
+		}
 /*section devider*/
 .commit{
-
+	width: 10rem;
+	height: 2.5rem;
+	background: #efefef;
 }
+	.commitBtn{
+		width: 9.4rem;
+		height: 1rem;
+		line-height: 1rem;
+		border-radius: 0.2rem;
+		font-weight: normal;
+		display: block;
+		margin: 0 auto;
+		background: red;
+		color: #fff;
+		text-align: center;
+		font-size: 0.6rem;
+	}
