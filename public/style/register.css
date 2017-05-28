@@ -80,3 +80,19 @@ a:hover{
 			.regcon-alert{
 				color: #c40000;
 			}
+		#submit{
+			width: 200px;
+			height: 50px;
+			margin:20px 0;
+			background: green;
+			display: block;
+			color:white;
+			text-align: center;
+			line-height: 50px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		textarea{
+			width: 500px!important;
+		}
