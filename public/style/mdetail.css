@@ -519,10 +519,13 @@ a:visited{
 	display: inline-block;
 	text-align: center;
 	margin-top: 0.2rem;
+	/*position: relative;
+	position: absolute;
+	bottom:0rem;
+	left: 0rem;*/
 }
 .footer-iconlist>a>span{
-	width: 1.6rem;
-} 
+	width: 1.6rem; } 
 .footer-iconlist>a>span:first-child{
 	font-size: 0.45rem;
 	color:#999;
@@ -561,3 +564,34 @@ a:visited{
 .footer-btn-buyNow{
 	background: #DD2727;
 }
+.masker{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	width: 7rem;
+	height: 3.5rem;
+	background: rgba(0,0,0,0.7);
+	color:#fff;
+	z-index: 20;
+	display: none;
+	border-radius: 5px;
+}
+	.masker-text{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-200%,0);
+		/*margin:0 auto;*/
+		/*background: red;*/
+	 	font-size: 0.5rem;
+	}
+	.masker-sign{
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate3d(-50%,-200%,0);
+	}
+		.masker-sign>span{
+			font-size: 0.7rem;
+		}

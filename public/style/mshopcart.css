@@ -43,8 +43,8 @@
 			line-height: 1rem;
 		}
 			.select{
-				width: 0.6rem;
-				height: 0.6rem;
+				width: 0.7rem;
+				height: 0.7rem;
 				margin: 0.1rem 0.2rem 0 0rem;
 				border-radius: 50%;
 				border:2px solid #cecece;
@@ -52,6 +52,11 @@
 				outline: none;
 				/*background: red;*/
 			}
+				.select-yes{
+					background-image: url(./style-icon/shopcartCSS.png);
+					background-position: -1.15rem 0px;
+					background-size: 2.1rem 7rem
+				}
 		.edit{
 			flex: 5;
 			height: 1rem;
@@ -145,7 +150,7 @@
 							position: absolute;
 							top: 0;
 							left: 0;
-
+							color:#999;
 						}
 						.countNumber{
 							width: 1rem;
@@ -316,6 +321,7 @@
 	z-index: 11;
 	top: 0;
 	left: 0;
+	display: none;
 }
 /*section*/
 .edit{

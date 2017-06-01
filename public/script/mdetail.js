@@ -1,5 +1,9 @@
 (function () {
 	window.onload=function () {
+
+
+		// alert(0)
+
 		var screenWidth=$(window).width()
 		$(".info-selec").css("display","none")
 		// console.log(document.body.scrollWidth)
@@ -13,9 +17,19 @@
 		var infoH=$(".info").css("height")
 		var moreH=$(".more").css("height")
 		var commentH=$(".comment").css("height")
+		var $addShopcart = $(".info-selec-yes")
+		var $btnarea = $(".info-selec-btns1")
+		var $btntit = $(".info-selec-btntitle")
+		var $btnSelected = $(".btn-selected")
+		var $infoSeTieFirst = $(".infoSeTie-first")
+		var $input = $(".number-input")
+
+		// console.log($btnarea.get(1))
+
+
 		$('.middle').css("height" , infoH)
 		$(".middle-outer").css("height" , infoH)
-		console.log(infoH)
+		// console.log(infoH)
 //点击头部标题“基本信息”的监听事件
 $('#header-info').click(function () {
 //若点击此时显示选项卡自己的按钮，则不执行任何操作
@@ -58,7 +72,7 @@ $(this).addClass('header-focus')
 $("#"+header_focus_item).removeClass('header-focus')
 header_focus_item='header-comment'
 })
-		$("#header-comment").click()
+		// $("#header-comment").click()
 
 		
 //在此函数中使用switch语句来进行判断可以使用更加简洁的代码，直接调用函数move并传入dis值，需要简单调整下move函数的实现
@@ -249,7 +263,7 @@ function handleend(argument) {
 			$(".info-selec").css("display","block")
 			$(".info-selec").addClass("show")
 		}
-		$(".cover").click(closeCover)
+		// $(".cover").click(closeCover)
 		$(".info-selec-close").click(closeCover)
 		function closeCover(argument) {
 			$(".cover").css("display","none")
@@ -261,20 +275,28 @@ function handleend(argument) {
 		//select button js
 		$(".info-selec-btns1>span").click(function () {
 			var $this=$(this)
+			var selectValue=$this.text()
+			var $thisParent = $this.parent()
+			var parIndex = $thisParent.attr("data-index")-1
+			 $($infoSeTieFirst.get(parIndex)).text(selectValue)
+			// console.log($thisParent.attr("data-index"))
+
 			$this.siblings().removeClass("btn-selected")
 			$this.addClass("btn-selected")
-			var selectValue=$this.text()
-			$($(".infoSeTie-haschoose>span").get("1")).text(selectValue)
+
+			// var selectValue=$this.text()
+			// $($(".infoSeTie-haschoose>span").get("1")).text(selectValue)
 		})
-		$(".info-selec-btns2>span").click(function () {
-			var $this=$(this)
-			$this.siblings().removeClass("btn-selected")
-			$this.addClass("btn-selected")
-			var selectValue=$this.text()
-			$($(".infoSeTie-haschoose>span").get("2")).text(selectValue)
-		})
+
+
+		// $(".info-selec-btns2>span").click(function () {
+		// 	var $this=$(this)
+		// 	$this.siblings().removeClass("btn-selected")
+		// 	$this.addClass("btn-selected")
+		// 	var selectValue=$this.text()
+		// 	$($(".infoSeTie-haschoose>span").get("2")).text(selectValue)
+		// })
 		$(".number-addBtn").click(function () {
-			var $input=$(".number-input")
 			var value =parseInt($input.attr("value"))
 				value++
 				$input.attr("value",value )
@@ -283,8 +305,8 @@ function handleend(argument) {
 				}
 			
 		})
+
 		$(".number-decreaseBtn").click(function () {
-			var $input=$(".number-input")
 			var value =parseInt($input.attr("value"))
 			if (value>1) {
 				value--
@@ -294,8 +316,46 @@ function handleend(argument) {
 			}
 			if (value<=1) {
 				$(this).addClass("btn-unable")
+			}	
+		})
+
+		$addShopcart.click(function () {
+			var standLen = $btntit.length-1
+			var msg = ""
+			var imgsrc = $($(".piclist-inner>img").get(0)).attr("src")
+			var name = $(".info-info-title").text()
+			var id = $(".info-info").attr("data-gid")
+			var nowprice = $(".info-info-price").text()
+			for(var i=0;i<standLen;i++){
+				var msgTil = $($btntit.get(i)).text()
+				var msgCon = $($infoSeTieFirst.get(i)).text()
+				msg += msgTil+":"+ msgCon + ";"
 			}
-			
+			var count = $input.val()
+			var dataObj = {}
+			dataObj.count = count
+			dataObj.stand = msg
+			dataObj.name = name
+			dataObj.id = id
+			dataObj.imgsrc = imgsrc
+			dataObj.nowprice = nowprice
+			console.log(dataObj)
+			$.post("/addwantsAjax" , dataObj , function(res){
+				if (res.back) {
+					// console.log(res)
+					$(".masker").css("display" , "block")
+					// $(".cover").css("display" , "none")
+					var timer1=setTimeout(function () {
+						$(".masker").css("display" , "none")
+					} , 2000)
+
+					var timer2=setTimeout(function () {
+						$(".cover").css("display" , "none")
+					} , 1000)
+
+				}
+
+			})
 		})
 
 	}//the all most outer

@@ -33,6 +33,19 @@
 			var nowpriceTxt = $nowpriceEle.val()
 			var locTxt = $locEle.val()
 			var mainimgTxt = $mainsrcEle.val().split(";")
+			var mainimgLen = mainimgTxt[1]
+			var detimgLen = mainimgTxt[2]
+			var mainPath = mainimgTxt[0]
+			var mainImgArray = []
+			var detImgArray = []
+			for(var i=1;i<=detimgLen;i++){
+				var temPath = mainPath + "b" + i + ".jpg"
+				detImgArray.push(temPath)
+			}
+			for(var i=1;i<=mainimgLen;i++){
+				var temPath = mainPath + "d" + i + ".jpg"
+				mainImgArray.push(temPath)
+			}
 			var detailimgTxt = $detailsrcEle.val().split(";")
 			var standardTxt = $standardEle.val().split("&")
 			var standardObjArray = []
@@ -54,8 +67,8 @@
 			resultObj.subtitle = subtilTxt
 			resultObj.oldprice = oldpriceTxt
 			resultObj.nowprice = nowpriceTxt
-			resultObj.detailImg = detailimgTxt
-			resultObj.mainImg = mainimgTxt
+			resultObj.detailImg = detImgArray
+			resultObj.mainImg = mainImgArray
 			resultObj.standard = standardObjArray
 			console.log(resultObj)
 			$.post("/managerajax" , resultObj ,function(res){

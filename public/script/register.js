@@ -31,6 +31,7 @@
 			temp.phone = $("#input-uphone").val()
 			temp.src = './public/images/header.png'
 			temp.receiver = []
+			temp.wants = []
 			var tempReceiver = {}
 			tempReceiver.receiverName = $("#input-rname").val()
 			tempReceiver.receiverPhone = $("#input-rphone").val() 
