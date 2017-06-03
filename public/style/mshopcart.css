@@ -312,6 +312,9 @@
 			text-align: center;
 			border-top: 1px solid #ccc;
 		}
+.conSin-hide{
+	display: none;
+}
 /*section*/
 .mask{
 	position: fixed;

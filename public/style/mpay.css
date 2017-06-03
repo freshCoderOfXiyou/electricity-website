@@ -1,9 +1,11 @@
+
 /*mpay.css*/
 .header{
 	width:10rem;
 	height: 2.5rem;
 	border-bottom: 1px solid #c9c0c7;
-	font-size: 
+	background: #e0e0e0;
+	/*color:;*/
 }
 	.header>div{
 		float: left;
@@ -37,7 +39,7 @@
 			/*display: block;*/
 		}
 			.headerRecePerName{
-				color: #909090;
+				color: #555;
 			}
 			.headerRecePerPhone{
 				float: right;
@@ -52,7 +54,7 @@
 			position: absolute;
 			top: 1rem;
 			left: 0;
-			color: #909090;
+			color: #666;
 		}
 			.header-receiver-locTit{
 				/*float: left;*/
@@ -72,7 +74,7 @@
 		}
 /*section*/
 .goodslist{
-	background: #e6e6e6;
+	/*background: #e6e6e6;*/
 	padding: 0.3rem 0;
 }
 	.goodslistTil{
@@ -86,10 +88,12 @@
 	}
 	.goodslistSin{
 		/*background: white;*/
-		width: 10rem;
+		width: 9.6rem;
 		display: flex;
 		height: 3rem;
 		color:#464545;
+		background: #fff;
+		margin: 0.2rem;
 	}
 		.listSinImg{
 			/*width: 2rem;*/
@@ -107,9 +111,12 @@
 		}
 			.listSinInfo-name{
 				margin: 0;
+				line-height: 0.4rem;
 			}
 			.listSinInfo-standard{
+				margin-top: 0.5rem;
 				color:#acacac;
+				line-height: 0.4rem;
 			}
 		.listprice{
 			flex: 2;
@@ -172,3 +179,37 @@
 		text-align: center;
 		line-height: 1.2rem;
 	}
+.masker{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	width: 7rem;
+	height: 3.5rem;
+	background: rgba(0,0,0,0.8);
+	color:#fff;
+	z-index: 20;
+	display: none;
+	border-radius: 5px;
+}
+	.masker-text{
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+		/*margin:0 auto;*/
+		/*background: red;*/
+	 	font-size: 0.5rem;
+	 	color:white;
+	 	width: 85%;
+	 	/*font-size: 0.4rem;*/
+	}
+	.masker-sign{
+		position: absolute;
+		top: 120%;
+		left: 50%;
+		transform: translate3d(-50%,-200%,0);
+	}
+		.masker-sign>span{
+			font-size: 0.7rem;
+		}

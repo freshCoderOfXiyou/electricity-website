@@ -18,7 +18,7 @@
 		line-height: 0.8rem;
 		/* background: white; */
 	}
-	.header input{
+	.header .header-text{
 		flex: 6;
 		border: none;
 		border-top-left-radius: 0.1rem;
@@ -31,6 +31,16 @@
 		text-indent: 0.3rem;
 		outline: none;
 		padding: 0;
+	}
+	.header-submit{
+		width: 0.8rem;
+		position: absolute;
+		top: 0.2rem;
+		right: 1.55rem;
+		background: rgba(0,0,0,0);
+		border:none;
+		outline: none;
+		z-index: 11;
 	}
 	.header .header-icon{
 		background: white;

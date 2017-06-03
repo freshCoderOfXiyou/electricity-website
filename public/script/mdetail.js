@@ -263,14 +263,21 @@ function handleend(argument) {
 			$(".info-selec").css("display","block")
 			$(".info-selec").addClass("show")
 		}
-		// $(".cover").click(closeCover)
+		$(".cover").bind("click",function(event) {
+			console.log(event.target)
+			if ( event.target == $(".cover")[0] ) {
+				closeCover()
+			}
+		})
+
 		$(".info-selec-close").click(closeCover)
-		function closeCover(argument) {
+		// addToCart()
+
+		function closeCover() {
 			$(".cover").css("display","none")
 			$(".info-selec").removeClass("show")
 			$(".info-selec").css("display","none")
 		}
-		// addToCart()
 
 		//select button js
 		$(".info-selec-btns1>span").click(function () {

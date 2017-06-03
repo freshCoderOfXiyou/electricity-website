@@ -39,11 +39,11 @@
 			var mainImgArray = []
 			var detImgArray = []
 			for(var i=1;i<=detimgLen;i++){
-				var temPath = mainPath + "b" + i + ".jpg"
+				var temPath = mainPath + "d" + i + ".jpg"
 				detImgArray.push(temPath)
 			}
 			for(var i=1;i<=mainimgLen;i++){
-				var temPath = mainPath + "d" + i + ".jpg"
+				var temPath = mainPath + "b" + i + ".jpg"
 				mainImgArray.push(temPath)
 			}
 			var detailimgTxt = $detailsrcEle.val().split(";")
