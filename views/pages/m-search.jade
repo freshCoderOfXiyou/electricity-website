@@ -16,22 +16,26 @@ html
 	body
 		div.header
 			a.back
-			input(type="text")
-			span 搜索 　
+				span.glyphicon.glyphicon-chevron-left
+			span.header-input-group
+				span.headInGroup-magnifer.glyphicon.glyphicon-search
+				input(type="text" value="mobile").headInGroupInput
+				span.headInGroupBtn 搜索 　
 		div.secondHeader
-			ul
-				li　综合
+			ul.keywordList
+				li.keywordSelected　综合
 				li　销量
 				li　价格
 				li　店铺
-			span
+			span.showModeBtn
+				span.glyphicon.glyphicon-th-large
 		div.content
 			div.contentSin
 				div.imgWrap
 					img(src="./images/mobile/detail/nike-slide.webp")
 				div.info
-					span.mainTitle 耐克科比四代篮球鞋
-					span.subTitle　该款月销量1077笔
+					span.mainTitle 耐克科比四代篮球鞋克科比四代篮球鞋
+					span.subTitle 该款月销量1077笔
 					span.anotherInfo
 						span.infoprice ￥499
 						span.infofee 免运费

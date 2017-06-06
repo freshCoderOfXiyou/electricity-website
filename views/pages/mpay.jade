@@ -13,81 +13,44 @@ html
 		meta(name='apple-mobile-web-app-capable' content='yes')
 		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
 		meta(name='format-detection' content='telephone=no,address=no')
-	body
+	body(style="background:rgb(240, 242, 245);")
 		div.header
 			div.header-icon 
 				span.glyphicon.glyphicon-map-marker
 			div.header-receiver　　　
 				div.header-receiver-person
-					span.headerRecePerName 收货人：张三
-					span.headerRecePerPhone　18812340001
+					span.headerRecePerName 收货人：#{receiver.receiverName}
+					span.headerRecePerPhone #{receiver.receiverPhone}
 				div.header-receiver-loc
 					span.header-receiver-locTit 收货地址：
-					span.header-receiver-locCon 陕西省西安市雁塔区小寨路街道西安邮电大学
+					span.header-receiver-locCon #{receiver.receiverAddress}
 			div.header-more
 				span.glyphicon.glyphicon-chevron-right
 		div.goodslist
-			div.goodslistTil 商品列表
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
-			div.goodslistSin
-				div.listSinImg
-					img(src="./images/mobile/detail/nike-slide.webp")
-				div.listSininfo
-					p.listSinInfo-name 耐克科比四代篮球鞋活力红耐克科比四代篮球鞋活力红
-					span.listSinInfo-standard 活力红；42
-				div.listprice
-					span.listprice-price ￥499
-					span.listprice-count x1
+			div.goodslistTil 
+				span 商品列表
+			each listSin in paylist
+				div.goodslistSin
+					div.listSinImg
+						img(src="#{listSin.src}")
+					div.listSininfo
+						div.listSinInfo-name #{listSin.name}
+						div.listSinInfo-standard #{listSin.stand}
+					div.listprice
+						span.listprice-price ￥#{listSin.price}
+						span.listprice-count x#{listSin.count}
 		div.footer
 			span.footerLeft
 				span 共
-				span#footerLeftCount 1
+				span#footerLeftCount #{payCount}
 				span 件，总金额
 				span.totalPrice 
 					span ￥
-					span#footerPrice 499
+					span#footerPrice #{payPrice}
 			span.footerSubmit 提交订单
+		div.masker
+			div.masker-text ＯＫ，我们已经接受到您的订单，请及时关注物流信息。
+			span.masker-sign 
+				span.glyphicon.glyphicon-ok
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src='./script/mpay.js')

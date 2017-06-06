@@ -14,7 +14,8 @@ db.once("open" , function () {
 		psw:String,
 		phone:String,
 		receiver:Array,
-		src:String
+		src:String,
+		wants:Array
 	})
 
 	var goodS = mongoose.Schema({
@@ -32,7 +33,7 @@ db.once("open" , function () {
 	var wantS = mongoose.Schema({
 		userid:String,
 		time:Date,
-		goods:Array,
+		goods:Array
 	})
 
 	var havingS = mongoose.Schema({
@@ -61,179 +62,11 @@ db.once("open" , function () {
 	var hadM = mongoose.model("had" , hadS)
 
 	//build five instance
-	var userm = new userM()
-	var goodm = new goodM()
-	var wantm =new wantM()
-	var havingm = new havingM()
-	var hadm = new hadM()
-
-	//add function to oper
-	oper.insertUser = function (id , name , psw , phone , receiverName , receiverAddress , receiverPhone , src) {
-		console.log("has successful enter in !")
-		//build obj
-		var temp = {}
-		temp.id = id
-		temp.name = name
-		temp.psw = psw
-		temp.phone = phone
-		temp.receiver = []
-		var tempReceiver = {}
-		tempReceiver.receiverName = receiverName
-		tempReceiver.receiverAddress = receiverAddress
-		tempReceiver.receiverPhone = receiverPhone
-		temp.receiver.push(tempReceiver)
-		temp.src = src || "./images/mobile/detail/header2.jpeg"
-		console.log(temp)
-		userM.create([temp] , function(err , candies){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into user, doc is:"+candies+new Date)
-			}
-		})
-	}//end function "insertUser"
-
-	oper.insertUserByObj = function (obj) {
-		console.log("has successful enter in !" , obj)
-		userM.create([obj], function(err , candies){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into user, doc is:"+candies+new Date)
-			}
-		})
-	}//end function "insertUser"
-
-	oper.insertGood = function (id , name , subtitle , oldprice , nowprice , loc , standard ,mainImg , detailImg) {
-		// body...
-		var temp = {}
-		temp.id = id
-		temp.name = name
-		temp.subtitle = subtitle
-		temp.oldprice = oldprice
-		temp.nowprice = nowprice
-		temp.loc = loc 
-		temp.standard = standard
-		temp.mainImg = mainImg
-		temp.detailImg = detailImg
-		goodM.create([temp],function (err , candies) {
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
-			}
-		})
-	}
-
-
-	oper.insertWant = function (userid , goods) {
-		var temp = {}
-		temp.userid = userid
-		temp.time = new Date()
-		temp.goods = goods
-		wantM.create([temp],function (err , candies) {
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
-			}
-		})
-	}
-	// function 
-
-	oper.insertHaving = function(userid , goods , receiverName ,receiverAddress ,receiverPhone){
-		var temp = {}
-		temp.userid = userid
-		temp.time = new Date()
-		temp.goods = goods
-		temp.receiverName = receiverName
-		temp.receiverAddress = receiverAddress
-		temp.receiverPhone = receiverPhone
-		havingM.create([temp] , function (err , candies) {
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
-			}
-		})
-	}
-
-	oper.insertHad = function(userid , goods ,receiverName ,receiverAddress ,receiverPhone){
-		var temp = {}
-		temp.userid = userid
-		temp.time = new Date()
-		temp.goods = goods
-		temp.receiverName = receiverName
-		temp.receiverAddress = receiverAddress
-		temp.receiverPhone = receiverPhone
-		hadM.create([temp] , function (err , candies) {
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
-			}
-		})
-
-	}
-
-	oper.userLoading= function(userid , psw){
-		userM.findOne({id:userid,psw:psw} ,   function(err , result){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				if (result == null) {
-					console.log("@this request has submit bad id or psw!")
-					return false
-				}
-				else{
-					console.log("@the user "+ result.name +" successful enter")
-					return true
-				}
-
-			}
-		})
-	}
-
-	oper.getUserInfoByKeyword = function(userid , keyword){
-		userM.findOne({id:userid} , keyword , function(err , result){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log(result)
-				return result
-			}
-
-		})
-	}
-
-	oper.getUserAll = function (userid ) {
-		userM.findOne({id:userid} , function(err , result){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log(result)
-				return result
-			}
-		})
-	}
-
-
-	// oper.insertUser("18812340001","张三","abcd","18812341234","张三","陕西西安市雁塔区","18812341234","./public/images/header.png")
-	// oper.insertGood("1001","Midea/美的 F60-15WB5(Y)60升电热水器50即热洗澡速热家用储水式","单店热销16万台 节能省电 远程遥控",2699,1099,"广东广州",[{name:"容积",items:["10L","20L"]},{name:"功率",items:["500w","1000w"]}],["./images/pc/meidi/main1.jpg","./images/pc/meidi/main2.jpg"],["./images/pc/meidi/detail1.jpg","./images/pc/meidi/detail2.jpg"])
-	// oper.insertWant("18812341234",[{id:"1001",count:"1",standard:[{name:"容积",value:"10L"} , {name:"功率",value:"1000w"}]} , {id:"1001",count:"1",standard:[{name:"容积",value:"10L"} , {name:"功率",value:"1000w"}]}])
-	// oper.userLoading("18812340001" , "abcd")
-	// oper.getUserInfo("18812340001" , "src")
-	// var obj = oper.getUserAll("18812340001")
-	// console.log("the return value is :"+ obj)
+	// var userm = new userM()
+	// var goodm = new goodM()
+	// var wantm =new wantM()
+	// var havingm = new havingM()
+	// var hadm = new hadM()
 
 	//build http server
 	var express=require('express')
@@ -245,11 +78,11 @@ db.once("open" , function () {
 	var session = require("express-session")
 	var parseurl = require("parseurl")
 	var app=express()
-	app.use(bodyParser.json()); // for parsing application/json
+	app.use(bodyParser.json())// for parsing application/json
 	app.use(bodyParser.urlencoded({ extended: true }))
 	app.use(cookieParser())
 	app.use(favicon(__dirname+"/public/images/detail/header-cola.png"))
-	// res.cookie("account", {account: userName, hash: hash, last: lastTime}, {maxAge: 60000});
+	// res.cookie("account", {account: userName, hash: hash, last: lastTime}, {maxAge: 60000})
 	// 通过req.cookies.account来访问
 	// 使用req.cookies[“account”]这种方式来检测是否有account这个cookie
 
@@ -270,17 +103,17 @@ db.once("open" , function () {
 
 
 		var hasload = req.session.hasload
-		console.log("before enter bad if the value is : " + hasload)
+		// console.log("before enter bad if the value is : " + hasload)
 		if ( !hasload ) {
-			console.log("enter bad if")
+			// console.log("enter bad if")
 			hasload = req.session.hasload = false
-			console.log("after gave value the hasload is :" + hasload)
+			// console.log("after gave value the hasload is :" + hasload)
 		}
 		var pathname = parseurl(req).pathname
-		console.log(pathname)
+		// console.log(pathname)
 		if (pathname == "/ajaxpost") { 
-			console.log("enter loadajax path handle")
-			console.log(req.body)
+			// console.log("enter loadajax path handle")
+			// console.log(req.body)
 			var username = req.body.id
 			var userpsw = req.body.psw
 			
@@ -298,7 +131,420 @@ db.once("open" , function () {
 				}
 			})//end function findOne
 		}//end if
+
+		if (pathname == "/paylistAjax") {
+			// var paylistArg = 
+			// console.log("@324 ajaxpost req is " + paylistArg)
+			req.session.paylist = req.body.paylist
+			console.log("@326 session req.body is " )
+			console.log(req.body)
+		}
+
 		next()
+	})
+
+	
+
+	app.get("/pcload" , require("./modules/pcload.js"))
+
+	app.post("/pcload" , function (req , res) {
+		console.log(req.body)
+
+		var username = req.body.userid
+		var userpsw = req.body.userpsw
+
+		userM.findOne( {id:username,psw:userpsw} ,   function(err , result){
+			if (err) {
+				console.log(err)
+			}
+			else{
+				if (result == null) {
+					console.log("@this request has submit bad id or psw!")
+					res.send("bad id or psw!")
+				}
+				else{
+					console.log("@the user "+ result.name +" successful enter")
+					res.redirect("/pc")
+				}
+			}
+		})//end function findOne
+	})//end pcload post action
+
+	app.get("/pcregister" , function(req , res){
+		res.render('register',{
+		title:'注册'
+		})
+	})
+
+	app.listen(app.get('port'),function(){
+		console.log("@Express started on http://localhost:"+app.get('port'))
+		console.log("@Http server start at :" + new Date())
+	})
+
+	app.post("/ajaxpost" , function (req , res) {
+		var username = req.body.id
+		var userpsw = req.body.psw
+
+		// console.log("has seen the /pcload "+ req.session.views["/pcload"]+" times")
+		userM.findOne({id:username,psw:userpsw} ,   function(err , result){
+			if (err) {
+				console.log(err)
+			}
+			else{
+				if (result == null) {
+					console.log("@this request has submit bad id or psw!")
+					res.json({back:false})
+				}
+				else{
+					console.log("@the user "+ result.name +" successful enter")
+					res.json({back:true})
+					// req.session.hasview = true
+					// req.session.hasload["load"] = "yes"
+					console.log("@/ajaxpost 901 :" , req.session)
+					// res.redirect("/pc")
+				}
+			}
+		})//end function findOne
+
+		// res.json({back:"datadddd"})
+	})
+
+	app.post("/paylistAjax" , function(req , res){
+		// var list = req.body
+		// console.log("/paylistAjax")
+		// console.log( req.session )
+		var wantsUpdateObj = {}
+		if (req.body.wantsUpdate == undefined) {
+			wantsUpdateObj.wants = []
+		}
+		else{
+			wantsUpdateObj.wants = req.body.wantsUpdate
+		}
+		console.log("wants update obj is :")
+		console.log(wantsUpdateObj)
+		var userid = req.session.loaderid
+		userM.update( {id:userid} , wantsUpdateObj , function(err , updateresult){
+							if (err) {
+								console.log(err)
+							}
+							else{
+								// console.log("add wants last step is " + updateresult)
+								res.json({back:true})
+							}
+						})
+		// res.json({back:true})
+	})
+
+	app.get("/mpay",function  (req,res) {
+		var paylistObj = req.session.paylist
+
+		var receiverObj = req.session.loaderobj.receiver[0]
+		// console.log("@236 get mpay paylist is ")
+		// console.log(paylistObj)
+		// res.json(paylistObj)
+		paylistObj.title = "mobile pay"
+		paylistObj.receiver = receiverObj
+
+		res.render("mpay",paylistObj)
+		// res.json(paylistObj)
+	})
+
+	app.post("/payAjax" , function(req , res){
+		var reqObj = req.body
+		// if (reqObj !=) {}
+		var paylistObj = req.session.paylist
+		var thisUserid = req.session.loaderid
+		var nowTime = new Date()
+		reqObj.userid = thisUserid
+		reqObj.time = nowTime
+		reqObj.goods = paylistObj.paylist
+		havingM.create([reqObj] , function(err , candies){
+			if (err) {
+				console.log(err)
+				res.json({back:false})
+			}
+			else{
+				console.log("@has insert one doc into havingS, doc is:"+candies+new Date)
+				res.json({back:true})
+			}
+		})
+	})
+
+	app.get("/err" , function (req , res) {
+		console.log("@/err + 910: ",req.session)
+		res.status(404).send("sorry , we couldn't find this ")
+	})
+
+	app.post("/registerajax" , function (req , res) {
+		var postarg = req.body
+		var hasRegister = false
+		console.log(req.body)
+		userM.create([postarg], function(err , candies){
+			if (err) {
+				console.log(err)
+				res.json({"result":hasRegister})
+			}
+			else{
+				console.log("@has insert one doc into user, doc is:" , candies+new Date)
+				hasRegister = true
+				// var tempwants = {}
+				// tempwants.userid = postarg.id
+				// tempwants.goods = []
+				// tempwants.time = new Date
+
+				// wantM.create([tempwants] , function (err , candies) {
+				// 	if (err) {
+				// 		console.log(err)
+				// 	}
+				// 	else{
+				// 		console.log("@has insert one doc into wants, doc is:"+candies+new Date)
+				// 	}
+				// })
+
+				res.json({"result":hasRegister})
+			}
+		})//end user create
+
+
+	})
+
+	app.post("/managerajax" , function (req , res) {
+		var postarg = req.body
+		// console.log(postarg)
+		
+		// oper.insertGoodByObj(postarg)
+		goodM.create([ postarg ],function (err , candies) {
+			if (err) {
+				console.log(err)
+				res.json({"registed":false})
+			}
+			else{
+				console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+				res.json({"registed":true})
+			}
+		})
+	})
+
+	app.post("/shopcartajax" , function (req , res) {
+		// body...
+		var postarg = req.body
+		// var 
+	})
+
+	app.post("/addwantsAjax" , function(req , res){
+		var userid = req.session.loaderid 
+		var getObj = req.body
+		var goodsid = getObj.id
+		//find goods info
+		goodM.findOne({id:goodsid} , "standard" , function(err , result){
+			if (err) {
+				console.log(err)
+			}
+			else{
+				console.log("@1002 find goods standard is :\n" + result)
+				//add standard to obj
+				getObj.standard = result.standard
+
+				//get goods array of users info
+				userM.findOne({id:userid} , "wants" , function(err , wantsresult){
+					if (err) {
+						console.log(err)
+					}
+					else{
+
+						var updateObj = wantsresult.wants
+						updateObj.push(getObj)
+						console.log("@1014 updateObj is :" + getObj)
+						// res.json(getObj)
+						//update goods array of users info
+						
+						userM.update( {id:userid} , { wants : updateObj } , function(err , updateresult){
+							if (err) {
+								console.log(err)
+							}
+							else{
+								console.log("add wants last step is " + updateresult)
+								res.json({back:true})
+							}
+						})
+
+						//end userm update
+						
+					}
+
+				})//end userm find
+			}
+
+		})//end of goodm find
+
+	})//end app.get
+
+	app.get("/manager" , function (req ,res) {
+		res.render("manager" , {title:"商品管理页面"})
+	})
+
+	app.get('/pcdetail',function (req,res) {
+
+		// var result = req.query.page
+		// //finde data
+		// var appGoodObj = goodM.findOne( { id : result } , function(err , result){
+		// 	if (err) {
+		// 		console.log(err)
+		// 	}
+		// 	else{
+		// 		// console.log(result)
+		// 		var jadeArg = {
+		// 			gname : result.name ,
+		// 			gsubtil : result.subtitle ,
+		// 			goldprice : result.oldprice ,
+		// 			gnowprice : result.nowprice ,
+		// 			gdetailImgs : result.detailImg ,
+		// 			gmainImgs :result.mainImg ,
+		// 			gstandard : result.standard,
+		// 			searchWord:'箱包名品任你挑',
+		// 			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+		// 		}
+				// console.log(jadeArg)
+				res.render('details',
+				{
+					title:"pcdetail",
+					searchWord:'箱包名品任你挑',
+					recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+				})
+		// 	}
+		// })		
+	})
+
+	app.get('/pcsearch',function (req,res) {
+		res.render('search',{
+			title:'search',
+			searchWord:'箱包名品任你挑',
+			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+		})
+	})
+
+	app.get('/pcshoppingcart',function (req,res) {
+		res.render('shoppingcart',{
+			title:'shoppingcart',
+			searchWord:'箱包名品任你挑',
+			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+		})
+	})
+
+	app.get('/pcpay',function (req,res) {
+		res.render('pay',{
+			title:'支付页面',
+			searchWord:'箱包名品任你挑',
+			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
+		})
+	})
+	app.get('/mload',function (req,res) {
+		res.render('m-loade',{
+			title:'登录'
+		})
+	})
+
+	app.get('/mindex',function (req,res) {
+		var username = ""
+		var isload = req.session.hasload
+		if(isload){
+			var username = req.session.loaderobj.name
+		}
+
+		res.render('m-index',{
+			title:'mobile index',
+			name:username,
+			hasload:isload
+		})
+	})
+
+	app.get('/mdetail',function (req,res) {
+		var result = req.query.page
+		//finde data
+		var appGoodObj = goodM.findOne( { id : result } , function(err , result){
+			if (err) {
+				console.log(err)
+			}
+			else{
+				// console.log(result)
+				// var gstandString = result.standard + ""
+				// console.log(gstandString)
+				var jadeArg = {
+					gname : result.name ,
+					gsubtil : result.subtitle ,
+					goldprice : result.oldprice ,
+					gnowprice : result.nowprice ,
+					gdetailImgs : result.detailImg ,
+					gmainImgs :result.mainImg ,
+					gstandard : result.standard,
+					gid : result.id
+				}
+				console.log(jadeArg)
+				res.render('m-detail',jadeArg)
+			}	
+
+		})
+		// console.log("query obj is :")
+		// console.log( appGoodObj)
+		
+	})
+
+
+	
+
+	// app.get("/indexSeach" , function (req , res) {
+	// 	// body...
+	// 	var keyword = req.query.keyword
+	// 	var re = "/"+keyword +"/"
+	// 	var query = userM.find({'name':re})
+	// })
+	
+	app.get("/mregister" , function(req , res){
+		res.render("mregister.jade",{
+			title:"mregister"
+		})
+	})
+
+	app.get("/mshopcart" , function(req , res){
+		//find users wants 
+		//get userid 
+		var userid = req.session.loaderid
+		if (!req.session.hasload) {
+			res.redirect("/mload")
+		}else{
+			userM.findOne({id:userid} , "wants" , function(err , result){
+				if (err) {
+					console.log(err)
+				}
+				else{
+					console.log(result)
+					var arg = {}
+					arg.wants = result.wants
+					if(arg.wants.length == 0 ){
+						arg.hasWants = false
+					}
+					else{
+						arg.hasWants = true 
+					}
+					console.log("arg is :\n"+arg)
+					console.log("wants is :\n"+arg.wants)
+					res.render("mshopcart",arg)
+					
+					// res.send("ok")
+					// return result
+				}	
+			})
+		}//end else
+		
+		// res.render("mshopcart",{
+		// 	title:"mshopcart"
+		// })
+	})
+
+	app.get("/msearch" , function(req , res){
+		res.render("m-search",{
+			title:"mserach"
+		})
 	})
 
 	app.get('/pc' , function (req , res ) {
@@ -843,161 +1089,197 @@ db.once("open" , function () {
 		}
 
 		console.log("line 310 " + hasload , loaderid , loadername)
-	})
-	app.get("/pcload" , require("./modules/pcload.js"))
-	app.post("/pcload" , function (req , res) {
-		console.log(req.body)
+	})//end get pc
 
-		var username = req.body.userid
-		var userpsw = req.body.userpsw
+}) //end of once
 
-		userM.findOne( {id:username,psw:userpsw} ,   function(err , result){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				if (result == null) {
-					console.log("@this request has submit bad id or psw!")
-					res.send("bad id or psw!")
-				}
-				else{
-					console.log("@the user "+ result.name +" successful enter")
-					res.redirect("/pc")
-				}
-			}
-		})//end function findOne
-	})//end pcload post action
-	app.get("/pcregister" , function(req , res){
-		res.render('register',{
-		title:'注册'
-		})
-	})
 
-	app.listen(app.get('port'),function(){
-		console.log("@Express started on http://localhost:"+app.get('port'))
-		console.log("@Http server start at :" + new Date())
-	})
 
-	app.post("/ajaxpost" , function (req , res) {
-		var username = req.body.id
-		var userpsw = req.body.psw
 
-		// console.log("has seen the /pcload "+ req.session.views["/pcload"]+" times")
-		userM.findOne({id:username,psw:userpsw} ,   function(err , result){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				if (result == null) {
-					console.log("@this request has submit bad id or psw!")
-					res.json({back:false})
-				}
-				else{
-					console.log("@the user "+ result.name +" successful enter")
-					res.json({back:true})
-					// req.session.hasview = true
-					// req.session.hasload["load"] = "yes"
-					console.log("@/ajaxpost 901 :" , req.session)
-					// res.redirect("/pc")
-				}
-			}
-		})//end function findOne
 
-		// res.json({back:"datadddd"})
-	})
+	//add function to oper
+	// oper.insertUser = function (id , name , psw , phone , receiverName , receiverAddress , receiverPhone , src) {
+	// 	console.log("has successful enter in !")
+	// 	//build obj
+	// 	var temp = {}
+	// 	temp.id = id
+	// 	temp.name = name
+	// 	temp.psw = psw
+	// 	temp.phone = phone
+	// 	temp.receiver = []
+	// 	var tempReceiver = {}
+	// 	tempReceiver.receiverName = receiverName
+	// 	tempReceiver.receiverAddress = receiverAddress
+	// 	tempReceiver.receiverPhone = receiverPhone
+	// 	temp.receiver.push(tempReceiver)
+	// 	temp.src = src || "./images/mobile/detail/header2.jpeg"
+	// 	console.log(temp)
+	// 	userM.create([temp] , function(err , candies){
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into user, doc is:"+candies+new Date)
+	// 		}
+	// 	})
 
-	app.get("/err" , function (req , res) {
-		console.log("@/err + 910: ",req.session)
-		res.status(404).send("sorry , we couldn't find this ")
-	})
 
-	app.post("/registerajax" , function (req , res) {
-		var postarg = req.body
-		console.log(req.body)
-		userM.create([postarg], function(err , candies){
-			if (err) {
-				console.log(err)
-			}
-			else{
-				console.log("@has insert one doc into user, doc is:" , candies+new Date)
-			}
-		})
 
-		res.json(req.body)
-	})
+	// }//end function "insertUser"
 
-	app.get("/manager" , function (req ,res) {
-		res.render("manager" , {title:"商品管理页面"})
-	})
-	app.get('/pcdetail',function (req,res) {
-		res.render('details',{
-			title:'detail',
-			searchWord:'箱包名品任你挑',
-			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
-		})
-	})
-	app.get('/pcsearch',function (req,res) {
-		res.render('search',{
-			title:'search',
-			searchWord:'箱包名品任你挑',
-			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
-		})
-	})
-	app.get('/pcshoppingcart',function (req,res) {
-		res.render('shoppingcart',{
-			title:'shoppingcart',
-			searchWord:'箱包名品任你挑',
-			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
-		})
-	})
+	// oper.insertUserByObj = function (obj) {
+	// 	console.log("has successful enter in !" , obj)
+	// 	userM.create([obj], function(err , candies){
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into user, doc is:"+candies+new Date)
+	// 		}
+	// 	})
 
-	app.get('/pcpay',function (req,res) {
-		res.render('pay',{
-			title:'支付页面',
-			searchWord:'箱包名品任你挑',
-			recommands:['羽绒服','|','零食','|','四件套','|','电暖气','|','保暖内衣','|','靴子','|','沙发','|','打底裤']
-		})
-	})
-	app.get('/mload',function (req,res) {
-		res.render('m-loade',{
-			title:'登录'
-		})
-	})
-	app.get('/mindex',function (req,res) {
-		res.render('m-index',{
-			title:'登录'
-		})
-	})
 
-	app.get('/mdetail',function (req,res) {
-		res.render('m-detail',{
-			title:'Nike'
-		})
-	})
-	app.get("/mpay",function  (req,res) {
-		res.render("m-pay",{
-			title:"mobile pay page"
-		})
-	})
-}) //end of end
+
 	
-//create obj by arg
-function createUserObj(id , name , psw , phone , receiver , src) {
-	var temp = {}
-	temp.id = id
-	temp.name = name
-	temp.psw = psw
-	temp.phone = phone
-	temp.receiver = []
-	temp.receiver.push(receiver)
-	temp.src = src
-}
+	// }//end function "insertUser"
+
+	// oper.insertGood = function (id , name , subtitle , oldprice , nowprice , loc , standard ,mainImg , detailImg) {
+	// 	// body...
+	// 	var temp = {}
+	// 	temp.id = id
+	// 	temp.name = name
+	// 	temp.subtitle = subtitle
+	// 	temp.oldprice = oldprice
+	// 	temp.nowprice = nowprice
+	// 	temp.loc = loc 
+	// 	temp.standard = standard
+	// 	temp.mainImg = mainImg
+	// 	temp.detailImg = detailImg
+	// 	goodM.create([temp],function (err , candies) {
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+	// 		}
+	// 	})
+	// }
+
+	// oper.insertGoodByObj = function (arg) {
+	// 	// body...
+	// 	goodM.create([ arg ],function (err , candies) {
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+	// 		}
+	// 	})
+
+	// }
+
+	// oper.insertWant = function (userid , goods) {
+	// 	var temp = {}
+	// 	temp.userid = userid
+	// 	temp.time = new Date()
+	// 	temp.goods = goods
+	// 	wantM.create([temp],function (err , candies) {
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+	// 		}
+	// 	})
+	// }
+	// // function 
+
+	// oper.insertHaving = function(userid , goods , receiverName ,receiverAddress ,receiverPhone){
+	// 	var temp = {}
+	// 	temp.userid = userid
+	// 	temp.time = new Date()
+	// 	temp.goods = goods
+	// 	temp.receiverName = receiverName
+	// 	temp.receiverAddress = receiverAddress
+	// 	temp.receiverPhone = receiverPhone
+	// 	havingM.create([temp] , function (err , candies) {
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+	// 		}
+	// 	})
+	// }
+
+	// oper.insertHad = function(userid , goods ,receiverName ,receiverAddress ,receiverPhone){
+	// 	var temp = {}
+	// 	temp.userid = userid
+	// 	temp.time = new Date()
+	// 	temp.goods = goods
+	// 	temp.receiverName = receiverName
+	// 	temp.receiverAddress = receiverAddress
+	// 	temp.receiverPhone = receiverPhone
+	// 	hadM.create([temp] , function (err , candies) {
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log("@has insert one doc into goods collection , doc is :"+candies + new Date)
+	// 		}
+	// 	})
+
+	// }
+
+	// oper.userLoading= function(userid , psw){
+	// 	userM.findOne({id:userid,psw:psw} ,   function(err , result){
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			if (result == null) {
+	// 				console.log("@this request has submit bad id or psw!")
+	// 				return false
+	// 			}
+	// 			else{
+	// 				console.log("@the user "+ result.name +" successful enter")
+	// 				return true
+	// 			}
+
+	// 		}
+	// 	})
+	// }
+
+	// oper.getUserInfoByKeyword = function(userid , keyword){
+	// 	userM.findOne({id:userid} , keyword , function(err , result){
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log(result)
+	// 			return result
+	// 		}
+
+	// 	})
+	// }
+
+	// oper.getUserAll = function (userid ) {
+	// 	userM.findOne({id:userid} , function(err , result){
+	// 		if (err) {
+	// 			console.log(err)
+	// 		}
+	// 		else{
+	// 			console.log(result)
+	// 			return result
+	// 		}
+	// 	})
+	// }
 
 
-
-
-
-
-
-
-
+	// oper.insertUser("18812340001","张三","abcd","18812341234","张三","陕西西安市雁塔区","18812341234","./public/images/header.png")
+	// oper.insertGood("1001","Midea/美的 F60-15WB5(Y)60升电热水器50即热洗澡速热家用储水式","单店热销16万台 节能省电 远程遥控",2699,1099,"广东广州",[{name:"容积",items:["10L","20L"]},{name:"功率",items:["500w","1000w"]}],["./images/pc/meidi/main1.jpg","./images/pc/meidi/main2.jpg"],["./images/pc/meidi/detail1.jpg","./images/pc/meidi/detail2.jpg"])
+	// oper.insertWant("18812341234",[{id:"1001",count:"1",standard:[{name:"容积",value:"10L"} , {name:"功率",value:"1000w"}]} , {id:"1001",count:"1",standard:[{name:"容积",value:"10L"} , {name:"功率",value:"1000w"}]}])
+	// oper.userLoading("18812340001" , "abcd")
+	// oper.getUserInfo("18812340001" , "src")
+	// var obj = oper.getUserAll("18812340001")
+	// console.log("the return value is :"+ obj)

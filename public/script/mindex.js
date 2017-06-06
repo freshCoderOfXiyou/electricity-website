@@ -67,6 +67,12 @@
 		
 		slidewrap.addEventListener('touchstart',handlestart,false)
 
+		$("#mshopcart-btn").bind("click" , function () {
+			$.get("/hasLoadAjax" , function (result) {
+				
+			})
+		})
+
 		//banner js
 		//function roll up in a single height
 		var $verRollPnode=$('.rollInfo-wrap')

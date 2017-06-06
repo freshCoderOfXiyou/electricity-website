@@ -18,14 +18,20 @@ html
 			form(method='post').load-form
 				div.load-form-user
 					span.load-form-label 账户
-					input.load-form-input(type='text' placeholder='手机号/邮箱/会员名')
+					input.load-form-input#idinput(type='text' placeholder='手机号/邮箱/会员名')
 				div.load-form-psw
 					span.load-form-label 登录密码
-					input.load-form-input(type='password' placeholder='请输入密码')
-				input(type='submit' value='登录').load-form-submit
+					input.load-form-input#pswinput(type='password' placeholder='请输入密码')
+				span.load-form-submit 登录
 			div.otherway
-				a(href='javascript:;') 免费注册 
+				a(href='/mregister') 免费注册 
 				a(href='javascript:;') 忘记密码
 			div.message-ask-wrap
 				a(href='javascript:;').message-ask 短信校验码登录
+			div.mask
+				div.content
+					div.contentTitle 您输入的账号和密码不匹配
+					div.contentBtn 确定
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src="./script/mload.js")
 

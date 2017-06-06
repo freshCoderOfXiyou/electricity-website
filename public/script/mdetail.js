@@ -264,7 +264,7 @@ function handleend(argument) {
 			$(".info-selec").addClass("show")
 		}
 		$(".cover").bind("click",function(event) {
-			console.log(event.target)
+			// console.log(event.target)
 			if ( event.target == $(".cover")[0] ) {
 				closeCover()
 			}
@@ -326,13 +326,20 @@ function handleend(argument) {
 			}	
 		})
 
+		// $(".footer-btn-buyNow").bind("click" , function(){
+		// 	var sendObj = {
+		// 		wantsUpdate:[]
+		// 	}
+
+		// })
+
 		$addShopcart.click(function () {
 			var standLen = $btntit.length-1
 			var msg = ""
 			var imgsrc = $($(".piclist-inner>img").get(0)).attr("src")
 			var name = $(".info-info-title").text()
 			var id = $(".info-info").attr("data-gid")
-			var nowprice = $(".info-info-price").text()
+			var nowprice = $(".info-info-price").text().substr(1)
 			for(var i=0;i<standLen;i++){
 				var msgTil = $($btntit.get(i)).text()
 				var msgCon = $($infoSeTieFirst.get(i)).text()
@@ -363,6 +370,7 @@ function handleend(argument) {
 				}
 
 			})
+
 		})
 
 	}//the all most outer

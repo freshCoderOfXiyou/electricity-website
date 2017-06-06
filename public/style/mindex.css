@@ -266,6 +266,10 @@
 					color:#2f2f2f;
 					/*font-size: 0.3rem;*/
 				}
+				.floor-sinlink:active{
+					color:#000;
+					text-decoration: none;
+				}
 				.floor-sinlink img{
 					width: 1.7rem;
 					display: inline-block;

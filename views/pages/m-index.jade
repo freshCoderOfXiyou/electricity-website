@@ -14,11 +14,17 @@ html
 		meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
 		meta(name='format-detection' content='telephone=no,address=no')
 		body
-			div.header
+			form(method="get" action="./indexSeach").header
 				span.glyphicon.glyphicon-th-list
-				input(type='text' placeholder='搜索商品/店铺')
+				input(type='text' placeholder='搜索商品/店铺' name="keyword").header-text
+				input(type="submit" value="").header-submit
 				span.header-icon.glyphicon.glyphicon-search
-				span 登录
+				//span
+				-var loadstatus = hasload
+				if loadstatus
+					span #{name}
+				else
+					a(href="./mload") 登录
 			div.sidebar
 			div.banner
 				div.bannerwrap#mobilebanner
@@ -121,47 +127,47 @@ html
 						span.title-modified
 					div.floor-content
 						div.floor-inner
-							a(href='javascript:;').floor-sinlink
+							a(href='/mdetail?page=1004').floor-sinlink
 								span 今日必抢
-								img(src='./images/mobile/index/goods-qiang.webp')
-								span.price ￥100
-								span.original-price ￥99
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/mayou/big1.jpg')
+								span.price ￥189
+								span.original-price ￥256
+							a(href='/mdetail?page=1008').floor-sinlink
 								span 聚超值
-								img(src='./images/mobile/index/goods-qiang2.webp')
-								span.price ￥100
-								span.original-price ￥99 
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/band/b1.jpg')
+								span.price ￥617
+								span.original-price ￥1299 
+							a(href='/mdetail?page=1001').floor-sinlink
 								span 进口必抢
-								img(src='./images/mobile/index/goods-qiang3.webp')
-								span.price ￥100
-								span.original-price ￥99
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/beats/beatsbig1.jpg')
+								span.price ￥1188
+								span.original-price ￥1458
+							a(href='/mdetail?page=1005').floor-sinlink
 								span 型男咔
-								img(src='./images/mobile/index/goods-qiang4.webp')
-								span.price ￥100
-								span.original-price ￥99
+								img(src='./images/detail/dani/b1.jpg')
+								span.price ￥799
+								span.original-price ￥1199
 						div.floor-inner
-							a(href='javascript:;').floor-sinlink
+							a(href='/mdetail?page=1002').floor-sinlink
 								span 爱囤货
-								img(src='./images/mobile/index/goods-qiang5.webp')
-								span.price ￥100
-								span.original-price ￥99
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/sony/b1.jpg')
+								span.price ￥569
+								span.original-price ￥799
+							a(href='/mdetail?page=1003').floor-sinlink
 								span 女神范
-								img(src='./images/mobile/index/goods-qiang6.webp')
-								span.price ￥100
-								span.original-price ￥99
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/rayban/b1.jpg')
+								span.price ￥456
+								span.original-price ￥788
+							a(href='/mdetail?page=1007').floor-sinlink
 								span 换新家
-								img(src='./images/mobile/index/goods-qiang7.webp')
-								span.price ￥100
-								span.original-price ￥99
-							a(href='javascript:;').floor-sinlink
+								img(src='./images/detail/hamankadun/big1.jpg')
+								span.price ￥1659
+								span.original-price ￥2258
+							a(href='/mdetail?page=1006').floor-sinlink
 								span 美食家
-								img(src='./images/mobile/index/goods-qiang8.webp')
-								span.price ￥100 
-								span.original-price ￥99
+								img(src='./images/detail/niupar/b1.jpg')
+								span.price ￥99
+								span.original-price ￥198
 						div.floor-inner
 				div.floor#secondfloor
 					div.floor-title
@@ -340,8 +346,8 @@ html
 					li
 						a(href='javascript:;')
 							img(src='./images/mobile/icon/footer3.png')
-					li
-						a(href='javascript:;')
+					li#mshopcart-btn
+						a(href="/mshopcart")
 							img(src='./images/mobile/icon/footer4.png')
 					li
 						a(href='javascript:;')

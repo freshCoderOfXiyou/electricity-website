@@ -131,7 +131,7 @@
 			paylistObj.payPrice = allGPrice
 			sendallObj.paylist = paylistObj
 			sendallObj.wantsUpdate = wantUpdateArray
-			console.log(paylistObj)
+			console.log(sendallObj)
 			$.post("/paylistAjax" , sendallObj , function (req) {
 				if (req.back) {
 					console.log("i could go to pay ")

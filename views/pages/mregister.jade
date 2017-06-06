@@ -15,23 +15,34 @@ html
 		meta(name='format-detection' content='telephone=no,address=no')
 	body
 		div.header
-			a(href="javascript:;").back 返回　
+			a(href="javascript:;").back
+				span.glyphicon.glyphicon-chevron-left
 			h2.title 设置账户信息　
 		div.content
 			div.sininfo
 				div.sininfo-input
-					label.sinInfo-input-title 登录密码　
-					input(type="text" placeholder="输入新密码　" ).sinInfo-input-content
-					span.sinInfo-suggest 密码由６－２０为英文字符、数字或者符号组成
+					label.sinInfo-input-title 登录密码
+					input(type="password" placeholder="输入新密码　" ).sinInfo-input-content#pswInput
+					label.sinInfo-input-exchange
+						span.glyphicon.glyphicon-eye-close
+				span.sinInfo-suggest 密码由６－２０为英文字符、数字或者符号组成
 			div.sininfo
 				div.sininfo-input 
 					label.sinInfo-input-title 会员名
-					input(type="text" placeholder="２－２５个字符" ).sinInfo-input-content
-					span.sinInfo-suggest ２－２５个字符，推荐使用中文，请勿包含姓名／身份证／银行卡等信息，可用户登录或找回密码
+					input(type="text" placeholder="２－２５个字符" ).sinInfo-input-content#nameInput
+				span.sinInfo-suggest ２－２５个字符，推荐使用中文，请勿包含姓名／身份证／银行卡等信息，可用户登录或找回密码
 			div.sininfo
 				div.sininfo-input
 					label.sinInfo-input-title 手机号
-					input(type="text" placeholder="输入在用的手机号，可用户登录　" ).sinInfo-input-content
-					span.sinInfo-suggest
-		div.commit 确定
+					input(type="text" placeholder="输入在用的手机号，可用于用户登录　" ).sinInfo-input-content#phoneInput
+				span.sinInfo-suggest 输入您当前正在使用的手机号
+			div.sininfo
+				div.sininfo-input
+					label.sinInfo-input-title 地址
+					input(type="text" placeholder="请输入您的收货地址" ).sinInfo-input-content#addressInput
+				span.sinInfo-suggest 可以是您家庭地址、公司地址以及任何您方便收取快递的地址
+		div.commit 
+			label.commitBtn 确定
+	script(src='./bower_components/jquery/dist/jquery.min.js')
+	script(src="./script/mregister.js")
 　　　　　　

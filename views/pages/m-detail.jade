@@ -1,7 +1,7 @@
 doctype
 html
 	head
-		title #{title} 
+		title #{gname} 
 		link(rel='stylesheet' href='./style/mobilepublic.css')
 		link(rel='stylesheet' href='./style/mdetail.css')
 		link(href='./bower_components/bootstrap/dist/css/bootstrap.css' rel='stylesheet' type='text/css')
@@ -23,21 +23,20 @@ html
 					div.info 
 						div.piclist-outer
 							div.piclist-inner
-								img(src='./images/mobile/detail/nike-slide.webp' alt='nike pic')
-								img(src='./images/mobile/detail/nike-slide6.jpg' alt='nike pic')
-								img(src='./images/mobile/detail/nike-slide7.webp' alt='nike pic')
-								img(src='./images/mobile/detail/nike-slide9.webp' alt='nike pic')
-								img(src='./images/mobile/detail/nike-slide5.jpg' alt='nike pic')
+								each singleBig in gmainImgs
+									img(src='#{singleBig}' alt='slide img')
 							div.piclist-signal-wrapper
 								ul.piclist-signal
-									li.piclist-signal-selec
-									li
-									li
-									li
-									li
-						div.info-info
-							div.info-info-title Nike 耐克官方 KOBE A.D. EP男子篮球鞋 852427
-							div.info-info-price ¥1199.00
+									each singleBig in gmainImgs
+										li
+									//li.piclist-signal-selec
+									//li
+									//li
+									//li
+									//li
+						div.info-info(data-gid="#{gid}")
+							div.info-info-title #{gname}
+							div.info-info-price ￥#{gnowprice}
 							div.info-info-other 
 								span 快递: 0.00
 								span 月销量 185件
@@ -53,44 +52,39 @@ html
 								span 购买可得599积分
 								span.text-btn ...
 						div.cover
-						div.info-selec
-							div.info-selec-title
-								div.info-selec-imgwrap
-									img(src="./images/mobile/detail/nike-slide.webp" alt="selec area img")
-								div.info-selec-main
-									span.infoSeTit-price ¥1199.00
-									span.infoSeTit-last
-										span 库存
-										span 4
-										span 件
-									span.infoSeTie-haschoose
-										span 已选择: 
-										span.infoSeTie-first 39
-										span.infoSeTie-second 大学红
-								div.info-selec-close X
-							div.info-selec-btnsarea
-								div.info-selec-btnarea
-									div.info-selec-btntitle 鞋码
-									div.info-selec-btns1
-										span.btn-selected 38.5
-										span 39 
-										span 40
-										span 41
-										span 42
-										span 47.5
-								div.info-selec-btnarea
-									div.info-selec-btntitle 颜色分类
-									div.info-selec-btns2
-										span.btn-selected 大学红
-										span 深藏青蓝/银灰色
-										span 白/合金灰
-								div.devider
-									div.info-selec-btntitle 数量
-									div.info-selec-number
-										span.btn-unable.number-decreaseBtn -
-										input.number-input(type="number" value="1")
-										span.number-addBtn +
-							div.info-selec-yes 确定
+							div.info-selec
+								div.info-selec-title
+									div.info-selec-imgwrap
+										img(src="#{gmainImgs[0]}" alt="selec area img")
+									div.info-selec-main
+										span.infoSeTit-price ¥#{gnowprice}
+										span.infoSeTit-last
+											span 库存
+											span 4
+											span 件
+										span.infoSeTie-haschoose
+											span 已选择: 
+											each singleStandard in gstandard
+												span.infoSeTie-first #{singleStandard.items[0]}
+											//39
+											//span.infoSeTie-second 大学红
+									div.info-selec-close X
+								div.info-selec-btnsarea
+									div.info-selec-btnarea
+										-var btnindex=1
+										each singleStandard in gstandard
+											div.info-selec-btntitle #{singleStandard.name}
+											div.info-selec-btns1(data-index="#{btnindex}")
+												-btnindex=btnindex+1
+													each singleStandItem in singleStandard.items
+														span #{singleStandItem}
+									div.devider
+										div.info-selec-btntitle 数量
+										div.info-selec-number
+											span.btn-unable.number-decreaseBtn -
+											input.number-input(type="number" value="1")
+											span.number-addBtn +
+								div.info-selec-yes 确定
 						div.selec
 							span 选择：鞋码/颜色分类
 							span.text-btn ...
@@ -115,15 +109,8 @@ html
 					div.more 
 						span 商品图片
 						div.more-wrapper
-							img(src="./images/mobile/detail/nike1.webp" alt="")
-							img(src="./images/mobile/detail/nike2.webp" alt="")
-							img(src="./images/mobile/detail/nike3.webp" alt="")
-							img(src="./images/mobile/detail/nike4.webp" alt="")
-							img(src="./images/mobile/detail/nike5.webp" alt="")
-							img(src="./images/mobile/detail/nike6.webp" alt="")
-							img(src="./images/mobile/detail/nike7.webp" alt="")
-							img(src="./images/mobile/detail/nike8.webp" alt="")
-							img(src="./images/mobile/detail/nike9.webp" alt="")
+							each singDetailImg in gdetailImgs
+								img(src="#{singDetailImg}" alt="")
 					div.comment 
 						div.comment-keyword
 							span.keywords-selected 全部
@@ -195,17 +182,21 @@ html
 								div.comment-divider
 			div.footer
 				div.footer-iconlist
-					a(href='javascript:;')
+					a(href='javascript:;').footer-iconlist-link
 						span.glyphicon.glyphicon-user
-						span 客服
-					a(href='javascript:;')
+						span.footer-iconList-txt 客服
+					a(href='javascript:;').footer-iconlist-link
 						span.glyphicon.glyphicon-star-empty
-						span 收藏
-					a(href='javascript:;')
+						span.footer-iconList-txt 收藏
+					a(href='/mshopcart').footer-iconlist-link
 						span.glyphicon.glyphicon-shopping-cart
-						span 购物车
+						span.footer-iconList-txt 购物车
 				div#footer-btns
 					a(href='javascript:;').footer-btn.footer-btn-addToCart 加入购物车
 					a(href='javascript:;').footer-btn.footer-btn-buyNow 立即购买
+			div.masker
+				span.masker-text 加入购物车成功
+				span.masker-sign 
+					span.glyphicon.glyphicon-ok
 		script(src='./bower_components/jquery/dist/jquery.min.js')
-script(src='./script/mdetail.js')
+		script(src='./script/mdetail.js')

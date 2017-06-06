@@ -11,7 +11,7 @@ app.set('view engine','jade')
 app.use(express.static(path.join(__dirname,'/public'))) 
 app.get('/' , function(req,res){
 	// res.type('text/html')
-	// res.send('welcome to electicity !')
+	// res.send('welcome to electicity !') 
 	res.render('index',{
 		title:'电子商务',
 		searchWord:'箱包名品任你挑',
