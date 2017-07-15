@@ -1,16 +1,2 @@
-# electricity-website
-通过组件化的工具开发现代电子商务网站。It is a morden electicity through component tools.
-
-problem:
-The height of three inner div are not same. So the short div will has white place at the bottom.
-solve:
-I modify the height of outer div through JS when the div scrolling.
-
-在商品手机详情业的制作上，出现了如下操作：横向的滚动、改变父层元素高度、滚动到顶部；这三个操作的顺序应该是：首先实现横向的滚动，再改变父级元素的高度，最后是滚动页面顶部。
-In the production of the commodity details mobile phone industry, the following steps: horizontal scrolling, change the parent layer height, scroll to the top; The three operation sequence should be: first implement horizontal scrolling, to change the height of the parent element, the last is rolling at the top of the page. 
-
-problem:
-1.Slide down in the banner is invalid.
-在banner中向下滑动无效。
-2.动画在第一次启动之后就不在有了。
-slove:
+本系统是我本科的毕业设计，从前端到后台实现了电子商务网站。页面实现了两套，分别用于PC端以及手机端。后台实现了用户的登录注册、加入购物车、结算功能，以及非常简单的商品信息录入功能。
+前端页面使用的JS库是jQuery，对于手机端手势功能是自己实现的没有采用第三方JS库。后台使用的语言是Node，采用Express框架。数据库方面使用MongoDB，使用mongoose简化操作。
